@@ -1,0 +1,14 @@
+<section>
+    <div>
+        <h1>Liste des enfants inscrits</h1>
+
+        {% for children in children %}
+        <div>
+            <p>
+            <h1>{{ children.firstName }} {{ children.lastName }}</h1>
+
+            <div><a href="{{ path ('admin_child_show', {'id':children.id}) }}"> - Details - </a></div>
+            {% endfor %}
+        </div>
+
+</section>

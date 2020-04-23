@@ -1,0 +1,27 @@
+
+
+    <h1>{{ children.firstName }} {{ children.lastName }}</h1>
+<div>
+<span>Né(e) le : {{ children.birthDate|date('d/m/Y') }}</span>
+<span>De sexe {{ children.sex }}</span>
+</div>
+<div>
+<h2>FICHE CONTACT</h2>
+    <div>
+    M. / Mme {{ children.user.lastName }} {{ children.user.firstName }}
+    Adresse :   {{ children.user.address }}
+                {{ children.user.zipcode }}
+                {{ children.user.city }}
+    Téléphone : {{ children.user.phoneNumber }}
+    Adresse mail : {{ children.user.email }}
+    </div>
+</div>
+
+<div>
+    {%  for allergen in children.allergen %}
+<p>
+   Allergènes :
+    {{allergen.type}}
+    {% endfor %}
+</p>
+</div>
