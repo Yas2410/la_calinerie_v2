@@ -195,10 +195,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587745047726" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1587759285167">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1587759343256">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587759285167" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587759343256" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1587739084159">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -207,6 +207,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="577" y="211" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1587757235047" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1587759360967">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587759360967" />
     <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1587718434304">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
