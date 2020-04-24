@@ -2,7 +2,9 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Allergen;
 use App\Entity\Child;
+use App\Form\AllergenType;
 use App\Form\ChildType;
 use App\Repository\AllergenRepository;
 use App\Repository\ChildRepository;
@@ -52,6 +54,36 @@ class ChildController extends AbstractController
         return $this->render('admin/children/child.html.twig', [
             'children' => $child,
             'user' => $user,
+        ]);
+    }
+
+    /**
+     * @route("admin/child/insert", name="admin_insert_child")
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @param $slugger
+     * @return Response
+     */
+
+    public function insertChild(Request $request,
+                                   EntityManagerInterface $entityManager,
+                                   SluggerInterface $slugger
+    )
+    {
+        $child = new Child();
+        $formChild= $this->createForm(ChildType::class, $child);
+        $formChild->handleRequest($request);
+
+        if ($formChild->isSubmitted() && $formChild->isValid()) {
+
+            $entityManager->persist($child);
+            $entityManager->flush();
+
+            $this->addFlash('success', "L'enfant' a bien été créé !");
+
+        }
+        return $this->render('admin/children/insert_child.html.twig', [
+            'formChild' => $formChild->createView()
         ]);
     }
 

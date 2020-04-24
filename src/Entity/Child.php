@@ -40,6 +40,7 @@ class Child
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Allergen", inversedBy="children")
+     * @ORM\JoinTable(name="child_allergen")
      */
     private $allergen;
 

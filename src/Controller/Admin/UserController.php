@@ -22,7 +22,7 @@ class UserController extends AbstractController
 
     public function users(UserRepository $userRepository)
     {
-        $users = $userRepository->findAll();
+        $users = $userRepository->findAllNonAdmin();
         return $this->render('admin/users/users.html.twig', [
             'users' => $users
         ]);

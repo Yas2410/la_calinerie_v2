@@ -1,0 +1,11 @@
+<h1>{{allergens.type}}</h1>
+<div>
+    {%  for children in allergens.children %}
+    <p>
+        {{children.firstName}}
+        {% endfor %}
+
+    </p>
+</div>
+
+

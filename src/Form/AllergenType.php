@@ -3,6 +3,8 @@
 namespace App\Form;
 
 use App\Entity\Allergen;
+use App\Entity\Child;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -14,7 +16,11 @@ class AllergenType extends AbstractType
     {
         $builder
             ->add('type')
-            ->add('children')
+            ->add('children', EntityType::class, [
+             'class' => Child::class,
+             'choice_label' => 'firstName',
+                'required' => false,
+            ])
             ->add('submit', SubmitType::class)
         ;
     }

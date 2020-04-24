@@ -62,23 +62,6 @@ class AllergenController extends AbstractController
 
         if ($formAllergen->isSubmitted() && $formAllergen->isValid()) {
 
-            $allergenFile = $formAllergen->get('allergenfile')->getData();
-
-            if ($allergenFile) {
-
-                $originalFilename = pathinfo($allergenFile->getClientOriginalName(), PATHINFO_FILENAME);
-
-                $safeFilename = $slugger->slug($originalFilename);
-
-                $newFilename = $safeFilename . '-' . uniqid() . '.' . $allergenFile->guessExtension();
-
-                $allergenFile->move(
-                    $this->getParameter('allergenFile_directory'),
-                    $newFilename);
-
-                $allergen->setAllergenFile($newFilename);
-            }
-
             $entityManager->persist($allergen);
             $entityManager->flush();
 

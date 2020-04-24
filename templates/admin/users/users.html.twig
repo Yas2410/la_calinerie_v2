@@ -1,4 +1,22 @@
+<div>
+    <div>
 {% for user in users %}
+    <h3>
     {{ user.lastName}}
     {{ user.firstName }}
+    </h3>
+    </div>
+    <div>
+    <span>Enfants :</span> <br>
+    {% for children in user.children %}
+       |  {{ children.firstName }} |
+    {% endfor %}
+    </div>
+    <div>
+        {% for event in user.event %}
+            |  {{ event.title }} |
+        {% endfor %}
+    </div>
 {% endfor %}
+</div>
+
