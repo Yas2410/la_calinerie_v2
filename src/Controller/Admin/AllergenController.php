@@ -56,9 +56,11 @@ class AllergenController extends AbstractController
                                    SluggerInterface $slugger
     )
     {
+
         $allergen = new Allergen();
         $formAllergen = $this->createForm(AllergenType::class, $allergen);
         $formAllergen->handleRequest($request);
+
 
         if ($formAllergen->isSubmitted() && $formAllergen->isValid()) {
 
@@ -70,6 +72,7 @@ class AllergenController extends AbstractController
         }
         return $this->render('admin/allergens/insert_allergen.html.twig', [
             'formAllergen' => $formAllergen->createView()
+
         ]);
 
     }

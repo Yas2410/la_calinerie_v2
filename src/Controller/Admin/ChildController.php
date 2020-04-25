@@ -27,7 +27,7 @@ class ChildController extends AbstractController
      */
 
     public function children(ChildRepository $childRepository, AllergenRepository $allergenRepository,
-    UserRepository $userRepository)
+                             UserRepository $userRepository)
     {
         $children = $childRepository->findAll();
         $allergen = $allergenRepository->findAll();
@@ -66,8 +66,8 @@ class ChildController extends AbstractController
      */
 
     public function insertChild(Request $request,
-                                   EntityManagerInterface $entityManager,
-                                   SluggerInterface $slugger
+                                EntityManagerInterface $entityManager,
+                                SluggerInterface $slugger
     )
     {
         $child = new Child();

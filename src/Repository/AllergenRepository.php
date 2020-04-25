@@ -14,12 +14,14 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class AllergenRepository extends ServiceEntityRepository
 {
+    private $getChildren;
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Allergen::class);
     }
 
-    // /**
+     /**
     //  * @return Allergen[] Returns an array of Allergen objects
     //  */
     /*
@@ -50,4 +52,6 @@ class AllergenRepository extends ServiceEntityRepository
     public function getByWordInAllergen($search)
     {
     }
+
+
 }
