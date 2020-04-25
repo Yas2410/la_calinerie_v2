@@ -23,15 +23,18 @@ class ChildType extends AbstractType
             ->add('firstName')
             ->add('birthDate')
             ->add('sex')
-            ->add('allergen',EntityType::class, array (
-                'class' => Allergen::class
+            ->add('allergen',CollectionType::class, [
+                'entry_type' => AllergenType::class
+            ])
+            ->add('allergen',EntityType::class, [
+                'class' => Allergen::class,
                 'multiple' => true,
                 'label' => 'Allergène',
                 'required' => false
-            ))
+            ])
 
             ->add('submit', SubmitType::class)
-        ;
+    ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
