@@ -23,8 +23,10 @@ class ChildType extends AbstractType
             ->add('firstName')
             ->add('birthDate')
             ->add('sex')
-            ->add('allergen',CollectionType::class, array (
-                'entry_type' => AllergenType::class,
+            ->add('allergen',EntityType::class, array (
+                'class' => Allergen::class
+                'multiple' => true,
+                'label' => 'Allergène',
                 'required' => false
             ))
 
