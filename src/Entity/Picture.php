@@ -43,19 +43,20 @@ class Picture
         return $this;
     }
 
+
     public function getImage(): ?string
     {
         return $this->image;
     }
 
-    public function setImage(string $image): self
+
+    public function setImage(?string $image): self
     {
         $this->image = $image;
 
         return $this;
     }
-
-    public function setPictureFile(string $newFilename)
-    {
-    }
 }
+
+
+

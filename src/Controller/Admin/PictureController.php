@@ -62,21 +62,21 @@ class PictureController extends AbstractController
 
         if ($formPicture->isSubmitted() && $formPicture->isValid()) {
 
-            $pictureFile = $formPicture->get('picturefile')->getData();
+            $image = $formPicture->get('image')->getData();
 
-            if ($pictureFile) {
+            if ($image) {
 
-                $originalFilename = pathinfo($pictureFile->getClientOriginalName(), PATHINFO_FILENAME);
+                $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
 
                 $safeFilename = $slugger->slug($originalFilename);
 
-                $newFilename = $safeFilename . '-' . uniqid() . '.' . $pictureFile->guessExtension();
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $image->guessExtension();
 
-                $pictureFile->move(
-                    $this->getParameter('pictureFile_directory'),
+                $image->move(
+                    $this->getParameter('gallery_directory'),
                     $newFilename);
 
-                $picture->setPictureFile($newFilename);
+                $picture->setImage($newFilename);
             }
 
             $entityManager->persist($picture);
@@ -111,6 +111,7 @@ class PictureController extends AbstractController
      * @route("admin/picture/update/{id}", name="admin_update_picture")
      * @param Request $request
      * @param PictureRepository $pictureRepository
+     * @param SluggerInterface $slugger
      * @param EntityManagerInterface $entityManager
      * @param $id
      * @return Response
@@ -118,6 +119,7 @@ class PictureController extends AbstractController
     public function updatePicture(
         Request $request,
         PictureRepository $pictureRepository,
+        SluggerInterface $slugger,
         EntityManagerInterface $entityManager,
         $id
     )
@@ -126,13 +128,31 @@ class PictureController extends AbstractController
         $formPicture = $this->createForm(PictureType::class, $picture);
         $formPicture->handleRequest($request);
         if ($formPicture->isSubmitted() && $formPicture->isValid()) {
+
+            $image = $formPicture->get('image')->getData();
+
+            if ($image) {
+
+                $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
+
+                $safeFilename = $slugger->slug($originalFilename);
+
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $image->guessExtension();
+
+                $image->move(
+                    $this->getParameter('gallery_directory'),
+                    $newFilename);
+
+                $picture->setImage($newFilename);
+            }
+
             $entityManager->persist($picture);
             $entityManager->flush();
 
-            $this->addFlash('sucess', "La photo a bien été modifiée !");
+            $this->addFlash('success', "L'élément a bien été modifié !");
         }
 
-        return $this->render('admin/pictures/update_picture.html.twig', [
+        return $this->render('admin/pictures/insert_picture.html.twig', [
             'formPicture'=>$formPicture->createView()
         ]);
     }
@@ -156,7 +176,7 @@ class PictureController extends AbstractController
         $entityManager->remove($picture);
         $entityManager->flush();
 
-        $this->addFlash('sucess', "La photo a bien été supprimée !");
+        $this->addFlash('success', "L'élément' a bien été supprimé !");
 
         return $this->redirectToRoute('admin_pictures_list');
     }

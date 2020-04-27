@@ -1,0 +1,12 @@
+{% for picture in pictures %}
+<div>
+    <div>
+        <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image}}" alt="">
+    </div>
+    <p> {{ picture.description }}</p>
+    <div><a class="delete" href="{{ path ('admin_delete_picture', {'id':picture.id}) }}"> - Supprimer la photo - </a>
+    </div>
+    <div class="margin"><a class="update" href="{{ path ('admin_update_picture', {'id':picture.id}) }}"> - Modifier la photo - </a></div>
+
+    {% endfor %}
+</div>

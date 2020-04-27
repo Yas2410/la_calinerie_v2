@@ -3,12 +3,19 @@
 namespace App\Controller\Front;
 
 use App\Entity\Article;
+use App\Entity\Event;
+use App\Entity\User;
+use App\Form\EventType;
+use App\Form\UserType;
 use App\Repository\ArticleRepository;
 use App\Repository\EventRepository;
 use App\Repository\PictureRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 class HomeParentsController extends AbstractController
 {
@@ -33,6 +40,8 @@ class HomeParentsController extends AbstractController
             'events' => $lastEvents,
             'pictures' => $lastPictures
         ]);
-
     }
+
 }
+
+

@@ -1,0 +1,11 @@
+{% for message in app.flashes('success') %}
+    <div class="message">
+        {{ message }}
+    </div>
+{% endfor %}
+
+<div class="form" >
+    {{ form_start(formEvent) }}
+
+    {{ form_end(formEvent) }}
+</div>

@@ -16,12 +16,7 @@ class AllergenType extends AbstractType
     {
         $builder
             ->add('type')
-            ->add('children', EntityType::class, [
-                'class' => Child::class,
-                'choice_label' => 'firstName',
-                'mapped' => false,
-                'required' => false,
-            ])
+
             ->add('submit', SubmitType::class)
         ;
     }

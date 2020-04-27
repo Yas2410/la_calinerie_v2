@@ -52,8 +52,8 @@ class EventController extends AbstractController
      */
 
     public function insertEvent(Request $request,
-                                  EntityManagerInterface $entityManager,
-                                  SluggerInterface $slugger
+                                EntityManagerInterface $entityManager,
+                                SluggerInterface $slugger
     )
     {
         $event = new Event();
@@ -62,21 +62,21 @@ class EventController extends AbstractController
 
         if ($formEvent->isSubmitted() && $formEvent->isValid()) {
 
-            $eventFile = $formEvent->get('eventfile')->getData();
+            $image = $formEvent->get('image')->getData();
 
-            if ($eventFile) {
+            if ($image) {
 
-                $originalFilename = pathinfo($eventFile->getClientOriginalName(), PATHINFO_FILENAME);
+                $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
 
                 $safeFilename = $slugger->slug($originalFilename);
 
-                $newFilename = $safeFilename . '-' . uniqid() . '.' . $eventFile->guessExtension();
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $image->guessExtension();
 
-                $eventFile->move(
-                    $this->getParameter('eventFile_directory'),
+                $image->move(
+                    $this->getParameter('events_directory'),
                     $newFilename);
 
-                $event->setEventFile($newFilename);
+                $event->setImage($newFilename);
             }
 
             $entityManager->persist($event);
@@ -111,6 +111,7 @@ class EventController extends AbstractController
      * @route("admin/event/update/{id}", name="admin_update_event")
      * @param Request $request
      * @param EventRepository $eventRepository
+     * @param SluggerInterface $slugger
      * @param EntityManagerInterface $entityManager
      * @param $id
      * @return Response
@@ -118,6 +119,7 @@ class EventController extends AbstractController
     public function updateEvent(
         Request $request,
         EventRepository $eventRepository,
+        SluggerInterface $slugger,
         EntityManagerInterface $entityManager,
         $id
     )
@@ -126,14 +128,32 @@ class EventController extends AbstractController
         $formEvent = $this->createForm(EventType::class, $event);
         $formEvent->handleRequest($request);
         if ($formEvent->isSubmitted() && $formEvent->isValid()) {
+
+            $image = $formEvent->get('image')->getData();
+
+            if ($image) {
+
+                $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
+
+                $safeFilename = $slugger->slug($originalFilename);
+
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $image->guessExtension();
+
+                $image->move(
+                    $this->getParameter('events_directory'),
+                    $newFilename);
+
+                $event->setImage($newFilename);
+            }
+
             $entityManager->persist($event);
             $entityManager->flush();
 
-            $this->addFlash('sucess', "L'évènement a bien été modifié !");
+            $this->addFlash('success', "L'évènement a bien été modifié !");
         }
 
-        return $this->render('admin/events/update_event.html.twig', [
-            'formEvent'=>$formEvent->createView()
+        return $this->render('admin/events/insert_event.html.twig', [
+            'formEvent' => $formEvent->createView()
         ]);
     }
 

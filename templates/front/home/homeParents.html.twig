@@ -25,5 +25,14 @@
     {% endfor %}
 </article>
 
+<article>
+    <h2>Les dernieres photos :</h2>
+    {% for picture in pictures %}
+        <h4>{{ picture.description }}</h4>
+        <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image}}" alt="">
+    {% endfor %}
+</article>
+
+
 </body>
 </html>

@@ -1,0 +1,8 @@
+{% for picture in pictures %}
+<div>
+    <div>
+        <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image}}" alt="">
+    </div>
+    <p> {{ picture.description }}</p>
+    {% endfor %}
+</div>

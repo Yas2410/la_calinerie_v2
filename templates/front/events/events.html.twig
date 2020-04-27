@@ -1,0 +1,16 @@
+{% for event in events %}
+<div>
+    <h1>{{ event.title }}</h1>
+    <div>
+        <img src="{{ asset ('uploads/admin/events/') ~ event.image}}" alt="">
+    </div>
+    <p> {{ event.content }}</p>
+    {% endfor %}
+</div>
+
+{% for message in app.flashes('success') %}
+    <div class="message">
+        {{ message }}
+    </div>
+{% endfor %}
+

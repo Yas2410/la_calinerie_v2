@@ -86,27 +86,27 @@ Valable pour toutes les classes, à l'exception des entités. */
         if ($formArticle->isSubmitted() && $formArticle->isValid()) {
 
 // Ici, je récupère la valeur du fichier uploadé.
-            $articleFile = $formArticle->get('articlefile')->getData();
+            $image = $formArticle->get('image')->getData();
 
 // On vérifie ici si un élément a bien été envoyé :
-            if ($articleFile) {
+            if ($image) {
 
 // On vérifie le nom du fichier uploadé :
-                $originalFilename = pathinfo($articleFile->getClientOriginalName(), PATHINFO_FILENAME);
+                $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
 
 // On sort les caractères spéciaux du nom de ce dernier.
                 $safeFilename = $slugger->slug($originalFilename);
 
 // On ajoute au nom du fichier un identifiant unique.
-                $newFilename = $safeFilename . '-' . uniqid() . '.' . $articleFile->guessExtension();
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $image->guessExtension();
 
 // On déplace le fichier uploadé dans le dossier précisé au préalable en paramètre du fichier services.yaml.
-                $articleFile->move(
-                    $this->getParameter('articleFile_directory'),
+                $image->move(
+                    $this->getParameter('articles_directory'),
                     $newFilename);
 
 // On enregistre le nom du fichier uploadé en BDD.
-                $article->setArticleFile($newFilename);
+                $article->setImage($newFilename);
             }
 // Enfin, on persiste l'articles
             $entityManager->persist($article);
@@ -146,6 +146,7 @@ Valable pour toutes les classes, à l'exception des entités. */
      * @route("admin/article/update/{id}", name="admin_update_article")
      * @param Request $request
      * @param ArticleRepository $articleRepository
+     * @param SluggerInterface $slugger
      * @param EntityManagerInterface $entityManager
      * @param $id
      * @return Response
@@ -153,6 +154,7 @@ Valable pour toutes les classes, à l'exception des entités. */
     public function updateArticle(
         Request $request,
         ArticleRepository $articleRepository,
+        SluggerInterface $slugger,
         EntityManagerInterface $entityManager,
         $id
     )
@@ -161,13 +163,31 @@ Valable pour toutes les classes, à l'exception des entités. */
         $formArticle = $this->createForm(ArticleType::class, $article);
         $formArticle->handleRequest($request);
         if ($formArticle->isSubmitted() && $formArticle->isValid()) {
+
+            $image = $formArticle->get('image')->getData();
+
+            if ($image) {
+
+                $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
+
+                $safeFilename = $slugger->slug($originalFilename);
+
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $image->guessExtension();
+
+                $image->move(
+                    $this->getParameter('articles_directory'),
+                    $newFilename);
+
+                $article->setImage($newFilename);
+            }
+
             $entityManager->persist($article);
             $entityManager->flush();
 
             $this->addFlash('sucess', "L' article a bien été modifié !");
         }
 
-        return $this->render('admin/articles/update_article.html.twig', [
+        return $this->render('admin/articles/insert_article.html.twig', [
             'formArticle'=>$formArticle->createView()
         ]);
     }

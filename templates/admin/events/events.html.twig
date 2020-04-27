@@ -1,0 +1,12 @@
+{% for event in events %}
+<div>
+    <h1>{{ event.title }}</h1>
+    <div>
+        <img src="{{ asset ('uploads/admin/events/') ~ event.image}}" alt="">
+    </div>
+    <p> {{ event.content }}</p>
+    <div><a class="delete" href="{{ path ('admin_delete_event', {'id':event.id}) }}"> - Supprimer l'evenement' - </a>
+    </div>
+    <div class="margin"><a class="update" href="{{ path ('admin_update_event', {'id':event.id}) }}"> - Modifier l'evenement' - </a></div>
+    {% endfor %}
+</div>

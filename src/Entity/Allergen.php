@@ -24,7 +24,7 @@ class Allergen
     private $type;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Child", mappedBy="allergen",)
+     * @ORM\ManyToMany(targetEntity="App\Entity\Child", mappedBy="allergen")
      */
     private $children;
 
