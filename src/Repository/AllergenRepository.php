@@ -21,9 +21,12 @@ class AllergenRepository extends ServiceEntityRepository
         parent::__construct($registry, Allergen::class);
     }
 
-     /**
-    //  * @return Allergen[] Returns an array of Allergen objects
-    //  */
+    /**
+     * //  *
+     * @param $word
+     * @return Allergen[] Returns an array of Allergen objects
+     * //
+     */
     /*
     public function findByExampleField($value)
     {
@@ -49,8 +52,17 @@ class AllergenRepository extends ServiceEntityRepository
         ;
     }
     */
-    public function getByWordInAllergen($search)
+    public function getByWordInAllergen($word)
     {
+        $queryBuilder = $this->createQueryBuilder('allergen');
+        $query = $queryBuilder->select('allergen')
+            ->where('allergen.type LIKE :word')
+            ->setParameter('word', '%' . $word . '%')
+            ->getQuery();
+
+        $results = $query->getResult();
+        return $results;
+
     }
 
 

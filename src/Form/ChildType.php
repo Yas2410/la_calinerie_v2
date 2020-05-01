@@ -8,8 +8,10 @@ use App\Entity\User;
 use Doctrine\ORM\Mapping\Entity;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -22,8 +24,20 @@ class ChildType extends AbstractType
         $builder
             ->add('lastName')
             ->add('firstName')
-            ->add('birthDate')
-            ->add('sex')
+            ->add('birthDate', BirthdayType::class, [
+                'placeholder' => [
+                    'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
+                ],
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd'
+            ])
+            ->add('sex', ChoiceType::class, [
+                'choices' => [
+                    'Feminin' => 'F',
+                    'Masculin' => 'M',
+                ],
+                'expanded' => true
+            ])
             ->add('allergen',CollectionType::class, [
                 'entry_type' => AllergenType::class,
                 'required' => false

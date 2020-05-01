@@ -13,6 +13,7 @@
     <h2>Les derniers articles ajoutés :</h2>
     {% for article in articles %}
         <h4>{{ article.title }}</h4>
+        <img src="{{ asset ('uploads/admin/articles/') ~ article.image}}" alt="">
         <span> <em>{{ article.content }} </em></span>
     {% endfor %}
 </article>
@@ -21,6 +22,7 @@
     <h2>Les derniers évènements ajoutés :</h2>
     {% for event in events %}
         <h4>{{ event.title }}</h4>
+        <img src="{{ asset ('uploads/admin/events/') ~ event.image}}" alt="">
         <span> <em>{{ event.content }} </em></span>
     {% endfor %}
 </article>
@@ -32,6 +34,8 @@
         <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image}}" alt="">
     {% endfor %}
 </article>
+
+<div class="margin"><a class="update" href="{{ path ('parents_insert_child') }}"> - Fiche Enfant - </a></div>
 
 
 </body>

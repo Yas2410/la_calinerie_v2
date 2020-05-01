@@ -1,22 +1,13 @@
-<div>
-    <div>
+<form action="{{ path('admin_search_user') }}" method="GET">
+    <input type="search" name="search">
+    <input type="submit" value="Rechercher">
+</form>
 {% for user in users %}
-    <h3>
-    {{ user.lastName}}
-    {{ user.firstName }}
-    </h3>
-    </div>
     <div>
-    <span>Enfants :</span> <br>
-    {% for children in user.children %}
-       |  {{ children.firstName }} |
-    {% endfor %}
+        <h1>{{ user.lastName }} {{ user.firstName }}</h1>
     </div>
-    <div>
-        {% for event in user.event %}
-            |  {{ event.title }} |
-        {% endfor %}
-    </div>
+    <div><a href="{{ path ('admin_user_show', {'id':user.id}) }}"> Détails </a></div>
 {% endfor %}
-</div>
+
+
 

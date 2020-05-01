@@ -68,8 +68,16 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         ;
     }
     */
-    public function getByWordInUser($search)
+    public function getByWordInUser($word)
     {
+        $queryBuilder = $this->createQueryBuilder('user');
+        $query = $queryBuilder->select('user')
+            ->where('user.lastName LIKE :word')
+            ->setParameter('word', '%' . $word . '%')
+            ->getQuery();
+
+        $results = $query->getResult();
+        return $results;
     }
 
     public function findAllNonAdmin()

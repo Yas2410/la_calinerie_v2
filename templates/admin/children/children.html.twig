@@ -1,3 +1,7 @@
+<form action="{{ path('admin_child_search') }}" method="GET">
+    <input type="search" name="search">
+    <input type="submit" value="Rechercher">
+</form>
 <section>
     <div>
         <h1>Liste des enfants inscrits</h1>
@@ -7,8 +11,7 @@
             <p>
             <h1>{{ children.firstName }} {{ children.lastName }}</h1>
 
-            <div><a href="{{ path ('admin_child_show', {'id':children.id}) }}"> - Details - </a></div>
             {% endfor %}
         </div>
-
+    </div>
 </section>

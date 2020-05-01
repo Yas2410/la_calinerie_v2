@@ -78,18 +78,13 @@ class User implements UserInterface
     private $phoneNumber2;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Event", inversedBy="users")
-     */
-    private $event;
-
-    /**
      * @ORM\OneToMany(targetEntity="App\Entity\Child", mappedBy="user")
      */
     private $children;
 
     public function __construct()
     {
-        $this->event = new ArrayCollection();
+
         $this->children = new ArrayCollection();
     }
 
@@ -268,38 +263,13 @@ class User implements UserInterface
     }
 
     /**
-     * @return Collection|Event[]
-     */
-    public function getEvent(): Collection
-    {
-        return $this->event;
-    }
-
-    public function addEvent(Event $event): self
-    {
-        if (!$this->event->contains($event)) {
-            $this->event[] = $event;
-        }
-
-        return $this;
-    }
-
-    public function removeEvent(Event $event): self
-    {
-        if ($this->event->contains($event)) {
-            $this->event->removeElement($event);
-        }
-
-        return $this;
-    }
-
-    /**
      * @return Collection|Child[]
      */
     public function getChildren(): Collection
     {
         return $this->children;
     }
+
 
     public function addChild(Child $child): self
     {

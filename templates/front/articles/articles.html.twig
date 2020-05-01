@@ -1,3 +1,9 @@
+<form action="{{ path('search_article') }}" method="GET">
+    <input type="search" name="search">
+    <input type="submit" value="Rechercher">
+</form>
+
+
 {% for article in articles %}
 <div>
     <h1>{{ article.title }}</h1>

@@ -1,0 +1,16 @@
+<section>
+
+    <h5>Vous avez recherché le mot : {{ search }}</h5>
+
+
+    {% for article in articles %}
+    <div>
+        <h1>{{ article.title }}</h1>
+        <div>
+            <img src="{{ asset ('uploads/admin/articles/') ~ article.image}}" alt="">
+        </div>
+        <p> {{ article.content }}</p>
+        {% endfor %}
+    </div>
+
+</section>

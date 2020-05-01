@@ -47,7 +47,15 @@ class ChildRepository extends ServiceEntityRepository
         ;
     }
     */
-    public function getByWordInChild($search)
+    public function getByWordInChild($word)
     {
+        $queryBuilder = $this->createQueryBuilder('child');
+        $query = $queryBuilder->select('child')
+            ->where('child.firstName LIKE :word')
+            ->setParameter('word', '%' . $word . '%')
+            ->getQuery();
+
+        $results = $query->getResult();
+        return $results;
     }
 }

@@ -88,7 +88,7 @@ class AllergenController extends AbstractController
         $search = $request->query->get('search');
         $allergens = $allergenRepository->getByWordInAllergen($search);
 
-        return $this->render('admin/allergens/search_family.html.twig', [
+        return $this->render('admin/allergens/search_allergen.html.twig', [
             'search' => $search, 'allergens' => $allergens
         ]);
     }

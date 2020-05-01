@@ -18,7 +18,6 @@ class UserType extends AbstractType
     {
         $builder
 
-
             ->add('submit', SubmitType::class)
     ;
     }

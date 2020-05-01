@@ -1,0 +1,7 @@
+<h5>Vous avez recherché : {{ search }}</h5>
+{% for allergen in allergens %}
+    <div>
+        <h1>{{ allergen.type }}</h1>
+    </div>
+    <div><a href="{{ path ('admin_allergen_show', {'id':allergen.id}) }}"> - Liste des enfants concernés - </a></div>
+{% endfor %}

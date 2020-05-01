@@ -19,35 +19,21 @@ class ArticleRepository extends ServiceEntityRepository
         parent::__construct($registry, Article::class);
     }
 
-    // /**
-    //  * @return Article[] Returns an array of Article objects
-    //  */
-    /*
-    public function findByExampleField($value)
+//Création d'une méthode : selectionner un article en fonction d'un mot défini et contenu dans l'article
+    public function getByWordInArticle($word)
     {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('a.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Article
-    {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        $queryBuilder = $this->createQueryBuilder('article');
+        $query = $queryBuilder->select('article')
+            ->where('article.content LIKE :word')
+            //SECURITE
+            ->setParameter('word', '%' . $word . '%')
+            ->getQuery();
+
+        $results = $query->getResult();
+        //Méthode qui me retourne les résultats que l'on va ensuite appeler (afficher) dans mon Articlecontroller
+        return $results;
+
     }
-    */
-    public function getByWordInArticle($search)
-    {
-    }
+
 }

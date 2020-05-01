@@ -6,10 +6,12 @@ use App\Entity\Article;
 use App\Entity\Event;
 use App\Entity\User;
 use App\Form\EventType;
+use App\Form\UserEventType;
 use App\Form\UserType;
 use App\Repository\ArticleRepository;
 use App\Repository\EventRepository;
 use App\Repository\PictureRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -41,7 +43,6 @@ class HomeParentsController extends AbstractController
             'pictures' => $lastPictures
         ]);
     }
-
 }
 
 

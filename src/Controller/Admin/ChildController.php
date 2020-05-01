@@ -88,7 +88,7 @@ class ChildController extends AbstractController
     }
 
     /**
-     * @route("admin/child/search", name="admin_search_child")
+     * @route("admin/child/search", name="admin_child_search")
      * @param ChildRepository $childRepository
      * @param Request $request
      * @return Response

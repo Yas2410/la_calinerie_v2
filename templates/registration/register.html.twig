@@ -5,6 +5,7 @@
 {% block body %}
     <h1>Formulaire de création de compte</h1>
 
+<h3>Section Parents</h3>
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.lastName) }}
         {{ form_row(registrationForm.firstName) }}
@@ -17,7 +18,5 @@
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword) }}
         {{ form_row(registrationForm.agreeTerms) }}
-
-        <button class="btn">Valider</button>
     {{ form_end(registrationForm) }}
 {% endblock %}

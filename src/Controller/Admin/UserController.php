@@ -2,8 +2,10 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Article;
 use App\Entity\User;
-use App\Form\UserType;
+use App\Form\ArticleType;
+use App\Repository\ArticleRepository;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,8 +14,10 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
+
 class UserController extends AbstractController
 {
+
     /**
      * //* @Route("/admin/users", name="admin_users_list")
      * @param UserRepository $userRepository
@@ -22,6 +26,7 @@ class UserController extends AbstractController
 
     public function users(UserRepository $userRepository)
     {
+
         $users = $userRepository->findAllNonAdmin();
         return $this->render('admin/users/users.html.twig', [
             'users' => $users
@@ -34,17 +39,17 @@ class UserController extends AbstractController
      * @param $id
      * @return Response
      */
-    public function User(UserRepository $userRepository, $id)
+    public function user(UserRepository $userRepository, $id)
     {
         $user = $userRepository->find($id);
 
         return $this->render('admin/users/user.html.twig', [
-            'users' => $user
+            'user' => $user
         ]);
     }
 
     /**
-     * @route("admin/user/search", name="admin_user_family")
+     * @route("admin/user/search", name="admin_search_user")
      * @param UserRepository $userRepository
      * @param Request $request
      * @return Response
@@ -60,36 +65,6 @@ class UserController extends AbstractController
     }
 
     /**
-     * @route("admin/user/update/{id}", name="admin_update_user")
-     * @param Request $request
-     * @param UserRepository $userRepository
-     * @param EntityManagerInterface $entityManager
-     * @param $id
-     * @return Response
-     */
-    public function updateUser(
-        Request $request,
-        UserRepository $userRepository,
-        EntityManagerInterface $entityManager,
-        $id
-    )
-    {
-        $user = $userRepository->find($id);
-        $formUser = $this->createForm(UserType::class, $user);
-        $formUser->handleRequest($request);
-        if ($formUser->isSubmitted() && $formUser->isValid()) {
-            $entityManager->persist($user);
-            $entityManager->flush();
-
-            $this->addFlash('sucess', "La fiche utilisateur a bien été modifiée !");
-        }
-
-        return $this->render('admin/users/update_user.html.twig', [
-            'formFamily'=>$formUser->createView()
-        ]);
-    }
-
-    /**
      * @route("admin/user/delete/{id}", name="admin_delete_user")
      * @param UserRepository $userRepository
      * @param EntityManagerInterface $entityManager
@@ -99,7 +74,7 @@ class UserController extends AbstractController
      */
     public function deleteUser(
         Request $request,
-        UserRepository $userRepository,
+       UserRepository $userRepository,
         EntityManagerInterface $entityManager,
         $id
     )
@@ -108,7 +83,7 @@ class UserController extends AbstractController
         $entityManager->remove($user);
         $entityManager->flush();
 
-        $this->addFlash('sucess', "La fiche utilisateur a bien été supprimée !");
+        $this->addFlash('success', "L'utilisateur a bien été supprimé !");
 
         return $this->redirectToRoute('admin_users_list');
     }
