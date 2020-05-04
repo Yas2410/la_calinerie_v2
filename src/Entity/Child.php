@@ -46,6 +46,7 @@ class Child
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="children")
+     * @ORM\JoinColumn(name="user_id", onDelete="SET NULL")
      */
     private $user;
 

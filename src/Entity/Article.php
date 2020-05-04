@@ -31,6 +31,11 @@ class Article
      */
     private $image;
 
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $date;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -71,9 +76,21 @@ class Article
     /**
      * @param mixed $image
      */
-    public function setImage( $image): void
+    public function setImage($image): void
     {
         $this->image = $image;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(?\DateTimeInterface $date): self
+    {
+        $this->date = $date;
+
+        return $this;
     }
 
 }

@@ -5,6 +5,8 @@ namespace App\Form;
 use App\Entity\Article;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -18,19 +20,20 @@ class ArticleType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title',TextType::class, [
+            ->add('title', TextType::class, [
                 'label' => 'Titre',
             ])
-            ->add('content',TextareaType::class, [
+            ->add('content', TextareaType::class, [
                 'label' => 'Contenu',
             ])
             ->add('image', FileType::class, [
                 'required' => false,
                 'mapped' => false
-
             ])
-            ->add('submit', SubmitType::class)
-        ;
+            ->add('date', DateType::class, [
+                'widget' => 'single_text'
+            ])
+            ->add('submit', SubmitType::class);
     }
 
     public function configureOptions(OptionsResolver $resolver)

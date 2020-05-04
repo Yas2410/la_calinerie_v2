@@ -18,6 +18,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
+use function Sodium\add;
 
 
 class RegistrationFormType extends AbstractType
@@ -62,32 +63,32 @@ class RegistrationFormType extends AbstractType
                 'invalid_message' => 'Le mot de passe n\'est pas identique',
                 'options' => ['attr' => ['class' => 'password-field']],
                 'required' => true,
-                'first_options'  => ['label' => 'Mot de Passe'],
+                'first_options' => ['label' => 'Mot de Passe'],
                 'second_options' => ['label' => 'Confirmer le mot de passe'],
                 'mapped' => false,
                 'constraints' => [
-            new NotBlank([
-                'message' => 'Please enter a password',
-            ]),
-            new Length([
-                'min' => 6,
-                'minMessage' => 'Your password should be at least {{ limit }} characters',
-                // max length allowed by Symfony for security reasons
-                'max' => 4096,
-            ]),
-        ],
+                    new NotBlank([
+                        'message' => 'Please enter a password',
+                    ]),
+                    new Length([
+                        'min' => 6,
+                        'minMessage' => 'Your password should be at least {{ limit }} characters',
+                        // max length allowed by Symfony for security reasons
+                        'max' => 4096,
+                    ]),
+                ],
             ])
             ->add('agreeTerms', CheckboxType::class, [
-            'label' => "J'accepte les conditions générales du site",
-            'mapped' => false,
-            'constraints' => [
-                new IsTrue([
-                    'message' => 'You should agree to our terms.',
-                ]),
-            ],
-        ])
-            ->add('Submit', SubmitType::class)
-;
+                'label' => "J'accepte les conditions générales du site",
+                'mapped' => false,
+                'constraints' => [
+                    new IsTrue([
+                        'message' => 'You should agree to our terms.',
+                    ]),
+                ],
+            ])
+            ->add('Submit', SubmitType::class);
+
     }
 
     public function configureOptions(OptionsResolver $resolver)

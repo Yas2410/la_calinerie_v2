@@ -1,0 +1,8 @@
+{% for message in app.flashes('success') %}
+    <div class="message">
+        {{ message }}
+    </div>
+    <div>
+        <a href="{{ path ('admin_allergens_list') }}"> - Revenir à l'ensemble des allergènes - </a>
+    </div>
+{% endfor %}

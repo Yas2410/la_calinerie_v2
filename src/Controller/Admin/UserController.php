@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Article;
 use App\Entity\User;
 use App\Form\ArticleType;
+use App\Form\UserType;
 use App\Repository\ArticleRepository;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -49,7 +50,40 @@ class UserController extends AbstractController
     }
 
     /**
-     * @route("admin/user/search", name="admin_search_user")
+     * @route("admin/user/insert", name="admin_user_insert")
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @param $slugger
+     * @return Response
+     */
+
+    public function insertUser(Request $request,
+                               EntityManagerInterface $entityManager,
+                               SluggerInterface $slugger
+    )
+    {
+
+        $user = new User();
+
+        $formUser = $this->createForm(UserType::class, $user);
+        $formUser->handleRequest($request);
+
+        if ($formUser->isSubmitted() && $formUser->isValid()) {
+
+            $entityManager->persist($user);
+            $entityManager->flush();
+
+            $this->addFlash('success', "L'utilisateur a bien été créé !");
+
+        }
+        return $this->render('admin/users/user_insert.html.twig', [
+            'formUser' => $formUser->createView()
+        ]);
+
+    }
+
+    /**
+     * @route("admin/user/search", name="admin_user_search")
      * @param UserRepository $userRepository
      * @param Request $request
      * @return Response
@@ -59,13 +93,49 @@ class UserController extends AbstractController
         $search = $request->query->get('search');
         $users = $userRepository->getByWordInUser($search);
 
-        return $this->render('admin/users/search_user.html.twig', [
+        return $this->render('admin/users/user_search.html.twig', [
             'search' => $search, 'users' => $users
         ]);
     }
 
     /**
-     * @route("admin/user/delete/{id}", name="admin_delete_user")
+     * @route("admin/user/update/{id}", name="admin_user_update")
+     * @param Request $request
+     * @param UserRepository $userRepository
+     * @param SluggerInterface $slugger
+     * @param EntityManagerInterface $entityManager
+     * @param $id
+     * @return Response
+     */
+    public function updateUser(
+        Request $request,
+        UserRepository $userRepository,
+        SluggerInterface $slugger,
+        EntityManagerInterface $entityManager,
+        $id
+    )
+    {
+        $user = $userRepository->find($id);
+
+        $formUser = $this->createForm(UserType::class, $user);
+        $formUser->handleRequest($request);
+
+        if ($formUser->isSubmitted() && $formUser->isValid()) {
+
+            $entityManager->persist($user);
+            $entityManager->flush();
+
+            $this->addFlash('success', "L'utilisateur a bien été modifié !");
+
+        }
+
+        return $this->render('admin/users/user_insert.html.twig', [
+            'formUser' => $formUser->createView()
+        ]);
+    }
+
+    /**
+     * @route("admin/user/delete/{id}", name="admin_user_delete")
      * @param UserRepository $userRepository
      * @param EntityManagerInterface $entityManager
      * @param Request $request
@@ -74,7 +144,7 @@ class UserController extends AbstractController
      */
     public function deleteUser(
         Request $request,
-       UserRepository $userRepository,
+        UserRepository $userRepository,
         EntityManagerInterface $entityManager,
         $id
     )
@@ -85,7 +155,9 @@ class UserController extends AbstractController
 
         $this->addFlash('success', "L'utilisateur a bien été supprimé !");
 
-        return $this->redirectToRoute('admin_users_list');
+        return $this->render('admin/users/user_delete.html.twig', [
+            'user' => $user
+        ]);
     }
 
 }

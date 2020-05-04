@@ -72,7 +72,7 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
     {
         $queryBuilder = $this->createQueryBuilder('user');
         $query = $queryBuilder->select('user')
-            ->where('user.lastName LIKE :word')
+            ->where('user.lastName LIKE :word OR user.firstName LIKE :word')
             ->setParameter('word', '%' . $word . '%')
             ->getQuery();
 

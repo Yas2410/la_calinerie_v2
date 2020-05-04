@@ -1,12 +1,16 @@
+<div>
+    <a href="{{ path ('admin_event_insert') }}"> - Créer un nouvel évènement - </a>
+</div>
+<div>
+    <a href="{{ path ('admin_dashboard') }}"> - Accueil - </a>
+</div>
+
 {% for event in events %}
 <div>
     <h1>{{ event.title }}</h1>
+    <h6>{{ event.date|date('d/m/Y') }}</h6>
     <div>
-        <img src="{{ asset ('uploads/admin/events/') ~ event.image}}" alt="">
+        <a href="{{ path ('admin_event_show', {'id':event.id}) }}"> - Voir l'évènement - </a>
     </div>
-    <p> {{ event.content }}</p>
-    <div><a class="delete" href="{{ path ('admin_delete_event', {'id':event.id}) }}"> - Supprimer l'evenement' - </a>
-    </div>
-    <div class="margin"><a class="update" href="{{ path ('admin_update_event', {'id':event.id}) }}"> - Modifier l'evenement' - </a></div>
     {% endfor %}
 </div>

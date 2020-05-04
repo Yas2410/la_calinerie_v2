@@ -39,12 +39,12 @@ class AllergenController extends AbstractController
         $allergen = $allergenRepository->find($id);
 
         return $this->render('admin/allergens/allergen.html.twig', [
-            'allergens' => $allergen,
+            'allergen' => $allergen,
         ]);
     }
 
     /**
-     * @route("admin/allergen/insert", name="admin_insert_allergen")
+     * @route("admin/allergen/insert", name="admin_allergen_insert")
      * @param Request $request
      * @param EntityManagerInterface $entityManager
      * @param $slugger
@@ -67,10 +67,10 @@ class AllergenController extends AbstractController
             $entityManager->persist($allergen);
             $entityManager->flush();
 
-            $this->addFlash('success', "Le nouveau type d'allergie a bien été créé !");
+            $this->addFlash('success', "Le nouveau type d'allergène a bien été créé !");
 
         }
-        return $this->render('admin/allergens/insert_allergen.html.twig', [
+        return $this->render('admin/allergens/allergen_insert.html.twig', [
             'formAllergen' => $formAllergen->createView()
 
         ]);
@@ -78,7 +78,7 @@ class AllergenController extends AbstractController
     }
 
     /**
-     * @route("admin/allergen/search", name="admin_search_allergen")
+     * @route("admin/allergen/search", name="admin_allergen_search")
      * @param AllergenRepository $allergenRepository
      * @param Request $request
      * @return Response
@@ -88,13 +88,13 @@ class AllergenController extends AbstractController
         $search = $request->query->get('search');
         $allergens = $allergenRepository->getByWordInAllergen($search);
 
-        return $this->render('admin/allergens/search_allergen.html.twig', [
+        return $this->render('admin/allergens/allergen_search.html.twig', [
             'search' => $search, 'allergens' => $allergens
         ]);
     }
 
     /**
-     * @route("admin/allergen/update/{id}", name="admin_update_allergen")
+     * @route("admin/allergen/update/{id}", name="admin_allergen_update")
      * @param Request $request
      * @param AllergenRepository $allergenRepository
      * @param EntityManagerInterface $entityManager
@@ -115,16 +115,16 @@ class AllergenController extends AbstractController
             $entityManager->persist($allergen);
             $entityManager->flush();
 
-            $this->addFlash('sucess', "L'allergie a bien été modifiée !");
+            $this->addFlash('success', "Le type d'allergène a bien été modifié !");
         }
 
-        return $this->render('admin/allergens/update_family.html.twig', [
-            'formAllergen'=>$formAllergen->createView()
+        return $this->render('admin/allergens/allergen_insert.html.twig', [
+            'formAllergen' => $formAllergen->createView()
         ]);
     }
 
     /**
-     * @route("admin/allergen/delete/{id}", name="admin_delete_allergen")
+     * @route("admin/allergen/delete/{id}", name="admin_allergen_delete")
      * @param AllergenRepository $allergenRepository
      * @param EntityManagerInterface $entityManager
      * @param Request $request
@@ -142,9 +142,11 @@ class AllergenController extends AbstractController
         $entityManager->remove($allergen);
         $entityManager->flush();
 
-        $this->addFlash('sucess', "L'allergie a bien été supprimée !");
+        $this->addFlash('success', "Le type d'allergène a bien été supprimé !");
 
-        return $this->redirectToRoute('admin_allergens_list');
+        return $this->render('admin/allergens/allergen_delete.html.twig', [
+            'allergen' => $allergen
+        ]);
     }
 
 }

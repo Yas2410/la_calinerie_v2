@@ -1,6 +1,13 @@
+<form action="{{ path('search_event') }}" method="GET">
+    <input type="search" name="search">
+    <input type="submit" value="Rechercher">
+</form>
+
+
 {% for event in events %}
 <div>
     <h1>{{ event.title }}</h1>
+    <h6>{{ event.date|date('d-m-Y') }}</h6>
     <div>
         <img src="{{ asset ('uploads/admin/events/') ~ event.image}}" alt="">
     </div>

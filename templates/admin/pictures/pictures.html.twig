@@ -1,12 +1,15 @@
+<div>
+    <a href="{{ path ('admin_picture_insert') }}"> - Insérer une nouvelle photo - </a>
+</div>
+<div>
+    <a href="{{ path ('admin_dashboard') }}"> - Accueil - </a>
+</div>
+
 {% for picture in pictures %}
 <div>
-    <div>
-        <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image}}" alt="">
-    </div>
     <p> {{ picture.description }}</p>
-    <div><a class="delete" href="{{ path ('admin_delete_picture', {'id':picture.id}) }}"> - Supprimer la photo - </a>
+    <div>
+        <a href="{{ path ('admin_picture_show', {'id':picture.id}) }}"> - Voir la photo - </a>
     </div>
-    <div class="margin"><a class="update" href="{{ path ('admin_update_picture', {'id':picture.id}) }}"> - Modifier la photo - </a></div>
-
     {% endfor %}
 </div>

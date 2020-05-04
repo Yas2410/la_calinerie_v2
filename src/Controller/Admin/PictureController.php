@@ -39,12 +39,12 @@ class PictureController extends AbstractController
         $picture = $pictureRepository->find($id);
 
         return $this->render('admin/pictures/picture.html.twig', [
-            'pictures' => $picture
+            'picture' => $picture
         ]);
     }
 
     /**
-     * @route("admin/picture/insert", name="admin_picture_event")
+     * @route("admin/picture/insert", name="admin_picture_insert")
      * @param Request $request
      * @param EntityManagerInterface $entityManager
      * @param $slugger
@@ -82,17 +82,17 @@ class PictureController extends AbstractController
             $entityManager->persist($picture);
             $entityManager->flush();
 
-            $this->addFlash('success', "Le fichier a bien été inséré !");
+            $this->addFlash('success', "La photo a bien été uploadée !");
 
         }
-        return $this->render('admin/pictures/insert_picture.html.twig', [
+        return $this->render('admin/pictures/picture_insert.html.twig', [
             'formPicture' => $formPicture->createView()
         ]);
 
     }
 
     /**
-     * @route("admin/picture/search", name="admin_search_picture")
+     * @route("admin/picture/search", name="admin_picture_search")
      * @param PictureRepository $pictureRepository
      * @param Request $request
      * @return Response
@@ -102,13 +102,13 @@ class PictureController extends AbstractController
         $search = $request->query->get('search');
         $pictures = $pictureRepository->getByWordInPicture($search);
 
-        return $this->render('admin/pictures/search_picture.html.twig', [
+        return $this->render('admin/pictures/picture_search.html.twig', [
             'search' => $search, 'pictures' => $pictures
         ]);
     }
 
     /**
-     * @route("admin/picture/update/{id}", name="admin_update_picture")
+     * @route("admin/picture/update/{id}", name="admin_picture_update")
      * @param Request $request
      * @param PictureRepository $pictureRepository
      * @param SluggerInterface $slugger
@@ -152,13 +152,13 @@ class PictureController extends AbstractController
             $this->addFlash('success', "L'élément a bien été modifié !");
         }
 
-        return $this->render('admin/pictures/insert_picture.html.twig', [
-            'formPicture'=>$formPicture->createView()
+        return $this->render('admin/pictures/picture_insert.html.twig', [
+            'formPicture' => $formPicture->createView()
         ]);
     }
 
     /**
-     * @route("admin/picture/delete/{id}", name="admin_delete_picture")
+     * @route("admin/picture/delete/{id}", name="admin_picture_delete")
      * @param PictureRepository $pictureRepository
      * @param EntityManagerInterface $entityManager
      * @param Request $request
@@ -178,7 +178,9 @@ class PictureController extends AbstractController
 
         $this->addFlash('success', "L'élément' a bien été supprimé !");
 
-        return $this->redirectToRoute('admin_pictures_list');
+        return $this->render('admin/pictures/picture_delete.html.twig', [
+            'picture' => $picture
+        ]);
     }
 
 }

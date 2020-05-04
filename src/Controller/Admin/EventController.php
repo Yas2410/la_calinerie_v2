@@ -39,12 +39,12 @@ class EventController extends AbstractController
         $event = $eventRepository->find($id);
 
         return $this->render('admin/events/event.html.twig', [
-            'events' => $event
+            'event' => $event
         ]);
     }
 
     /**
-     * @route("admin/event/insert", name="admin_insert_event")
+     * @route("admin/event/insert", name="admin_event_insert")
      * @param Request $request
      * @param EntityManagerInterface $entityManager
      * @param $slugger
@@ -85,14 +85,14 @@ class EventController extends AbstractController
             $this->addFlash('success', "L'évènement a bien été créé !");
 
         }
-        return $this->render('admin/events/insert_event.html.twig', [
+        return $this->render('admin/events/event_insert.html.twig', [
             'formEvent' => $formEvent->createView()
         ]);
 
     }
 
     /**
-     * @route("admin/event/search", name="admin_search_event")
+     * @route("admin/event/search", name="admin_event_search")
      * @param EventRepository $eventRepository
      * @param Request $request
      * @return Response
@@ -102,13 +102,13 @@ class EventController extends AbstractController
         $search = $request->query->get('search');
         $events = $eventRepository->getByWordInEvent($search);
 
-        return $this->render('admin/events/search_event.html.twig', [
+        return $this->render('admin/events/event_search.html.twig', [
             'search' => $search, 'events' => $events
         ]);
     }
 
     /**
-     * @route("admin/event/update/{id}", name="admin_update_event")
+     * @route("admin/event/update/{id}", name="admin_event_update")
      * @param Request $request
      * @param EventRepository $eventRepository
      * @param SluggerInterface $slugger
@@ -152,13 +152,13 @@ class EventController extends AbstractController
             $this->addFlash('success', "L'évènement a bien été modifié !");
         }
 
-        return $this->render('admin/events/insert_event.html.twig', [
+        return $this->render('admin/events/event_insert.html.twig', [
             'formEvent' => $formEvent->createView()
         ]);
     }
 
     /**
-     * @route("admin/event/delete/{id}", name="admin_delete_event")
+     * @route("admin/event/delete/{id}", name="admin_event_delete")
      * @param EventRepository $eventRepository
      * @param EntityManagerInterface $entityManager
      * @param Request $request
@@ -176,9 +176,11 @@ class EventController extends AbstractController
         $entityManager->remove($event);
         $entityManager->flush();
 
-        $this->addFlash('sucess', "L'évènement a bien été supprimé !");
+        $this->addFlash('success', "L'évènement a bien été supprimé !");
 
-        return $this->redirectToRoute('admin_events_list');
+        return $this->render('admin/events/event_delete.html.twig', [
+            'event' => $event
+        ]);
     }
 
 }

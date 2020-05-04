@@ -4,8 +4,11 @@
     </div>
 {% endfor %}
 
-<div class="form" >
+<div class="form">
     {{ form_start(formPicture) }}
 
     {{ form_end(formPicture) }}
+</div>
+<div>
+    <a href="{{ path ('admin_pictures_list') }}"> - Revenir à la galerie photo - </a>
 </div>

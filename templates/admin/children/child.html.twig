@@ -1,27 +1,37 @@
-
-
-<h1>{{ children.firstName }} {{ children.lastName }}</h1>
+<h1>{{ child.firstName }} {{ child.lastName }}</h1>
 <div>
-<span>Né(e) le : {{ children.birthDate|date('d/m/Y') }}</span>
-<span>De sexe {{ children.sex }}</span>
+    <p>Né(e) le : {{ child.birthDate|date('d/m/Y') }}</p>
+    <p>De sexe : {{ child.sex }}</p>
 </div>
 <div>
-<h2>FICHE CONTACT</h2>
+    <h2>FICHE CONTACT</h2>
     <div>
-    M. / Mme {{ children.user.lastName }} {{ children.user.firstName }}
-    Adresse :   {{ children.user.address }}
-                {{ children.user.zipcode }}
-                {{ children.user.city }}
-    Téléphone : {{ children.user.phoneNumber }}
-    Adresse mail : {{ children.user.email }}
+        {% if child.user is not null %}
+        M. / Mme {{ child.user.lastName }} {{ child.user.firstName }}
+        Adresse : {{ child.user.address }}
+        {{ child.user.zipcode }}
+        {{ child.user.city }}
+        Téléphone : {{ child.user.phoneNumber }}
+        Adresse mail : {{ child.user.email }}
+        {% else %}
+        Aucun compte parent rattaché à la fiche enfant
+        {% endif %}
     </div>
 </div>
-
 <div>
-    {%  for allergen in children.allergen %}
-<p>
-   Allergènes :
-    {{allergen.type}}
-    {% endfor %}
-</p>
+    Allergènes :
+    {% for allergen in child.allergen %}
+    <p>
+        {{ allergen.type }}
+        {% endfor %}
+    </p>
+</div>
+<div>
+    <a href="{{ path ('admin_child_update', {'id':child.id}) }}"> - Modifier la fiche enfant - </a>
+</div>
+<div>
+    <a href="{{ path ('admin_child_delete', {'id':child.id}) }}"> - Supprimer la fiche enfant - </a>
+</div>
+<div>
+    <a href="{{ path ('admin_children_list') }}"> - Revenir à la liste des enfants - </a>
 </div>

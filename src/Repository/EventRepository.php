@@ -47,7 +47,16 @@ class EventRepository extends ServiceEntityRepository
         ;
     }
     */
-    public function getByWordInEvent($search)
+    public function getByWordInEvent($word)
     {
+        $queryBuilder = $this->createQueryBuilder('event');
+        $query = $queryBuilder->select('event')
+            ->where('event.title LIKE :word OR event.content LIKE :word')
+            ->setParameter('word', '%' . $word . '%')
+            ->getQuery();
+
+        $results = $query->getResult();
+        return $results;
     }
+
 }

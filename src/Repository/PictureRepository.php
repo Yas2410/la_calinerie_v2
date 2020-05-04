@@ -47,7 +47,16 @@ class PictureRepository extends ServiceEntityRepository
         ;
     }
     */
-    public function getByWordInPicture($search)
+    public function getByWordInPicture($word)
     {
+        $queryBuilder = $this->createQueryBuilder('picture');
+        $query = $queryBuilder->select('picture')
+            ->where('picture.description LIKE :word OR picture.image LIKE :word')
+            ->setParameter('word', '%' . $word . '%')
+            ->getQuery();
+
+        $results = $query->getResult();
+        return $results;
     }
+
 }

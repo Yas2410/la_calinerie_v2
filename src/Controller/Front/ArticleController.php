@@ -79,5 +79,6 @@ Valable pour toutes les classes, à l'exception des entités. */
             'search' => $search, 'articles' => $articles
         ]);
     }
+
 }
 

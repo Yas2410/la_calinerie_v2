@@ -1,14 +1,39 @@
 <main>
-    Bienvenue sur l'admin !
+    <h1>Bienvenue sur l'espace Administrateur de LA CALINERIE !</h1>
 </main>
 <aside>
-    <a href="{{ path('admin_articles_list') }}">Voir les articles</a>
-    <a href="{{ path('admin_events_list') }}">Voir les évènements</a>
-    <a href="{{ path('admin_pictures_list') }}">Voir les photos</a>
-    <a href="{{ path('admin_allergens_list') }}">Voir la liste des allergènes</a>
-    <a href="{{ path('admin_children_list') }}">LISTE DES ENFANTS</a>
-    <a href="{{ path('admin_users_list') }}">LISTE DES FAMILLES</a>
-    <a href="{{ path('admin_menus_list') }}">les menus</a>
-
-
+    <div>
+        <a href="{{ path('admin_articles_list') }}">Voir les articles</a>
+        <a href="{{ path('admin_events_list') }}">Voir les évènements</a>
+        <a href="{{ path('admin_pictures_list') }}">Voir les photos</a>
+        <a href="{{ path('admin_allergens_list') }}">Voir la liste des allergènes</a>
+        <a href="{{ path('admin_menus_list') }}">Voir les menus</a>
+    </div>
+    <div>
+        <a href="{{ path('admin_children_list') }}">LES ENFANTS</a>
+        <a href="{{ path('admin_users_list') }}">LES FAMILLES</a>
+    </div>
 </aside>
+<article>
+    <h2>Les derniers enfants inscrits :</h2>
+    {% for child in children %}
+        <p>
+            {{ child.firstName }} {{ child.lastName }}
+        </p>
+    {% endfor %}
+    <div>
+        <a href="{{ path('admin_children_list') }}"> Voir la liste complète </a>
+    </div>
+</article>
+<br/>
+<article>
+    <h2>Les derniers comptes parents créés :</h2>
+    {% for user in users %}
+        <p>
+            {{ user.firstName }} {{ user.lastName }}
+        </p>
+    {% endfor %}
+    <div>
+        <a href="{{ path('admin_users_list') }}"> Voir la liste complète </a>
+    </div>
+</article>

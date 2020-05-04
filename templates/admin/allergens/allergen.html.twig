@@ -1,10 +1,20 @@
-<h1>{{allergens.type}}</h1>
+<h1>{{ allergen.type }}</h1>
 <div>
-    {%  for children in allergens.children %}
+    Liste des enfants concernés :
+    {% for children in allergen.children %}
     <p>
-        {{children.firstName}}
+        {{ children.firstName }}
         {% endfor %}
     </p>
+    <div>
+        <a href="{{ path ('admin_allergen_update', {'id':allergen.id}) }}"> - Modifier le type d'allergène - </a>
+    </div>
+    <div>
+        <a href="{{ path ('admin_allergen_delete', {'id':allergen.id}) }}"> - Supprimer l'allergène - </a>
+    </div>
+    <div>
+        <a href="{{ path ('admin_allergens_list') }}"> - Revenir à l'ensemble des allergènes - </a>
+    </div>
 </div>
 
 

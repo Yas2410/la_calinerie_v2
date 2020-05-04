@@ -1,0 +1,15 @@
+<h5>Vous avez recherché : {{ search }}</h5>
+
+<div>
+    {% for child in children %}
+    <div>
+        <p>
+        <h1>{{ child.firstName }} {{ child.lastName }}</h1>
+
+        <div><a href="{{ path ('admin_child_show', {'id':child.id}) }}"> - Details - </a></div>
+        {% endfor %}
+    </div>
+</div>
+<div>
+    <a href="{{ path ('admin_children_list') }}"> - Revenir à la liste des enfants  - </a>
+</div>

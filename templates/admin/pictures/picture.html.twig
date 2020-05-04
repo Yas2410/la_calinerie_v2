@@ -1,0 +1,13 @@
+<div>
+    <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image }}" alt="">
+</div>
+<p> {{ picture.description }}</p>
+<div>
+    <a href="{{ path ('admin_picture_update', {'id':picture.id}) }}"> - Modifier la photo - </a>
+</div>
+<div>
+    <a href="{{ path ('admin_picture_delete', {'id':picture.id}) }}"> - Supprimer la photo - </a>
+</div>
+<div>
+    <a href="{{ path ('admin_pictures_list') }}"> - Revenir à la galerie photo - </a>
+</div>

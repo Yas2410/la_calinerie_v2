@@ -1,3 +1,8 @@
+<form action="{{ path('search_picture') }}" method="GET">
+    <input type="search" name="search">
+    <input type="submit" value="Rechercher">
+</form>
+
 {% for picture in pictures %}
 <div>
     <div>

@@ -52,13 +52,13 @@ class ChildController extends AbstractController
         $user = $userRepository->find($id);
 
         return $this->render('admin/children/child.html.twig', [
-            'children' => $child,
+            'child' => $child,
             'user' => $user,
         ]);
     }
 
     /**
-     * @route("admin/child/insert", name="admin_insert_child")
+     * @route("admin/child/insert", name="admin_child_insert")
      * @param Request $request
      * @param EntityManagerInterface $entityManager
      * @param $slugger
@@ -71,7 +71,7 @@ class ChildController extends AbstractController
     )
     {
         $child = new Child();
-        $formChild= $this->createForm(ChildType::class, $child);
+        $formChild = $this->createForm(ChildType::class, $child);
         $formChild->handleRequest($request);
 
         if ($formChild->isSubmitted() && $formChild->isValid()) {
@@ -79,10 +79,10 @@ class ChildController extends AbstractController
             $entityManager->persist($child);
             $entityManager->flush();
 
-            $this->addFlash('success', "L'enfant' a bien été créé !");
+            $this->addFlash('success', "La fiche enfant a bien été créée !");
 
         }
-        return $this->render('admin/children/insert_child.html.twig', [
+        return $this->render('admin/children/child_insert.html.twig', [
             'formChild' => $formChild->createView()
         ]);
     }
@@ -98,13 +98,13 @@ class ChildController extends AbstractController
         $search = $request->query->get('search');
         $children = $childRepository->getByWordInChild($search);
 
-        return $this->render('admin/children/search_child.html.twig', [
+        return $this->render('admin/children/child_search.html.twig', [
             'search' => $search, 'children' => $children
         ]);
     }
 
     /**
-     * @route("admin/child/update/{id}", name="admin_update_child")
+     * @route("admin/child/update/{id}", name="admin_child_update")
      * @param Request $request
      * @param ChildRepository $childRepository
      * @param EntityManagerInterface $entityManager
@@ -125,16 +125,16 @@ class ChildController extends AbstractController
             $entityManager->persist($child);
             $entityManager->flush();
 
-            $this->addFlash('sucess', "La fiche enfant a bien été modifiée !");
+            $this->addFlash('success', "La fiche enfant a bien été modifiée !");
         }
 
-        return $this->render('admin/children/update_child.html.twig', [
-            'formChild'=>$formChild->createView()
+        return $this->render('admin/children/child_insert.html.twig', [
+            'formChild' => $formChild->createView()
         ]);
     }
 
     /**
-     * @route("admin/child/delete/{id}", name="admin_delete_child")
+     * @route("admin/child/delete/{id}", name="admin_child_delete")
      * @param ChildRepository $childRepository
      * @param EntityManagerInterface $entityManager
      * @param Request $request
@@ -152,9 +152,11 @@ class ChildController extends AbstractController
         $entityManager->remove($child);
         $entityManager->flush();
 
-        $this->addFlash('sucess', "La fiche enfant a bien été supprimée !");
+        $this->addFlash('success', "La fiche enfant a bien été supprimée !");
 
-        return $this->redirectToRoute('admin_children_list');
+        return $this->render('admin/articles/child_delete.html.twig', [
+            'child' => $child
+        ]);
     }
 
 }

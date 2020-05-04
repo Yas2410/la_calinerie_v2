@@ -1,12 +1,22 @@
-<form action="{{ path('admin_search_allergen') }}" method="GET">
+<form action="{{ path('admin_allergen_search') }}" method="GET">
     <input type="search" name="search">
     <input type="submit" value="Rechercher">
 </form>
-{% for allergen in allergens %}
+
 <div>
-    <h1>{{ allergen.type }}</h1>
+    <a href="{{ path ('admin_allergen_insert') }}"> - Insérer un nouveau type d'allergène - </a>
 </div>
-    <div><a href="{{ path ('admin_allergen_show', {'id':allergen.id}) }}"> - Liste des enfants concernés - </a></div>
+<div>
+    <a href="{{ path ('admin_dashboard') }}"> - Accueil - </a>
+</div>
+
+{% for allergen in allergens %}
+    <div>
+        <h1>{{ allergen.type }}</h1>
+    </div>
+    <div>
+        <a href="{{ path ('admin_allergen_show', {'id':allergen.id}) }}"> - Détails - </a>
+    </div>
 {% endfor %}
-<div><a href="{{ path ('admin_insert_allergen') }}"> - Insérer un nouveau type d'allergène - </a></div>
+
 

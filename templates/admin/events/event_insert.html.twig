@@ -4,8 +4,11 @@
     </div>
 {% endfor %}
 
-<div class="form" >
+<div class="form">
     {{ form_start(formEvent) }}
 
     {{ form_end(formEvent) }}
+</div>
+<div>
+    <a href="{{ path ('admin_events_list') }}"> - Revenir à l'ensemble des évènements - </a>
 </div>

@@ -1,0 +1,14 @@
+<div>
+    <h1>{{ article.title }}</h1>
+    <img src="{{ asset ('uploads/admin/articles/') ~ article.image }}" alt="">
+</div>
+<p> {{ article.content }}</p>
+<div>
+    <a href="{{ path ('admin_article_update', {'id':article.id}) }}"> - Modifier l'article - </a>
+</div>
+<div>
+    <a href="{{ path ('admin_article_delete', {'id':article.id}) }}"> - Supprimer l'article - </a>
+</div>
+<div>
+    <a href="{{ path ('admin_articles_list') }}"> - Revenir à l'ensemble des articles - </a>
+</div>

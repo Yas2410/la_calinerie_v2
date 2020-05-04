@@ -51,7 +51,7 @@ class ChildRepository extends ServiceEntityRepository
     {
         $queryBuilder = $this->createQueryBuilder('child');
         $query = $queryBuilder->select('child')
-            ->where('child.firstName LIKE :word')
+            ->where('child.firstName LIKE :word OR child.lastName LIKE :word')
             ->setParameter('word', '%' . $word . '%')
             ->getQuery();
 

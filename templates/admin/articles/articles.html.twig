@@ -1,12 +1,16 @@
+<div>
+    <a href="{{ path ('admin_article_insert') }}"> - Rédiger un nouvel article - </a>
+</div>
+<div>
+    <a href="{{ path ('admin_dashboard') }}"> - Accueil - </a>
+</div>
+
 {% for article in articles %}
 <div>
     <h1>{{ article.title }}</h1>
+    <h6>{{ article.date|date('d/m/Y') }}</h6>
     <div>
-        <img src="{{ asset ('uploads/admin/articles/') ~ article.image}}" alt="">
+        <a href="{{ path ('admin_article_show', {'id':article.id}) }}"> - Voir l'article - </a>
     </div>
-    <p> {{ article.content }}</p>
-    <div><a class="delete" href="{{ path ('admin_delete_article', {'id':article.id}) }}"> - Supprimer l'article' - </a>
-    </div>
-    <div class="margin"><a class="update" href="{{ path ('admin_update_article', {'id':article.id}) }}"> - Modifier l'article' - </a></div>
     {% endfor %}
 </div>

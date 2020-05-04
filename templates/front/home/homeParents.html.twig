@@ -13,6 +13,7 @@
     <h2>Les derniers articles ajoutés :</h2>
     {% for article in articles %}
         <h4>{{ article.title }}</h4>
+        <h6>{{ article.date|date('d-m-Y')  }}</h6>
         <img src="{{ asset ('uploads/admin/articles/') ~ article.image}}" alt="">
         <span> <em>{{ article.content }} </em></span>
     {% endfor %}
@@ -22,6 +23,7 @@
     <h2>Les derniers évènements ajoutés :</h2>
     {% for event in events %}
         <h4>{{ event.title }}</h4>
+        <h6>{{ event.date|date('d-m-Y') }}</h6>
         <img src="{{ asset ('uploads/admin/events/') ~ event.image}}" alt="">
         <span> <em>{{ event.content }} </em></span>
     {% endfor %}
@@ -35,8 +37,11 @@
     {% endfor %}
 </article>
 
+<div>
+    <a href="{{ path ('parents_user_show', {'id':app.user.id}) }}"> - Voir ma fiche famille - </a>
+</div>
+
 <div class="margin"><a class="update" href="{{ path ('parents_insert_child') }}"> - Fiche Enfant - </a></div>
-
-
+</div>
 </body>
 </html>

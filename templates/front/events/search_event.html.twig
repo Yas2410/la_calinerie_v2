@@ -1,0 +1,17 @@
+<section>
+
+    <h5>Vous avez recherché l'évènement' : {{ search }}</h5>
+
+
+    {% for event in events %}
+    <div>
+        <h1>{{ event.title }}</h1>
+        <h6>{{ event.date|date('d-m-Y') }}</h6>
+        <div>
+            <img src="{{ asset ('uploads/admin/events/') ~ event.image}}" alt="">
+        </div>
+        <p> {{ event.content }}</p>
+        {% endfor %}
+    </div>
+
+</section>

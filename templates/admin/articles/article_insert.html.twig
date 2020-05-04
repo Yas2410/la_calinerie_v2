@@ -4,8 +4,11 @@
     </div>
 {% endfor %}
 
-<div class="form" >
+<div class="form">
     {{ form_start(formArticle) }}
 
     {{ form_end(formArticle) }}
+</div>
+<div>
+    <a href="{{ path ('admin_articles_list') }}"> - Revenir à l'ensemble des articles - </a>
 </div>

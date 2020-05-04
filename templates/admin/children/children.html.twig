@@ -2,16 +2,19 @@
     <input type="search" name="search">
     <input type="submit" value="Rechercher">
 </form>
-<section>
+
+<div>
+    <a href="{{ path ('admin_child_insert') }}"> - Créer une nouvelle fiche enfant - </a>
+</div>
+<div>
+    <a href="{{ path ('admin_dashboard') }}"> - Accueil - </a>
+</div>
+
+{% for child in children %}
+<div>
+    <h1>{{ child.firstName }} {{ child.lastName }}</h1>
     <div>
-        <h1>Liste des enfants inscrits</h1>
-
-        {% for children in children %}
-        <div>
-            <p>
-            <h1>{{ children.firstName }} {{ children.lastName }}</h1>
-
-            {% endfor %}
-        </div>
+        <a href="{{ path ('admin_child_show', {'id':child.id}) }}"> - Détails - </a>
     </div>
-</section>
+    {% endfor %}
+</div>

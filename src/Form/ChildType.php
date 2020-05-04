@@ -38,25 +38,25 @@ class ChildType extends AbstractType
                 ],
                 'expanded' => true
             ])
-            ->add('allergen',CollectionType::class, [
+            ->add('allergen', CollectionType::class, [
                 'entry_type' => AllergenType::class,
                 'required' => false
             ])
-            ->add('allergen',EntityType::class, [
+            ->add('allergen', EntityType::class, [
                 'class' => Allergen::class,
                 'multiple' => true,
                 'label' => 'Allergène',
                 'choice_label' => 'type',
-                'required' => false
+                'required' => false,
+
             ])
-            ->add('user',EntityType::class, [
+            ->add('user', EntityType::class, [
                 'class' => User::class,
                 'label' => 'FAMILLE',
-                'choice_label' => 'lastName'
+                'choice_label' => 'lastName',
+                'required' => false
             ])
-
-            ->add('submit', SubmitType::class)
-    ;
+            ->add('submit', SubmitType::class);
     }
 
     public function configureOptions(OptionsResolver $resolver)

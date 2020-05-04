@@ -17,9 +17,9 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 class ArticleController extends AbstractController
 {
 
-/* La synthaxe d'une @route : annotation et non commentaire car "/**".
- Chaque route fait la correspondance entre l'url à afficher et le controller à exécuter pour permettre
-cet affichage. */
+    /* La synthaxe d'une @route : annotation et non commentaire car "/**".
+     Chaque route fait la correspondance entre l'url à afficher et le controller à exécuter pour permettre
+    cet affichage. */
 
     /**
      * //* @Route("/admin/articles", name="admin_articles_list")
@@ -27,15 +27,15 @@ cet affichage. */
      * @return Response
      */
 
-/* J'instancie ici la classe ArticleRepository dans la variable $articleRepository.
-Pour cela, on utilise l'"autowire" de Symfony : Automatise la configuration des services.
-Valable pour toutes les classes, à l'exception des entités. */
+    /* J'instancie ici la classe ArticleRepository dans la variable $articleRepository.
+    Pour cela, on utilise l'"autowire" de Symfony : Automatise la configuration des services.
+    Valable pour toutes les classes, à l'exception des entités. */
 
     public function articles(ArticleRepository $articleRepository)
     {
 
-/* Récupérer le repository des Articles, car c'est la classe Repository
- qui me permet de sélectionner les évènements en BDD. */
+        /* Récupérer le repository des Articles, car c'est la classe Repository
+         qui me permet de sélectionner les évènements en BDD. */
 
         $articles = $articleRepository->findAll();
         return $this->render('admin/articles/articles.html.twig', [
@@ -64,7 +64,7 @@ Valable pour toutes les classes, à l'exception des entités. */
 // Création d'une nouvelle route pour INSERER des articles.
 
     /**
-     * @route("admin/article/insert", name="admin_insert_article")
+     * @route("admin/article/insert", name="admin_article_insert")
      * @param Request $request
      * @param EntityManagerInterface $entityManager
      * @param $slugger
@@ -72,8 +72,8 @@ Valable pour toutes les classes, à l'exception des entités. */
      */
 
     public function insertArticle(Request $request,
-        EntityManagerInterface $entityManager,
-        SluggerInterface $slugger
+                                  EntityManagerInterface $entityManager,
+                                  SluggerInterface $slugger
     )
     {
 // Création d'un nouvel articles afin de le lier au formulaire.
@@ -116,7 +116,7 @@ Valable pour toutes les classes, à l'exception des entités. */
             $this->addFlash('success', "L'article a bien été créé !");
 
         }
-        return $this->render('admin/articles/insert_article.html.twig', [
+        return $this->render('admin/articles/article_insert.html.twig', [
             'formArticle' => $formArticle->createView()
         ]);
 
@@ -125,7 +125,7 @@ Valable pour toutes les classes, à l'exception des entités. */
 // Création d'une nouvelle route pour RECHERCHER des articles.
 
     /**
-     * @route("admin/article/search", name="admin_search_article")
+     * @route("admin/article/search", name="admin_article_search")
      * @param ArticleRepository $articleRepository
      * @param Request $request
      * @return Response
@@ -135,7 +135,7 @@ Valable pour toutes les classes, à l'exception des entités. */
         $search = $request->query->get('search');
         $articles = $articleRepository->getByWordInArticle($search);
 
-        return $this->render('admin/articles/search_article.html.twig', [
+        return $this->render('admin/articles/article_search.html.twig', [
             'search' => $search, 'articles' => $articles
         ]);
     }
@@ -143,7 +143,7 @@ Valable pour toutes les classes, à l'exception des entités. */
 // Création d'une nouvelle route pour METTRE A JOUR des articles.
 
     /**
-     * @route("admin/article/update/{id}", name="admin_update_article")
+     * @route("admin/article/update/{id}", name="admin_article_update")
      * @param Request $request
      * @param ArticleRepository $articleRepository
      * @param SluggerInterface $slugger
@@ -184,18 +184,18 @@ Valable pour toutes les classes, à l'exception des entités. */
             $entityManager->persist($article);
             $entityManager->flush();
 
-            $this->addFlash('sucess', "L' article a bien été modifié !");
+            $this->addFlash('success', "L' article a bien été modifié !");
         }
 
-        return $this->render('admin/articles/insert_article.html.twig', [
-            'formArticle'=>$formArticle->createView()
+        return $this->render('admin/articles/article_insert.html.twig', [
+            'formArticle' => $formArticle->createView()
         ]);
     }
 
 // Création d'une nouvelle route pour SUPPRIMER des articles.
 
     /**
-     * @route("admin/article/delete/{id}", name="admin_delete_article")
+     * @route("admin/article/delete/{id}", name="admin_article_delete")
      * @param ArticleRepository $articleRepository
      * @param EntityManagerInterface $entityManager
      * @param Request $request
@@ -213,9 +213,11 @@ Valable pour toutes les classes, à l'exception des entités. */
         $entityManager->remove($article);
         $entityManager->flush();
 
-        $this->addFlash('sucess', "L'article a bien été supprimé !");
+        $this->addFlash('success', "L'article a bien été supprimé !");
 
-        return $this->redirectToRoute('admin_articles_list');
+        return $this->render('admin/articles/article_delete.html.twig', [
+            'article' => $article
+        ]);
     }
 
 }

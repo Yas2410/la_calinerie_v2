@@ -11,16 +11,35 @@ namespace App\Controller\Admin;
 /* Pour pouvoir utiliser la classe dans mon code,
 je fais un "use" vers le namespace (qui correspond au chemin) de la classe "Route".
 Cela revient à faire un import ou un require en PHP*/
+
+use App\Repository\ArticleRepository;
+use App\Repository\ChildRepository;
+use App\Repository\EventRepository;
+use App\Repository\PictureRepository;
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DashboardController extends AbstractController
 {
     /**
      * @Route("/admin", name="admin_dashboard")
+     * @param UserRepository $userRepository
+     * @param ChildRepository $childRepository
+     * @return Response
      */
-    public function adminDashboard()
+    public function adminDashboard(
+        UserRepository $userRepository,
+        ChildRepository $childRepository
+    )
     {
-        return $this->render('admin/home/dashboard.html.twig');
+        $lastUsers = $userRepository->findBy([], ['id' => 'DESC'], 5, 0);
+        $lastChildren = $childRepository->findBy([], ['id' => 'DESC'], 5, 0);
+        return $this->render('admin/home/dashboard.html.twig', [
+            'users' => $lastUsers,
+            'children' => $lastChildren,
+        ]);
     }
+
 }
