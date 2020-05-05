@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Bienvenue sur l'espace Parents de La Calinerie !{% endblock %}</title>
 </head>
+{% if is_granted("ROLE_PARENT") %}
+    Bonjour famille {{ app.user.lastName }} !
+{% endif %}
+<div>
+    <a href="{{ path('app_logout') }}">Se Déconnecter</a>
+</div>
 <body>
 <header class="container">
     <h1>Bienvenue sur l'espace Parents de La Calinerie !</h1>

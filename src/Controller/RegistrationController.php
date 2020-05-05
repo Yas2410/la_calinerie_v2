@@ -1,10 +1,7 @@
 <?php
 
 namespace App\Controller;
-
-use App\Entity\Child;
 use App\Entity\User;
-use App\Form\ChildrenType;
 use App\Form\RegistrationFormType;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;

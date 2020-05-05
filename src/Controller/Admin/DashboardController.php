@@ -12,12 +12,14 @@ namespace App\Controller\Admin;
 je fais un "use" vers le namespace (qui correspond au chemin) de la classe "Route".
 Cela revient à faire un import ou un require en PHP*/
 
+use App\Entity\Child;
 use App\Repository\ArticleRepository;
 use App\Repository\ChildRepository;
 use App\Repository\EventRepository;
 use App\Repository\PictureRepository;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
