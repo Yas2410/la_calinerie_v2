@@ -4,18 +4,18 @@
 
 {% block body %}
 
-<h3>Section Parents</h3>
+    <h3>Section Parents</h3>
     {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.lastName) }}
-        {{ form_row(registrationForm.firstName) }}
-        {{ form_row(registrationForm.address) }}
-        {{ form_row(registrationForm.address2) }}
-        {{ form_row(registrationForm.zipcode) }}
-        {{ form_row(registrationForm.city) }}
-        {{ form_row(registrationForm.phoneNumber) }}
-        {{ form_row(registrationForm.phoneNumber2) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+    {{ form_row(registrationForm.lastName) }}
+    {{ form_row(registrationForm.firstName) }}
+    {{ form_row(registrationForm.address) }}
+    {{ form_row(registrationForm.address2) }}
+    {{ form_row(registrationForm.zipcode) }}
+    {{ form_row(registrationForm.city) }}
+    {{ form_row(registrationForm.phoneNumber) }}
+    {{ form_row(registrationForm.phoneNumber2) }}
+    {{ form_row(registrationForm.email) }}
+    {{ form_row(registrationForm.plainPassword) }}
+    {{ form_row(registrationForm.agreeTerms) }}
     {{ form_end(registrationForm) }}
 {% endblock %}

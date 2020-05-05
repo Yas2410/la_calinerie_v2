@@ -1,16 +1,17 @@
-<form action="{{ path('search_article') }}" method="GET">
+<div>
+    <a href="{{ path ('home_parents') }}"> - Accueil - </a>
+</div>
+<form action="{{ path('article_search') }}" method="GET">
     <input type="search" name="search">
     <input type="submit" value="Rechercher">
 </form>
-
-
 {% for article in articles %}
 <div>
     <h1>{{ article.title }}</h1>
-    <h6>{{ article.date|date('d/m/Y')  }}</h6>
+    <h6>{{ article.date|date('d/m/Y') }}</h6>
+
     <div>
-        <img src="{{ asset ('uploads/admin/articles/') ~ article.image}}" alt="">
+        <a href="{{ path ('article', {'id':article.id}) }}"> - Voir l'article - </a>
     </div>
-    <p> {{ article.content }}</p>
     {% endfor %}
 </div>

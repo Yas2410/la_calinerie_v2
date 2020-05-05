@@ -2,19 +2,12 @@
 
 namespace App\Controller\Front;
 
-use App\Entity\Event;
-use App\Entity\User;
-use App\Form\EventFrontType;
-use App\Form\EventType;
-use App\Form\UserType;
 use App\Repository\EventRepository;
-use App\Repository\UserRepository;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\String\Slugger\SluggerInterface;
+
 
 class EventController extends AbstractController
 {
@@ -43,12 +36,12 @@ class EventController extends AbstractController
         $event = $eventRepository->find($id);
 
         return $this->render('front/events/event.html.twig', [
-            'events' => $event
+            'event' => $event
         ]);
     }
 
     /**
-     * @route("parents/event/search", name="search_event")
+     * @route("parents/event/search", name="event_search")
      * @param EventRepository $eventRepository
      * @param Request $request
      * @return Response
@@ -58,7 +51,7 @@ class EventController extends AbstractController
         $search = $request->query->get('search');
         $events = $eventRepository->getByWordInEvent($search);
 
-        return $this->render('front/events/search_event.html.twig', [
+        return $this->render('front/events/event_search.html.twig', [
             'search' => $search, 'events' => $events
         ]);
     }

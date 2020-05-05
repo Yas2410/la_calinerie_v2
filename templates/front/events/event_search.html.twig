@@ -1,0 +1,16 @@
+<h5>Vous avez recherché le mot : {{ search }}</h5>
+
+<div>
+    {% for event in events %}
+    <div>
+        <h1>{{ event.title }}</h1>
+        <h6>{{ event.date|date('d/m/Y') }}</h6>
+        <div>
+            <a href="{{ path ('event', {'id':event.id}) }}"> - Details - </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div>
+    <a href="{{ path ('events') }}"> - Revenir à l'ensemble des évènements - </a>
+</div>

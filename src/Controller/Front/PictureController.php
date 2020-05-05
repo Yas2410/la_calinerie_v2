@@ -2,15 +2,11 @@
 
 namespace App\Controller\Front;
 
-use App\Entity\Picture;
-use App\Form\PictureType;
 use App\Repository\PictureRepository;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\String\Slugger\SluggerInterface;
 
 class PictureController extends AbstractController
 {
@@ -39,12 +35,12 @@ class PictureController extends AbstractController
         $picture = $pictureRepository->find($id);
 
         return $this->render('admin/pictures/picture.html.twig', [
-            'pictures' => $picture
+            'picture' => $picture
         ]);
     }
 
     /**
-     * @route("parents/picture/search", name="search_picture")
+     * @route("parents/picture/search", name="picture_search")
      * @param PictureRepository $pictureRepository
      * @param Request $request
      * @return Response
@@ -54,7 +50,7 @@ class PictureController extends AbstractController
         $search = $request->query->get('search');
         $pictures = $pictureRepository->getByWordInPicture($search);
 
-        return $this->render('front/pictures/search_picture.html.twig', [
+        return $this->render('front/pictures/picture_search.html.twig', [
             'search' => $search, 'pictures' => $pictures
         ]);
     }

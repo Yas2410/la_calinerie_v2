@@ -37,8 +37,8 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
     private $security;
 
     public function __construct(EntityManagerInterface $entityManager, UrlGeneratorInterface $urlGenerator,
-    CsrfTokenManagerInterface $csrfTokenManager, UserPasswordEncoderInterface $passwordEncoder,
-    \Symfony\Component\Security\Core\Security $security)
+                                CsrfTokenManagerInterface $csrfTokenManager, UserPasswordEncoderInterface $passwordEncoder,
+                                \Symfony\Component\Security\Core\Security $security)
     {
         $this->entityManager = $entityManager;
         $this->urlGenerator = $urlGenerator;
@@ -51,7 +51,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
     {
         return ('app_login' === $request->attributes->get('_route') ||
                 'home' === $request->attributes->get('_route'))
-                && $request->isMethod('POST');
+            && $request->isMethod('POST');
     }
 
     public function getCredentials(Request $request)
@@ -104,7 +104,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
     {
         //if ($targetPath = $this->getTargetPath($request->getSession(), $providerKey)) {
-            //return new RedirectResponse($targetPath);
+        //return new RedirectResponse($targetPath);
         //}
 
         $isAdmin = $this->security->isGranted('ROLE_ADMIN');
@@ -121,6 +121,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
     {
         return $this->urlGenerator->generate('app_login');
     }
+
     private function getRoles(array $array)
     {
     }

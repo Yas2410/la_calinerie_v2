@@ -2,9 +2,7 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Allergen;
 use App\Entity\Child;
-use App\Form\AllergenType;
 use App\Form\ChildType;
 use App\Repository\AllergenRepository;
 use App\Repository\ChildRepository;

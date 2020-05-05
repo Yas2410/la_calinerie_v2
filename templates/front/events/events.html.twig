@@ -1,4 +1,8 @@
-<form action="{{ path('search_event') }}" method="GET">
+<div>
+    <a href="{{ path ('home_parents') }}"> - Accueil - </a>
+</div>
+
+<form action="{{ path('event_search') }}" method="GET">
     <input type="search" name="search">
     <input type="submit" value="Rechercher">
 </form>
@@ -7,11 +11,12 @@
 {% for event in events %}
 <div>
     <h1>{{ event.title }}</h1>
-    <h6>{{ event.date|date('d-m-Y') }}</h6>
+    <h6>{{ event.date|date('d/m/Y') }}</h6>
     <div>
-        <img src="{{ asset ('uploads/admin/events/') ~ event.image}}" alt="">
+        <a href="{{ path ('event', {'id':event.id}) }}"> - Voir l'évènement - </a>
     </div>
-    <p> {{ event.content }}</p>
     {% endfor %}
 </div>
+
+
 

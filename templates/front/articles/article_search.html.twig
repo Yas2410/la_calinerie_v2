@@ -1,0 +1,16 @@
+<h5>Vous avez recherché le mot : {{ search }}</h5>
+
+<div>
+    {% for article in articles %}
+    <div>
+        <h1>{{ article.title }}</h1>
+        <h6>{{ article.date|date('d/m/Y') }}</h6>
+        <div>
+            <a href="{{ path ('article', {'id':article.id}) }}"> - Details - </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div>
+    <a href="{{ path ('articles') }}"> - Revenir à l'ensemble des articles - </a>
+</div>

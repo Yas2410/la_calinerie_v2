@@ -1,0 +1,9 @@
+<div>
+    <h1>{{ event.title }}</h1>
+    <h6>{{ event.date|date('d/m/Y') }}</h6>
+    <img src="{{ asset ('uploads/admin/events/') ~ event.image }}" alt="">
+</div>
+<p> {{ event.content }}</p>
+<div>
+    <a href="{{ path ('events') }}"> - Revenir à l'ensemble des évènements - </a>
+</div>

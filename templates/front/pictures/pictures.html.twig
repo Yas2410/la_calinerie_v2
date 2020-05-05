@@ -1,13 +1,15 @@
-<form action="{{ path('search_picture') }}" method="GET">
+<div>
+    <a href="{{ path ('home_parents') }}"> - Accueil - </a>
+</div>
+<form action="{{ path('picture_search') }}" method="GET">
     <input type="search" name="search">
     <input type="submit" value="Rechercher">
 </form>
 
+
 {% for picture in pictures %}
 <div>
-    <div>
-        <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image}}" alt="">
-    </div>
-    <p> {{ picture.description }}</p>
+    <h4>{{ picture.description }}</h4>
+    <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image }}" alt="">
     {% endfor %}
 </div>
