@@ -82,6 +82,11 @@ class User implements UserInterface
      */
     private $children;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $activationToken;
+
     public function __construct()
     {
 
@@ -294,9 +299,20 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getUserLastName()
+    public function getActivationToken(): ?string
     {
+        return $this->activationToken;
     }
 
+    public function setActivationToken(?string $activationToken): self
+    {
+        $this->activationToken = $activationToken;
+
+        return $this;
+    }
+
+    public function contains(\App\Repository\ChildRepository $child)
+    {
+    }
 
 }
