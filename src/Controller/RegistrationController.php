@@ -55,7 +55,7 @@ class RegistrationController extends AbstractController
 
             $message = (new \Swift_Message('Nouveau compte'))
                 // On attribue l'expéditeur
-                ->setFrom('crechelacalinerie@gmail.com')
+                ->setFrom(['crechelacalinerie@gmail.com' => 'LA CALINERIE '])
                 // On attribue le destinataire
                 ->setTo($user->getEmail())
                 // On crée le texte avec la vue
