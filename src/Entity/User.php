@@ -87,6 +87,11 @@ class User implements UserInterface
      */
     private $activationToken;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $resetToken;
+
     public function __construct()
     {
 
@@ -313,6 +318,18 @@ class User implements UserInterface
 
     public function contains(\App\Repository\ChildRepository $child)
     {
+    }
+
+    public function getResetToken(): ?string
+    {
+        return $this->resetToken;
+    }
+
+    public function setResetToken(?string $resetToken): self
+    {
+        $this->resetToken = $resetToken;
+
+        return $this;
     }
 
 }
