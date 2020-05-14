@@ -1,0 +1,15 @@
+<h5>Vous avez recherché : {{ search }}</h5>
+
+<div>
+    {% for user in users %}
+    <div>
+        <p>
+        <h1>{{ user.firstName }} {{ user.lastName }}</h1>
+
+        <div><a href="{{ path ('admin_user_show', {'id':user.id}) }}"> - Details - </a></div>
+        {% endfor %}
+    </div>
+</div>
+<div>
+    <a href="{{ path ('admin_users_list') }}"> - Revenir à la liste des familles - </a>
+</div>

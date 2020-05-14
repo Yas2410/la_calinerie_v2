@@ -1,0 +1,15 @@
+<div>
+    <a href="{{ path ('admin_menu_insert') }}"> - Ajouter un menu - </a>
+</div>
+<div>
+    <a href="{{ path ('admin_dashboard') }}"> - Accueil - </a>
+</div>
+
+{% for menu in menus %}
+<div>
+    <h1>{{ menu.title }}</h1>
+    <div>
+        <a href="{{ path ('admin_menu_show', {'id':menu.id}) }}"> - Voir le menu - </a>
+    </div>
+    {% endfor %}
+</div>

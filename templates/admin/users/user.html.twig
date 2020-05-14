@@ -1,0 +1,28 @@
+<div>
+    <div>
+        <h2>FICHE CONTACT</h2>
+        <div>
+            M. / Mme {{ user.lastName }} {{ user.firstName }}
+            Adresse : {{ user.address }} {{ user.address2 }}
+            {{ user.zipcode }}
+            {{ user.city }}
+            Téléphone : {{ user.phoneNumber }} {{ user.phoneNumber2 }}
+            Adresse mail : {{ user.email }}
+        </div>
+    </div>
+</div>
+<div>
+    <span>Enfants :</span> <br>
+    {% for child in user.children %}
+        |  {{ child.firstName }} |
+    {% endfor %}
+</div>
+<div>
+    <a href="{{ path ('admin_user_update', {'id':user.id}) }}"> - Modifier le compte Parents - </a>
+</div>
+<div>
+    <a href="{{ path ('admin_user_delete', {'id':user.id}) }}"> - Supprimer le compte Parents - </a>
+</div>
+<div>
+    <a href="{{ path ('admin_users_list') }}"> - Revenir à la liste des familles - </a>
+</div>

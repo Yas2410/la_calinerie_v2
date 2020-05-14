@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="{{ asset('uploads/admin/img/icon.png') }}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Quicksand|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/admin/style.css') }}">
+    <title>Crèche Multi-Accueil LA CALINERIE - Espace ADMIN</title>
+</head>
+
+<body>
+
+<header>
+    <div class="welcome">
+        <p>
+            Tableau de Bord
+        </p>
+        <div class="logout">
+            <a href="{{ path('app_logout') }}">Se Déconnecter</a>
+        </div>
+    </div>
+</header>
+
+<aside>
+    <div class="menu">
+        <nav>
+            <div class="imgMenu">
+                <img src="{{ asset('uploads/admin/img/logo.png') }}" alt="Logo La Calinerie" class="img-fluid">
+            </div>
+            <span>Admin, Bonjour !</span>
+            <ul>
+                <li class="select"><a href="{{ path('admin_articles_list') }}">ARTICLES</a></li>
+                <li class="select"><a href="{{ path('admin_events_list') }}">ÉVÈNEMENTS</a></li>
+                <li class="select"><a href="{{ path('admin_pictures_list') }}">GALERIE</a></li>
+                <li class="select"><a href="{{ path('admin_menus_list') }}">MENUS</a></li>
+            </ul>
+        </nav>
+    </div>
+</aside>
+
+{# j'affiche tous les messages flashs enregistrés #}
+{% for message in app.flashes('success') %}
+    <div>
+        {{ message }}
+    </div>
+{% endfor %}
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

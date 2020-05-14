@@ -1,0 +1,14 @@
+{% for message in app.flashes('success') %}
+    <div class="message">
+        {{ message }}
+    </div>
+{% endfor %}
+
+<div class="form" >
+    {{ form_start(formUser) }}
+
+    {{ form_end(formUser) }}
+</div>
+<div>
+    <a href="{{ path ('home_parents') }}"> - Accueil - </a>
+</div>

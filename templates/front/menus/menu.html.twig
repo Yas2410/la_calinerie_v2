@@ -1,0 +1,12 @@
+<div>
+    <h1>{{ menu.title }}</h1>
+    <div>
+        <a href="{{ asset('uploads/admin/menus/' ~ menu.file) }}" target="_blank">
+            <img src="{{ asset ('uploads/admin/menus/' ~ menu.image) }}" alt="">
+        </a>
+    </div>
+    <p> {{ menu.content }}</p>
+    <div>
+        <a href="{{ path ('menus') }}"> - Revenir à la liste des menus - </a>
+    </div>
+</div>

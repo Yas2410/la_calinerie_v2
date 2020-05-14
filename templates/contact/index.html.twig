@@ -1,0 +1,12 @@
+<h1>FORMULAIRE DE CONTACT</h1>
+{{ form(contactForm) }}
+<h2>
+    {% for message in app.flashes('message') %}
+        <div class="message">
+            {{ message }}
+        </div>
+    {% endfor %}
+</h2>
+<div>
+    <a href="{{ path ('home') }}"> - Revenir à l'accueil du site - </a>
+</div>

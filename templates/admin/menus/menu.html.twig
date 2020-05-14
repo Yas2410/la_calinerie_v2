@@ -1,0 +1,18 @@
+<div>
+    <h1>{{ menu.title }}</h1>
+    <div>
+        <a href="{{ asset('uploads/admin/menus/' ~ menu.file) }}" target="_blank">
+            <img src="{{ asset ('uploads/admin/menus/' ~ menu.image) }}" alt="">
+        </a>
+    </div>
+    <p> {{ menu.content }}</p>
+    <div>
+        <a href="{{ path ('admin_menu_update', {'id':menu.id}) }}"> - Modifier le menu - </a>
+    </div>
+    <div>
+        <a href="{{ path ('admin_menu_delete', {'id':menu.id}) }}"> - Supprimer le menu - </a>
+    </div>
+    <div>
+        <a href="{{ path ('admin_menus_list') }}"> - Revenir à l'ensemble des menus - </a>
+    </div>
+</div>

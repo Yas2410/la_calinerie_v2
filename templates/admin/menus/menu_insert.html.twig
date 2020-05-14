@@ -1,0 +1,14 @@
+{% for message in app.flashes('success') %}
+    <div class="message">
+        {{ message }}
+    </div>
+{% endfor %}
+
+<div class="form">
+    {{ form_start(formMenu) }}
+
+    {{ form_end(formMenu) }}
+</div>
+<div>
+    <a href="{{ path ('admin_menus_list') }}"> - Revenir à l'ensemble des menus - </a>
+</div>

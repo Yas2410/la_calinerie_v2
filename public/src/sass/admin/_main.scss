@@ -1,0 +1,27 @@
+* {
+  font-family: $mainFont;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $lightGrey ;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,23 @@
+<article>
+    <h3>Mes Coordonnées</h3>
+    {{ user.lastName }}
+    {{ user.address }}
+    {{ user.zipcode }} {{ user.city }}
+    {{ user.phoneNumber }}
+    {{ user.email }}
+
+    <h3>Enfant(s)</h3>
+
+    {% for child in user.children %}
+        {{ child.firstName }}
+        Date de Naissance : {{ child.birthDate|date('d/m/Y') }}
+    {% endfor %}
+
+    <div class="margin"><a class="update" href="{{ path ('user_update', {'id':app.user.id}) }}"> - Modifier mes
+            informations - </a></div>
+    <div><a class="delete" href="{{ path ('user_delete', {'id':app.user.id}) }}"> - Supprimer mon compte - </a>
+    </div>
+    <div>
+        <a href="{{ path ('home_parents') }}"> - Retour à l'espace Parents - </a>
+    </div>
+</article>
