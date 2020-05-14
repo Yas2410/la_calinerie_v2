@@ -1,55 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fc1eb0a-69df-41be-90ec-b23689bbb73b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/dist/css/admin/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dist/css/admin/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/src/sass/admin/_dashboardAdmin.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/src/sass/admin/_main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/src/sass/admin/_var.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/src/sass/admin/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/articles/001-5eaf0a6362873.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/articles/001-5eaf0a78de0c1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/articles/001-5eaf0cbfa498a.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/articles/001-5eb0632bd9282.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/articles/20190821-142428-5ea68dfd1f8de-5ea6cee48c839-5ea6cf4d64301-5ea6cfd7d3bce-5ea6d115abb9e.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/articles/children-playing-with-animal-toys-3661387-5ea5ac82d5335.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/articles/oranges-sac-tisse-3-5eaf0cd56a2e1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/articles/pexels-photo-3661351-1-5ea5ab1653e97.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/events/001-5eabda0480838.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/events/001-5eafd334943fa.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/events/20190821-142428-5ea68dfd1f8de-5ea6cee48c839-5ea6cf4d64301-5ea6cfd7d3bce-5ea6d13531226.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/events/20190821-142428-5ea68dfd1f8de-5ea88ea2b6d67.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/events/adult-affection-baby-casual-236164-5ea5af4bc2692.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/events/logoFilRouge-5ea5af3ddfac2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/001-5eb0638a34bab.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/2019-08-09-09-40-24-5ea5af97ef747-5ea699aa8b4f5.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/2019-08-09-09-40-24-5ea5af97ef747-5ea6cf3d5c3fd.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/2019-08-09-09-40-24-5ea5af97ef747.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/2019-08-09-09-40-24-5ea68de943d6f-5ea6987c04b6d.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/2019-08-09-09-40-24-5ea68de943d6f.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/2019-08-09-09-42-18-5ea5af8f13a3e-5ea699b32385e.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/2019-08-09-09-42-18-5ea5af8f13a3e-5ea6cf4561122.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/2019-08-09-09-42-18-5ea5af8f13a3e.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/2019-08-09-09-42-18-5ea68df281859.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/20190821-142428-5ea68dfd1f8de-5ea6cee48c839-5ea6cf4d64301-5ea6cfd7d3bce.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/20190821-142428-5ea68dfd1f8de-5ea6cee48c839-5ea6cf4d64301.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/20190821-142428-5ea68dfd1f8de-5ea6cee48c839.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/20190821-142428-5ea68dfd1f8de.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/oranges-sac-tisse-3-5eafdd6d6f384.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/gallery/oranges-sac-tisse-3-5eafdd9bd8f00.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/img/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/img/logoAdmin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/menus/20200401-MCD-MLD-5ea89fe316d0f.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/menus/21646-650x330-cerisesswetlana-wall-5ea8a1d34d31d.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/menus/5419547779-5ea89e05bec10.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/menus/6163025323-5ea89ed2aad1c.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/menus/attestation-deplacement-fr-5eafdb3bcbb48.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/menus/courgette-istock-5ea936f64c3d0.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/admin/menus/oranges-sac-tisse-3-5eafdb3bce831.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3fc1eb0a-69df-41be-90ec-b23689bbb73b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -255,7 +207,7 @@
       <workItem from="1589274015146" duration="3779000" />
       <workItem from="1589359557783" duration="10952000" />
       <workItem from="1589443839439" duration="12851000" />
-      <workItem from="1589493203730" duration="820000" />
+      <workItem from="1589493203730" duration="1267000" />
     </task>
     <task id="LOCAL-00001" summary="Forms / Insert">
       <created>1587759344490</created>
