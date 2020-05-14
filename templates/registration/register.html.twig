@@ -1,11 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}S'enregistrer{% endblock %}
+{% block title %}Formulaire d'Inscription{% endblock %}
 
 {% block body %}
 
-    <h3>Section Parents</h3>
+    <h1>FORMULAIRE D'INSCRIPTION</h1>
+    <p>
+        Votre enfant est inscrit au sein de notre crèche?
+        Complétez ce formulaire afin de créer votre compte PARENTS!
+        Ce dernier vous donnera accès à de multiples informations :
+        Actualités, évènements, galerie photo, etc.
+    </p>
     {{ form_start(registrationForm) }}
+
     {{ form_row(registrationForm.lastName) }}
     {{ form_row(registrationForm.firstName) }}
     {{ form_row(registrationForm.address) }}
@@ -17,5 +24,8 @@
     {{ form_row(registrationForm.email) }}
     {{ form_row(registrationForm.plainPassword) }}
     {{ form_row(registrationForm.agreeTerms) }}
+
     {{ form_end(registrationForm) }}
+
+
 {% endblock %}

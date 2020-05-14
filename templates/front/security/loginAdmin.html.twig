@@ -1,9 +1,9 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-    <form method="post" class="container justify-content-center">
+    <form method="post">
         {% if error %}
-            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
         {% endif %}
 
         <div>
@@ -29,8 +29,8 @@
                 </div>
             #}
 
-            <div class="btn1">
-                <button class="btn btn-secondary" type="submit">
+            <div>
+                <button type="submit">
                     Se Connecter
                 </button>
             </div>

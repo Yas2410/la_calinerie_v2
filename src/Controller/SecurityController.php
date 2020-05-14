@@ -100,7 +100,7 @@ class SecurityController extends AbstractController
 
             // On génère l'e-mail
             $message = (new Swift_Message('Mot de passe oublié'))
-                ->setFrom('crechelacalinerie@gmail.com')
+                ->setFrom(['crechelacalinerie@gmail.com' => 'LA CALINERIE '])
                 ->setTo($user->getEmail())
                 ->setBody(
                     "Bonjour,<br><br>Une demande de réinitialisation de mot de passe a été effectuée.

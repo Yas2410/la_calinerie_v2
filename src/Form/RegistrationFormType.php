@@ -45,7 +45,13 @@ class RegistrationFormType extends AbstractType
                 'label' => 'Ville'
             ])
             ->add('phoneNumber', TextType::class, [
-                'label' => 'Téléphone'
+                'label' => 'Téléphone',
+                'constraints' => [
+                    new Length([
+                        'min' => 10,
+                        'minMessage' => 'Veuillez saisir un numéro de téléphone à {{ limit }} chiffres',
+                    ])
+                ]
             ])
             ->add('phoneNumber2', TextType::class, [
                 'label' => 'Téléphone 2',
@@ -66,13 +72,14 @@ class RegistrationFormType extends AbstractType
                 'mapped' => false,
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Please enter a password',
+                        'message' => 'Veuillez saisir un mot de passe',
                     ]),
                     new Length([
-                        'min' => 6,
-                        'minMessage' => 'Your password should be at least {{ limit }} characters',
+                        'min' => 8,
+                        'minMessage' => 'Votre mot de passe doit contenir au minimum {{ limit }} caractères',
                         // max length allowed by Symfony for security reasons
-                        'max' => 4096,
+                        'max' => 25,
+                        'maxMessage' => 'Votre mot de passe doit contenir au maximum {{ limit }} caractères'
                     ]),
                 ],
             ])
@@ -85,7 +92,9 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('Submit', SubmitType::class);
+            ->add('Submit', SubmitType::class, [
+                'label' => 'Valider'
+            ]);
 
     }
 
