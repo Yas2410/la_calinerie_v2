@@ -17,7 +17,7 @@ header  {
   font-size: 30px;
   font-weight: bold;
   color: $darkGrey;
-  padding-left: 25px;
+  padding-left: 30px;
 }
 
 .logout a {
@@ -79,10 +79,11 @@ header  {
   align-items: center;
   margin-left: 18%;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .smallBox {
-  margin: 50px 0 100px 0;
+  margin: 70px 0 100px 0;
   width: 20%;
   height: 80px;
   line-height: 80px;
@@ -106,19 +107,38 @@ header  {
   color: white;
 }
 
-.secondBox {
-  text-align: inherit;
-}
-
 .bigBox {
-  width: 45%;
-  height: 300px;
+  width: 40%;
+  height: 225px;
   background-color: white;
   box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
-  border-radius: 6px;
 }
 
+.lastRegister {
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  background-color: $grey;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
 
+.bigBox a {
+  font-size: 16px;
+  margin: 0;
+}
 
+.watchIcon {
+  width: 4%;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  padding:  10px 25px 0;
+  margin: 0;
+  color: $darkGrey;
+}
 
 

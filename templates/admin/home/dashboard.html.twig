@@ -16,26 +16,34 @@
 
     <section class="secondBox">
         <div class="bigBox">
-            <h2>Les derniers enfants inscrits :</h2>
+            <p class="lastRegister">- LES DERNIERS ENFANTS INSCRITS -</p>
             {% for child in children %}
-                <p>
-                    {{ child.firstName }} {{ child.lastName }}
-                </p>
+                <div class="flex">
+                    <p>
+                        <b>{{ child.lastName }}</b> {{ child.firstName }}
+                    </p>
+                    <div class="watchIcon">
+                        <a href="{{ path ('admin_child_show', {'id':child.id}) }}">
+                            <img src="{{ asset('uploads/admin/img/watchIcon2.png') }}" alt="Détails" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
             {% endfor %}
-            <div>
-                <a href="{{ path('admin_children_list') }}"> Voir la liste complète </a>
-            </div>
         </div>
         <div class="bigBox">
-            <h2>Les derniers comptes parents créés :</h2>
+            <p class="lastRegister">- LES DERNIERS COMPTES PARENTS CRÉÉS -</p>
             {% for user in users %}
-                <p>
-                    {{ user.firstName }} {{ user.lastName }}
-                </p>
+                <div class="flex">
+                    <p>
+                        <b>{{ user.lastName }}</b> {{ user.firstName }}
+                    </p>
+                    <div class="watchIcon">
+                        <a href="{{ path ('admin_user_show', {'id':user.id}) }}">
+                            <img src="{{ asset('uploads/admin/img/watchIcon2.png') }}" alt="Détails" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
             {% endfor %}
-            <div>
-                <a href="{{ path('admin_users_list') }}"> Voir la liste complète </a>
-            </div>
         </div>
     </section>
 
