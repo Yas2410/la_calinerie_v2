@@ -1,14 +1,20 @@
-{% for message in app.flashes('success') %}
-    <div class="message">
-        {{ message }}
+{% extends 'admin/base.html.twig' %}
+
+{% block content %}
+
+<section class="insert">
+    <h3>Insérer un nouveau type d'allergène</h3>
+    <div class="center">
+        <div class="form">
+            {{ form_start(formAllergen) }}
+            {{ form_end(formAllergen) }}
+        </div>
     </div>
-{% endfor %}
+    <div class="center">
+        <a href="{{ path ('admin_allergens_list') }}">
+            <i class="fa fa-reply"></i>
+        </a>
+    </div>
+</section>
+{% endblock %}
 
-<div class="form">
-    {{ form_start(formAllergen) }}
-
-    {{ form_end(formAllergen) }}
-</div>
-<div>
-    <a href="{{ path ('admin_allergens_list') }}"> - Revenir à l'ensemble des allergènes - </a>
-</div>

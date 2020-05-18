@@ -1,3 +1,8 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block content %}
+
+    <h1 class="title">ARTICLES</h1>
 <div>
     <a href="{{ path ('admin_article_insert') }}"> - Rédiger un nouvel article - </a>
 </div>
@@ -14,3 +19,5 @@
     </div>
     {% endfor %}
 </div>
+
+{% endblock %}

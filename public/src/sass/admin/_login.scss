@@ -1,0 +1,54 @@
+
+.loginAdmin {
+  position: fixed;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+}
+
+.log {
+  text-align: center;
+  margin-top: 18%;
+}
+
+.log h1 {
+  color: $darkPink;
+  margin-bottom: 10px;
+}
+
+.log h3 {
+  color: $darkGrey;
+  margin-bottom: 50px;
+}
+
+.logLogo {
+  position: absolute;
+  width: 25%;
+  bottom: 70%;
+  left: 38%;
+}
+
+.btnLogin {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.btnLogin button {
+  background-color: $darkGrey;
+  border: none;
+  width: 130px;
+  height: 40px;
+  line-height: 20px;
+  font-size: 16px;
+  border-radius: 65px;
+  color: white;
+  outline: none;
+}
+
+.btnLogin:hover button {
+  background-color: $darkPink;
+  font-weight: bold;
+  border: 1px solid white;
+}

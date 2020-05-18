@@ -17,7 +17,7 @@ header  {
   font-size: 30px;
   font-weight: bold;
   color: $darkGrey;
-  padding-left: 30px;
+  margin-left: 1%;
 }
 
 .logout a {
@@ -129,10 +129,6 @@ header  {
   margin: 0;
 }
 
-.watchIcon {
-  width: 4%;
-}
-
 .flex {
   display: flex;
   justify-content: space-between;
@@ -140,5 +136,10 @@ header  {
   margin: 0;
   color: $darkGrey;
 }
+
+.fa-eye {
+  @include icon ($grey)
+}
+
 
 

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="{{ asset('uploads/admin/img/icon.png') }}">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Quicksand|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/admin/style.css') }}">
     <title>Crèche Multi-Accueil LA CALINERIE - Espace ADMIN</title>
 </head>
@@ -19,7 +20,7 @@
             Tableau de Bord
         </p>
         <div class="logout">
-            <a href="{{ path('app_logout') }}">Se Déconnecter</a>
+            <a href="{{ path('app_login') }}">Se Déconnecter</a>
         </div>
     </div>
 </header>
@@ -28,7 +29,9 @@
     <div class="menu">
         <nav>
             <div class="imgMenu">
-                <img src="{{ asset('uploads/admin/img/logo.png') }}" alt="Logo La Calinerie" class="img-fluid">
+                <a href="{{ path('admin_dashboard') }}">
+                    <img src="{{ asset('uploads/admin/img/logo.png') }}" alt="Logo La Calinerie" class="img-fluid">
+                </a>
             </div>
             <span>Admin, Bonjour !</span>
             <ul>
@@ -43,7 +46,7 @@
 
 {# j'affiche tous les messages flashs enregistrés #}
 {% for message in app.flashes('success') %}
-    <div>
+    <div class="flash center">
         {{ message }}
     </div>
 {% endfor %}

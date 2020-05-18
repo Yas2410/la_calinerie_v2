@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fc1eb0a-69df-41be-90ec-b23689bbb73b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/la_calinerie.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/la_calinerie.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/dist/css/admin/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/admin/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/dist/css/admin/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/admin/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_dashboardAdmin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_dashboardAdmin.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_var.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_var.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/sass/admin/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AllergenType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AllergenType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/allergens/allergen_insert.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/allergens/allergen_insert.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/allergens/allergens.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/allergens/allergens.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/articles/articles.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/articles/articles.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/home/dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/home/dashboard.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/baseLog.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/security/login.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/security/loginAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/security/loginAdmin.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,17 +178,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../sf_library" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\la_calinerie\templates\front" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\la_calinerie\public\src\sass\admin" />
       <recent name="C:\wamp64\www\la_calinerie\templates\admin" />
       <recent name="C:\wamp64\www\la_calinerie\templates\emails" />
       <recent name="C:\wamp64\www\la_calinerie\templates\contact" />
       <recent name="C:\wamp64\www\la_calinerie\src\Form" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\la_calinerie\templates\admin" />
+      <recent name="C:\wamp64\www\la_calinerie\templates\front" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -217,7 +230,10 @@
       <workItem from="1589359557783" duration="10952000" />
       <workItem from="1589443839439" duration="12851000" />
       <workItem from="1589493203730" duration="1267000" />
-      <workItem from="1589529212845" duration="8675000" />
+      <workItem from="1589529212845" duration="8890000" />
+      <workItem from="1589613886118" duration="18735000" />
+      <workItem from="1589703666136" duration="17758000" />
+      <workItem from="1589798239096" duration="2125000" />
     </task>
     <task id="LOCAL-00001" summary="Forms / Insert">
       <created>1587759344490</created>
@@ -331,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589493262663</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="SASS Admin">
+      <created>1589572454896</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1589572454896</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +390,8 @@
     <MESSAGE value="'Access Denied'" />
     <MESSAGE value="Reset Password" />
     <MESSAGE value="SASS Admin Dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="SASS Admin Dashboard" />
+    <MESSAGE value="SASS Admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="SASS Admin" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Notifications" timestamp="1589493776031">
@@ -390,18 +414,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589100581906" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1589493261714">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1589572453663">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589493261714" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589572453663" />
     <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog" timestamp="1587806426419">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1587806426419" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1589400151538">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1589704611311">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589400151538" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589704611311" />
     <state x="147" y="65" key="MergeDialog" timestamp="1587805620571">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -414,18 +438,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="577" y="211" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1589101795435" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1589493614260">
+    <state x="277" y="55" key="SettingsEditor" timestamp="1589659515130">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589493614260" />
+    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589659515130" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1589572457479">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589572457479" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1589493729998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1589493729998" />
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589529213072">
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589798270303">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589529213072" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589798270303" />
     <state x="577" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588771287901">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -434,9 +462,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="494" y="51" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1588192181370" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588770709425">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589745861025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588770709425" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589745861025" />
   </component>
 </project>

@@ -1,12 +1,270 @@
-/*ADMIN MAIN CSS*/
-* {
-  font-family: "Quicksand", sans-serif;
+@media only screen and (min-width: 1280px) {
+  /* For wide screens: */
+  .xLarge-1 {
+    width: 8.33%;
+  }
+
+  .xLarge-2 {
+    width: 16.66%;
+  }
+
+  .xLarge-3 {
+    width: 25%;
+  }
+
+  .xLarge-4 {
+    width: 33.33%;
+  }
+
+  .xLarge-5 {
+    width: 41.66%;
+  }
+
+  .xLarge-6 {
+    width: 50%;
+  }
+
+  .xLarge-7 {
+    width: 58.33%;
+  }
+
+  .xLarge-8 {
+    width: 66.66%;
+  }
+
+  .xLarge-9 {
+    width: 75%;
+  }
+
+  .xLarge-10 {
+    width: 83.33%;
+  }
+
+  .xLarge-11 {
+    width: 91.66%;
+  }
+
+  .xLarge-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 980px) and (max-width: 1279px) {
+  /* For desktop: */
+  .large-1 {
+    width: 8.33%;
+  }
+
+  .large-2 {
+    width: 16.66%;
+  }
+
+  .large-3 {
+    width: 25%;
+  }
+
+  .large-4 {
+    width: 33.33%;
+  }
+
+  .large-5 {
+    width: 41.66%;
+  }
+
+  .large-6 {
+    width: 50%;
+  }
+
+  .large-7 {
+    width: 58.33%;
+  }
+
+  .large-8 {
+    width: 66.66%;
+  }
+
+  .large-9 {
+    width: 75%;
+  }
+
+  .large-10 {
+    width: 83.33%;
+  }
+
+  .large-11 {
+    width: 91.66%;
+  }
+
+  .large-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 520px) and (max-width: 979px) {
+  /* For tablets: */
+  .medium-1 {
+    width: 8.33%;
+  }
+
+  .medium-2 {
+    width: 16.66%;
+  }
+
+  .medium-3 {
+    width: 25%;
+  }
+
+  .medium-4 {
+    width: 33.33%;
+  }
+
+  .medium-5 {
+    width: 41.66%;
+  }
+
+  .medium-6 {
+    width: 50%;
+  }
+
+  .medium-7 {
+    width: 58.33%;
+  }
+
+  .medium-8 {
+    width: 66.66%;
+  }
+
+  .medium-9 {
+    width: 75%;
+  }
+
+  .medium-10 {
+    width: 83.33%;
+  }
+
+  .medium-11 {
+    width: 91.66%;
+  }
+
+  .medium-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 260px) and (max-width: 519px) {
+  /* For mobile: */
+  .small-1 {
+    width: 8.33%;
+  }
+
+  .small-2 {
+    width: 16.66%;
+  }
+
+  .small-3 {
+    width: 25%;
+  }
+
+  .small-4 {
+    width: 33.33%;
+  }
+
+  .small-5 {
+    width: 41.66%;
+  }
+
+  .small-6 {
+    width: 50%;
+  }
+
+  .small-7 {
+    width: 58.33%;
+  }
+
+  .small-8 {
+    width: 66.66%;
+  }
+
+  .small-9 {
+    width: 75%;
+  }
+
+  .small-10 {
+    width: 83.33%;
+  }
+
+  .small-11 {
+    width: 91.66%;
+  }
+
+  .small-12 {
+    width: 100%;
+  }
+}
+/*LOGIN ADMIN*/
+.loginAdmin {
+  position: fixed;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
 }
 
+.log {
+  text-align: center;
+  margin-top: 18%;
+}
+
+.log h1 {
+  color: #F08EAD;
+  margin-bottom: 10px;
+}
+
+.log h3 {
+  color: #5A5A5A;
+  margin-bottom: 50px;
+}
+
+.logLogo {
+  position: absolute;
+  width: 25%;
+  bottom: 70%;
+  left: 38%;
+}
+
+.btnLogin {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.btnLogin button {
+  background-color: #5A5A5A;
+  border: none;
+  width: 130px;
+  height: 40px;
+  line-height: 20px;
+  font-size: 16px;
+  border-radius: 65px;
+  color: white;
+  outline: none;
+}
+
+.btnLogin:hover button {
+  background-color: #F08EAD;
+  font-weight: bold;
+  border: 1px solid white;
+}
+
+/*ADMIN MAIN CSS*/
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: #F4F4F4;
+  font-family: "Quicksand", sans-serif;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
 }
 
 a {
@@ -21,13 +279,79 @@ ul {
   padding: 0;
 }
 
-p, h1 {
+p, h1, h3 {
   margin: 0;
 }
 
-.img-fluid {
+.title {
+  font-size: 30px;
+  color: #5A5A5A;
+}
+
+.flash {
   width: 100%;
-  height: auto;
+  background-color: #5A5A5A;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 18%;
+  padding-left: 55px;
+}
+
+section {
+  margin-left: 19%;
+}
+
+.insert {
+  position: fixed;
+  top: 35%;
+  left: 25%;
+}
+
+.insert h3 {
+  color: #5A5A5A;
+  margin-bottom: 10px;
+}
+
+.form {
+  padding: 35px;
+}
+
+.form button {
+  margin: 25px 65px;
+  background-color: #5A5A5A;
+  border: none;
+  width: 90px;
+  height: 35px;
+  line-height: 32px;
+  font-size: 18px;
+  border-radius: 20px;
+  color: white;
+  outline: none;
+}
+
+.pathInsert a {
+  color: #5A5A5A;
+  font-size: 18px;
+}
+
+.pathInsert:hover {
+  font-weight: bold;
+}
+
+.fa-reply {
+  font-size: 18px;
+  color: #5A5A5A;
+  font-size: 30px;
+}
+
+.center {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
 }
 
 /*ADMIN DASHBOARD CSS*/
@@ -51,7 +375,7 @@ header {
   font-size: 30px;
   font-weight: bold;
   color: #5A5A5A;
-  padding-left: 30px;
+  margin-left: 1%;
 }
 
 .logout a {
@@ -164,10 +488,6 @@ header {
   margin: 0;
 }
 
-.watchIcon {
-  width: 4%;
-}
-
 .flex {
   display: flex;
   justify-content: space-between;
@@ -176,10 +496,75 @@ header {
   color: #5A5A5A;
 }
 
+.fa-eye {
+  font-size: 18px;
+  color: #808080;
+}
+
 /*ADMIN ALLERGENS SECTION CSS*/
 .searchBar {
-  margin-left: 25%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #808080;
+  width: 235px;
+  height: 25px;
+  font-size: 16px;
+  outline: none;
+}
+
+.btnSearch {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  color: #F08EAD;
+}
+
+.topSection {
   display: flex;
+  justify-content: space-between;
+  margin-left: 18%;
+  padding: 0 30px;
+  margin-top: 35px;
+}
+
+.path {
+  margin-left: 20%;
+  font-size: 20px;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+.path a {
+  color: #5A5A5A;
+}
+
+.path:hover {
+  font-weight: bold;
+}
+
+.mainFlex {
+  justify-content: space-between;
+  margin-left: 20%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 25%;
+  height: auto;
+  background-color: white;
+}
+
+.insertBox {
+  position: fixed;
+  top: 30%;
+  left: 45%;
+  width: 20%;
+  border: 1px solid black;
+}
+
+.insertBox h3 {
+  font-size: 18px;
+  color: #5A5A5A;
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

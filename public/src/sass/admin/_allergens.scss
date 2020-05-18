@@ -1,0 +1,55 @@
+.searchBar {
+@include searchBar ($grey)
+}
+
+.btnSearch {
+@include searchBtn ($darkPink)
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 18%;
+  padding: 0 30px;
+  margin-top: 35px;
+}
+
+.path {
+  margin-left: 20%;
+  font-size: 20px;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+.path a {
+  color: $darkGrey;
+}
+
+.path:hover {
+  font-weight: bold;
+}
+
+.mainFlex {
+  justify-content: space-between;
+  margin-left: 20%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 25%;
+  height: auto;
+  background-color: white;
+}
+
+.insertBox {
+  position: fixed;
+  top: 30%;
+  left: 45%;
+  width: 20%;
+  border: 1px solid black;
+}
+
+.insertBox h3 {
+  font-size: 18px;
+  color: $darkGrey;
+  margin-bottom: 50px;
+}
+

@@ -22,9 +22,9 @@
                     <p>
                         <b>{{ child.lastName }}</b> {{ child.firstName }}
                     </p>
-                    <div class="watchIcon">
+                    <div>
                         <a href="{{ path ('admin_child_show', {'id':child.id}) }}">
-                            <img src="{{ asset('uploads/admin/img/watchIcon2.png') }}" alt="Détails" class="img-fluid">
+                            <i class="fa fa-eye"></i>
                         </a>
                     </div>
                 </div>
@@ -37,9 +37,9 @@
                     <p>
                         <b>{{ user.lastName }}</b> {{ user.firstName }}
                     </p>
-                    <div class="watchIcon">
+                    <div>
                         <a href="{{ path ('admin_user_show', {'id':user.id}) }}">
-                            <img src="{{ asset('uploads/admin/img/watchIcon2.png') }}" alt="Détails" class="img-fluid">
+                            <i class="fa fa-eye"></i>
                         </a>
                     </div>
                 </div>

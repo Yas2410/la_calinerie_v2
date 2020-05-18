@@ -1,12 +1,14 @@
-* {
-  font-family: $mainFont;
-
-}
-
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: $lightGrey ;
+  background-color: $lightGrey;
+  font-family: $mainFont
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
 }
 
 a {
@@ -21,10 +23,67 @@ ul {
   padding: 0;
 }
 
-p, h1 {
+p, h1, h3 {
   margin: 0;
 }
-.img-fluid {
+
+.title {
+  font-size: 30px;
+  color: $darkGrey;
+}
+
+.flash {
+  @include flash($darkGrey)
+}
+
+section {
+  margin-left: 19%;
+}
+
+.insert {
+  position: fixed;
+  top: 35%;
+  left: 25%;
+}
+
+.insert h3 {
+  color: $darkGrey;
+  margin-bottom: 10px;
+}
+
+.form {
+  padding: 35px;
+}
+
+.form button {
+  margin: 25px 65px;
+  background-color: $darkGrey;
+  border: none;
+  width: 90px;
+  height: 35px;
+  line-height: 32px;
+  font-size: 18px;
+  border-radius: 20px;
+  color: white;
+  outline: none;
+}
+
+.pathInsert a {
+  color: $darkGrey;
+  font-size: 18px;
+}
+
+.pathInsert:hover {
+  font-weight: bold;
+}
+
+.fa-reply {
+  @include icon($darkGrey);
+  font-size: 30px;
+}
+
+.center {
+  margin: 0 auto;
   width: 100%;
-  height: auto;
+  text-align: center;
 }

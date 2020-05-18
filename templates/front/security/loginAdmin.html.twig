@@ -1,40 +1,51 @@
-{% block title %}{% endblock %}
+{% extends 'admin/baseLog.html.twig' %}
 
-{% block body %}
+{% block content %}
+
+<div class="loginAdmin">
+
+    <div class="logLogo">
+        <img src="{{ asset('uploads/admin/img/logo.png') }}" alt="Logo La Calinerie" class="img-fluid">
+    </div>
     <form method="post">
+
         {% if error %}
             <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
         {% endif %}
 
-        <div>
+        <div class="log">
+            <h1>ESPACE ADMIN</h1>
             <h3>Veuillez vous authentifier</h3>
+
             <label for="inputEmail">Email</label>
-            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required
+            <input type="email" name="email" id="inputEmail" class="form-control" required
                    autofocus>
+
             <label for="inputPassword">Mot de Passe</label>
             <input type="password" name="password" id="inputPassword" class="form-control" required>
 
             <input type="hidden" name="_csrf_token"
-                   value="{{ csrf_token('authenticate') }}"
-            >
+                   value="{{ csrf_token('authenticate') }}">
 
-            {#
-                Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-                See https://symfony.com/doc/current/security/remember_me.html
+        </div>
+        {#
+            Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+            See https://symfony.com/doc/current/security/remember_me.html
 
-                <div class="checkbox mb-3">
-                    <label>
-                        <input type="checkbox" name="_remember_me"> Remember me
-                    </label>
-                </div>
-            #}
-
-            <div>
-                <button type="submit">
-                    Se Connecter
-                </button>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" name="_remember_me"> Remember me
+                </label>
             </div>
+        #}
+
+        <div class="btnLogin">
+            <button type="submit">
+                Se Connecter
+            </button>
         </div>
     </form>
+
+</div>
 
 {% endblock %}

@@ -2,30 +2,37 @@
 
 {% block content %}
 
-    <div class="searchBar">
-        <h1>ALLERGÈNES</h1>
-        <form action="{{ path('admin_allergen_search') }}" method="GET">
-            <label>
-                <input type="search" name="search">
-            </label>
-            <input type="submit" value="Rechercher">
-        </form>
-    </div>
-
-    <div>
-        <a href="{{ path ('admin_allergen_insert') }}"> - Insérer un nouveau type d'allergène - </a>
-    </div>
-    <div>
-        <a href="{{ path ('admin_dashboard') }}"> - Accueil - </a>
-    </div>
-
-    {% for allergen in allergens %}
+    <section class="topSection">
+        <h1 class="title">ALLERGÈNES</h1>
         <div>
-            <h1>{{ allergen.type }}</h1>
+            <form action="{{ path('admin_allergen_search') }}" method="GET">
+                <label>
+                    <input class="searchBar" type="text" name="search" placeholder="RECHERCHER">
+                </label>
+                <button class="btnSearch" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
         </div>
-        <div>
-            <a href="{{ path ('admin_allergen_show', {'id':allergen.id}) }}"> - Détails - </a>
+    </section>
+
+    <section class="mainFlex">
+    {% for allergen in allergens %}
+        <div class="flex">
+            <div>
+                <p>{{ allergen.type }}</p>
+            </div>
+            <div>
+                <a href="{{ path ('admin_allergen_show', {'id':allergen.id}) }}">
+                    <i class="fa fa-eye"></i>
+                </a>
+            </div>
         </div>
     {% endfor %}
+    </section>
+
+    <div class="path">
+        <a href="{{ path ('admin_allergen_insert') }}"> - Insérer un nouveau type d'allergène - </a>
+    </div>
 
 {% endblock %}
