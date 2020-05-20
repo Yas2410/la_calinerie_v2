@@ -1,7 +1,14 @@
-{% extends 'admin/base.html.twig' %}
+{% extends 'admin/common/base.html.twig' %}
 
 {% block content %}
 
+    <div>
+        <div class=" logoResp">
+            <a href="{{ path('admin_dashboard') }}">
+                <img src="{{ asset('uploads/admin/img/logo.png') }}" alt="Logo La Calinerie" class="img-fluid">
+            </a>
+        </div>
+    </div>
     <section class="topSection">
         <h1 class="title">ALLERGÈNES</h1>
         <div>

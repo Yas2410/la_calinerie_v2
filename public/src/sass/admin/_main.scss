@@ -1,3 +1,4 @@
+/*GLOBAL CSS*/
 body {
   box-sizing: border-box;
   margin: 0;
@@ -15,75 +16,38 @@ a {
   text-decoration: none;
 }
 
-li {
+ul, li {
   list-style: none;
-}
-
-ul {
   padding: 0;
+  margin: 0 auto;
 }
 
-p, h1, h3 {
+
+h1, h3, p {
   margin: 0;
 }
 
-.title {
-  font-size: 30px;
-  color: $darkGrey;
-}
-
-.flash {
-  @include flash($darkGrey)
-}
-
-section {
-  margin-left: 19%;
-}
-
-.insert {
-  position: fixed;
-  top: 35%;
-  left: 25%;
-}
-
-.insert h3 {
-  color: $darkGrey;
-  margin-bottom: 10px;
-}
-
-.form {
-  padding: 35px;
-}
-
-.form button {
-  margin: 25px 65px;
-  background-color: $darkGrey;
-  border: none;
-  width: 90px;
-  height: 35px;
-  line-height: 32px;
-  font-size: 18px;
-  border-radius: 20px;
-  color: white;
-  outline: none;
-}
-
-.pathInsert a {
-  color: $darkGrey;
-  font-size: 18px;
-}
-
-.pathInsert:hover {
+.textLogo, #t1, #t2, #t3 {
+  font-family: $logoText;
   font-weight: bold;
+  color: $grey;
+  #t1 {
+    color: $blue;
+  }
+
+  #t2 {
+    color: $pink;
+  }
+
+  #t3 {
+    color: $green;
+  }
 }
 
-.fa-reply {
-  @include icon($darkGrey);
-  font-size: 30px;
+.logoResp {
+  margin: 10px 15px;
+  width: 10%;
 }
 
-.center {
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-}
+
+

@@ -1,54 +1,56 @@
-
-.loginAdmin {
-  position: fixed;
-  top: 30%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
-}
-
-.log {
-  text-align: center;
-  margin-top: 18%;
-}
-
-.log h1 {
-  color: $darkPink;
-  margin-bottom: 10px;
-}
-
-.log h3 {
-  color: $darkGrey;
-  margin-bottom: 50px;
-}
-
-.logLogo {
-  position: absolute;
-  width: 25%;
-  bottom: 70%;
-  left: 38%;
-}
-
-.btnLogin {
+/*LOGIN*/
+.container {
   display: flex;
-  justify-content: center;
-  padding: 30px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-size: 35px;
+    color: $darkPink;
+    padding: 20px;
+  }
+
+  h3 {
+    color: $darkGrey;
+    margin-bottom: 25px;
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input {
+    margin-bottom: 5px;
+    width: 200px;
+  }
 }
 
 .btnLogin button {
   background-color: $darkGrey;
+  font-family: $mainFont;
+  margin-top: 10px;
   border: none;
+  outline: none;
   width: 130px;
   height: 40px;
   line-height: 20px;
   font-size: 16px;
   border-radius: 65px;
   color: white;
-  outline: none;
+
+  &:hover {
+    background-color: $darkPink;
+    font-weight: bold;
+  }
 }
 
-.btnLogin:hover button {
-  background-color: $darkPink;
-  font-weight: bold;
-  border: 1px solid white;
-}
+
+

@@ -1,13 +1,9 @@
 @import "var";
 @import "responsive";
 @import "mixin";
-/*LOGIN ADMIN*/
-@import "login";
-/*ADMIN MAIN CSS*/
 @import "main";
-/*ADMIN DASHBOARD CSS*/
+@import "login";
 @import "dashboardAdmin";
-/*ADMIN ALLERGENS SECTION CSS*/
 @import "allergens";
 
 

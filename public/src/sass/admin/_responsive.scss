@@ -12,6 +12,14 @@
   .xLarge-10 {width: 83.33%;}
   .xLarge-11 {width: 91.66%;}
   .xLarge-12 {width: 100%;}
+
+  .container {
+    margin-top: 30px;
+  }
+
+  .dashboardResp, .logoResp, navResp {
+    display: none !important;
+  }
 }
 
 
@@ -29,6 +37,14 @@
   .large-10 {width: 83.33%;}
   .large-11 {width: 91.66%;}
   .large-12 {width: 100%;}
+
+  .container {
+    margin-top: 30px;
+  }
+
+  .dashboardResp, .logoResp, navResp {
+    display: none !important;
+  }
 }
 
 
@@ -46,6 +62,20 @@
   .medium-10 {width: 83.33%;}
   .medium-11 {width: 91.66%;}
   .medium-12 {width: 100%;}
+
+  .container {
+    margin-top: 40px;
+  }
+
+  .dashboardDesk, aside, .resumeBox {
+    display: none !important;
+  }
+
+  .mainCatBox, .mainCat, .topSection {
+  flex-direction: column;
+    margin: 10px!important;
+  }
+
 }
 
 
@@ -63,4 +93,17 @@
   .small-10 {width: 83.33%;}
   .small-11 {width: 91.66%;}
   .small-12 {width: 100%;}
+
+  .container {
+    margin-top: 60px;
+  }
+
+  .dashboardDesk, aside, .resumeBox{
+    display: none !important;
+  }
+
+  .mainCatBox, .mainCat, .topSection {
+    flex-direction: column;
+    margin: 15px!important;
+  }
 }

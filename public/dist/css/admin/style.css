@@ -47,6 +47,14 @@
   .xLarge-12 {
     width: 100%;
   }
+
+  .container {
+    margin-top: 30px;
+  }
+
+  .dashboardResp, .logoResp, navResp {
+    display: none !important;
+  }
 }
 @media only screen and (min-width: 980px) and (max-width: 1279px) {
   /* For desktop: */
@@ -96,6 +104,14 @@
 
   .large-12 {
     width: 100%;
+  }
+
+  .container {
+    margin-top: 30px;
+  }
+
+  .dashboardResp, .logoResp, navResp {
+    display: none !important;
   }
 }
 @media only screen and (min-width: 520px) and (max-width: 979px) {
@@ -147,6 +163,19 @@
   .medium-12 {
     width: 100%;
   }
+
+  .container {
+    margin-top: 40px;
+  }
+
+  .dashboardDesk, aside, .resumeBox {
+    display: none !important;
+  }
+
+  .mainCatBox, .mainCat, .topSection {
+    flex-direction: column;
+    margin: 10px !important;
+  }
 }
 @media only screen and (min-width: 260px) and (max-width: 519px) {
   /* For mobile: */
@@ -197,63 +226,21 @@
   .small-12 {
     width: 100%;
   }
-}
-/*LOGIN ADMIN*/
-.loginAdmin {
-  position: fixed;
-  top: 30%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
-}
 
-.log {
-  text-align: center;
-  margin-top: 18%;
-}
+  .container {
+    margin-top: 60px;
+  }
 
-.log h1 {
-  color: #F08EAD;
-  margin-bottom: 10px;
-}
+  .dashboardDesk, aside, .resumeBox {
+    display: none !important;
+  }
 
-.log h3 {
-  color: #5A5A5A;
-  margin-bottom: 50px;
+  .mainCatBox, .mainCat, .topSection {
+    flex-direction: column;
+    margin: 15px !important;
+  }
 }
-
-.logLogo {
-  position: absolute;
-  width: 25%;
-  bottom: 70%;
-  left: 38%;
-}
-
-.btnLogin {
-  display: flex;
-  justify-content: center;
-  padding: 30px;
-}
-
-.btnLogin button {
-  background-color: #5A5A5A;
-  border: none;
-  width: 130px;
-  height: 40px;
-  line-height: 20px;
-  font-size: 16px;
-  border-radius: 65px;
-  color: white;
-  outline: none;
-}
-
-.btnLogin:hover button {
-  background-color: #F08EAD;
-  font-weight: bold;
-  border: 1px solid white;
-}
-
-/*ADMIN MAIN CSS*/
+/*GLOBAL CSS*/
 body {
   box-sizing: border-box;
   margin: 0;
@@ -271,125 +258,249 @@ a {
   text-decoration: none;
 }
 
-li {
+ul, li {
   list-style: none;
-}
-
-ul {
   padding: 0;
+  margin: 0 auto;
 }
 
-p, h1, h3 {
+h1, h3, p {
   margin: 0;
 }
 
-.title {
-  font-size: 30px;
+.textLogo, #t1, #t2, #t3 {
+  font-family: "Adequate", sans-serif;
+  font-weight: bold;
+  color: #808080;
+}
+.textLogo #t1, #t1 #t1, #t2 #t1, #t3 #t1 {
+  color: #66C7D8;
+}
+.textLogo #t2, #t1 #t2, #t2 #t2, #t3 #t2 {
+  color: #FFC0CB;
+}
+.textLogo #t3, #t1 #t3, #t2 #t3, #t3 #t3 {
+  color: #90EE90;
+}
+
+.logoResp {
+  margin: 10px 15px;
+  width: 10%;
+}
+
+/*LOGIN*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.login h1 {
+  font-size: 35px;
+  color: #F08EAD;
+  padding: 20px;
+}
+.login h3 {
   color: #5A5A5A;
+  margin-bottom: 25px;
+}
+.login label {
+  margin-bottom: 5px;
+}
+.login input {
+  margin-bottom: 5px;
+  width: 200px;
 }
 
-.flash {
-  width: 100%;
+.btnLogin button {
   background-color: #5A5A5A;
-  height: 50px;
-  line-height: 50px;
-  color: white;
-  font-size: 22px;
-  text-align: center;
-  margin-top: 25px;
-  margin-left: 18%;
-  padding-left: 55px;
-}
-
-section {
-  margin-left: 19%;
-}
-
-.insert {
-  position: fixed;
-  top: 35%;
-  left: 25%;
-}
-
-.insert h3 {
-  color: #5A5A5A;
-  margin-bottom: 10px;
-}
-
-.form {
-  padding: 35px;
-}
-
-.form button {
-  margin: 25px 65px;
-  background-color: #5A5A5A;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 10px;
   border: none;
-  width: 90px;
-  height: 35px;
-  line-height: 32px;
-  font-size: 18px;
-  border-radius: 20px;
-  color: white;
   outline: none;
+  width: 130px;
+  height: 40px;
+  line-height: 20px;
+  font-size: 16px;
+  border-radius: 65px;
+  color: white;
 }
-
-.pathInsert a {
-  color: #5A5A5A;
-  font-size: 18px;
-}
-
-.pathInsert:hover {
+.btnLogin button:hover {
+  background-color: #F08EAD;
   font-weight: bold;
 }
 
-.fa-reply {
-  font-size: 18px;
-  color: #5A5A5A;
-  font-size: 30px;
-}
-
-.center {
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-}
-
-/*ADMIN DASHBOARD CSS*/
-header {
-  position: relative;
-}
-
-.welcome {
+/*DASHBOARD DESKTOP*/
+.dashboardDesk {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #F4F4F4;
-  height: 10vh;
-  font-size: 20px;
-  padding: 0;
   margin-left: 18%;
   border-bottom: 2px solid white;
 }
-
-.welcome p {
+.dashboardDesk p {
   font-size: 30px;
   font-weight: bold;
   color: #5A5A5A;
-  margin-left: 1%;
+  margin-left: 20px;
+  padding: 20px 0;
 }
 
 .logout a {
   font-size: 18px;
   color: #5A5A5A;
-  margin-right: 40px;
+  margin-right: 20px;
   transition: transform 0.3s;
 }
-
-.logout:hover {
+.logout a:hover {
   font-weight: bold;
 }
 
-.menu {
+/*DASHBOARD RESPONSIVE*/
+.dashboardResp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 35px 0;
+}
+
+.hello, .welcome {
+  color: #5A5A5A;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hello {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.welcome {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/*BURGER MENU RESPONSIVE*/
+.textLogo {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 45px;
+}
+
+.fa-navicon, .fa-times {
+  color: #5A5A5A;
+  font-size: 45px;
+}
+
+.fa-times {
+  font-size: 35px;
+}
+
+.drop-down {
+  padding-top: 50px;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background: white;
+  top: -100%;
+  transition: top 0.4s ease-in-out;
+  box-shadow: 0 0 10px 2px #000;
+}
+.drop-down li {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.drop-down li:nth-child(1) {
+  border-top: 0;
+}
+.drop-down li:nth-child(4) {
+  border-bottom: 0;
+}
+.drop-down li:hover {
+  background: lightgrey;
+  font-weight: bold;
+}
+.drop-down a {
+  display: block;
+  font-size: 18pt;
+  color: #5A5A5A;
+  text-decoration: none;
+}
+.drop-down .logoutResp {
+  background-color: #5A5A5A;
+  color: white;
+}
+
+.down {
+  top: 0;
+  transition: top 0.4s ease-in-out;
+}
+
+.menuResp {
+  box-sizing: content-box !important;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  justify-content: center;
+  z-index: 999;
+}
+.menuResp a {
+  display: block;
+  font-size: 50pt;
+  color: #5A5A5A;
+  margin: 0 auto;
+}
+.menuResp .close {
+  display: none;
+}
+
+.trigger {
+  animation: menuResp-spin-back 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.round {
+  animation: menuResp-spin 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes menuResp-spin {
+  50% {
+    border-radius: 100%;
+  }
+  100% {
+    border-radius: 100%;
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes menuResp-spin-back {
+  50% {
+    border-radius: 0;
+  }
+  100% {
+    border-radius: 0;
+    transform: rotate(-180deg);
+  }
+}
+.white {
+  border-color: #fff;
+  color: #fff !important;
+}
+
+/*MENU DESKTOP*/
+.menuDesk {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -409,21 +520,18 @@ header {
   padding: 10px 0 10px 0;
 }
 
-.menu span {
+.menuDesk span {
   margin-left: 22%;
   color: #808080;
 }
-
-.menu ul {
+.menuDesk ul {
   margin-top: 100px;
 }
-
-.menu li {
+.menuDesk li {
   text-align: center;
   padding: 25px 0 25px 0;
 }
-
-.menu a {
+.menuDesk a {
   color: #5A5A5A;
 }
 
@@ -432,7 +540,7 @@ header {
   font-weight: bold;
 }
 
-.firstBox, .secondBox {
+.mainCatBox, .resumeBox {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -441,36 +549,37 @@ header {
   margin-bottom: 50px;
 }
 
-.smallBox {
+.mainCat {
   margin: 70px 0 100px 0;
-  width: 20%;
+  width: 225px;
   height: 80px;
   line-height: 80px;
   background-color: white;
   box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
-  border-radius: 6px;
 }
-
-.smallBox a {
+.mainCat a {
   font-size: 22px;
   color: #5A5A5A;
 }
 
-.select2:hover {
+.selectCat:hover {
   color: white;
   background-color: #808080;
   font-weight: bold;
 }
-
-.select2:hover a {
+.selectCat:hover a {
   color: white;
 }
 
-.bigBox {
+.resumeBoxDetails {
   width: 40%;
   height: 225px;
   background-color: white;
   box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+}
+.resumeBoxDetails a {
+  font-size: 16px;
+  margin: 0;
 }
 
 .lastRegister {
@@ -483,11 +592,6 @@ header {
   margin-bottom: 10px;
 }
 
-.bigBox a {
-  font-size: 16px;
-  margin: 0;
-}
-
 .flex {
   display: flex;
   justify-content: space-between;
@@ -497,11 +601,9 @@ header {
 }
 
 .fa-eye {
-  font-size: 18px;
   color: #808080;
 }
 
-/*ADMIN ALLERGENS SECTION CSS*/
 .searchBar {
   background-color: transparent;
   border: none;
