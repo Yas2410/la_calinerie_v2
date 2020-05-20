@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fc1eb0a-69df-41be-90ec-b23689bbb73b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/admin/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/admin/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/admin/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/admin/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_dashboardAdmin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_dashboardAdmin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_mixin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_mixin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_responsive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_var.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_var.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/allergens/allergens.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/allergens/allergens.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/articles/articles.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/articles/articles.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/common/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/baseLog.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/common/baseLog.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/home/dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/home/dashboard.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/security/loginAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/security/loginAdmin.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="3fc1eb0a-69df-41be-90ec-b23689bbb73b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -234,7 +216,7 @@
       <workItem from="1589703666136" duration="17758000" />
       <workItem from="1589798239096" duration="12406000" />
       <workItem from="1589875713559" duration="14803000" />
-      <workItem from="1589967229308" duration="14372000" />
+      <workItem from="1589967229308" duration="14658000" />
     </task>
     <task id="LOCAL-00001" summary="Forms / Insert">
       <created>1587759344490</created>
@@ -369,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589800906304</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Responsive : BurgerMenu/Dashboard/JS">
+      <created>1590007619525</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1590007619525</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +396,8 @@
     <MESSAGE value="SASS Admin Dashboard" />
     <MESSAGE value="SASS Admin" />
     <MESSAGE value="SASS/CSS update" />
-    <option name="LAST_COMMIT_MESSAGE" value="SASS/CSS update" />
+    <MESSAGE value="Responsive : BurgerMenu/Dashboard/JS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Responsive : BurgerMenu/Dashboard/JS" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Notifications" timestamp="1589493776031">
@@ -430,10 +420,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589100581906" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1589800905457">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1590007617907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589800905457" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590007617907" />
     <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog" timestamp="1587806426419">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -458,10 +448,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589659515130" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1589800908203">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1590007637437">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589800908203" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590007637437" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1589493729998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
