@@ -702,12 +702,23 @@ h1, h3, p {
   margin-bottom: 30px;
   height: auto;
   background-color: white;
+  color: #5A5A5A;
 }
 
 .singleCatContent {
   display: flex;
   justify-content: space-between;
   margin: 15px 15px;
+  color: #5A5A5A;
+}
+.singleCatContent h1 {
+  color: #5A5A5A;
+  font-size: 20px;
+}
+.singleCatContent h1 span {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: normal;
 }
 
 .return .fa-reply {

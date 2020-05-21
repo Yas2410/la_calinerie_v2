@@ -1,15 +1,32 @@
-<div>
-    <a href="{{ path ('admin_menu_insert') }}"> - Ajouter un menu - </a>
-</div>
-<div>
-    <a href="{{ path ('admin_dashboard') }}"> - Accueil - </a>
-</div>
+{% extends 'admin/common/base.html.twig' %}
 
-{% for menu in menus %}
-<div>
-    <h1>{{ menu.title }}</h1>
-    <div>
-        <a href="{{ path ('admin_menu_show', {'id':menu.id}) }}"> - Voir le menu - </a>
-    </div>
-    {% endfor %}
-</div>
+{% block content %}
+
+    <section class="title-search">
+        <h1>MENUS</h1>
+    </section>
+
+    <section class="container">
+        <div class="path xLarge-3 large-3 medium-6 small-9">
+            <a href="{{ path ('admin_menu_insert') }}">Ajouter un menu</a>
+        </div>
+        <div class="singleCat xLarge-5 large-5 medium-10 small-9">
+            {% for menu in menus %}
+                <div class="singleCatContent">
+                    <h1>
+                        {{ menu.title }}
+                    </h1>
+                    <a href="{{ path ('admin_menu_show', {'id':menu.id}) }}">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="return">
+            <a href="{{ path ('admin_dashboard') }}">
+                <i class="fa fa-reply"></i>
+            </a>
+        </div>
+    </section>
+
+{% endblock %}

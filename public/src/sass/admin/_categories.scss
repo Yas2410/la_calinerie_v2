@@ -48,12 +48,26 @@
   margin-bottom: 30px;
   height: auto;
   background-color: white;
+  color: $darkGrey;
 }
 
 .singleCatContent {
   display: flex;
   justify-content: space-between;
   margin: 15px 15px;
+  color: $darkGrey;
+
+  h1 {
+    color: $darkGrey;
+    font-size: 20px;
+
+    span {
+      font-size: 16px;
+      font-style: italic;
+      font-weight: normal;
+    }
+  }
+
 }
 
 .return .fa-reply {

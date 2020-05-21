@@ -1,20 +1,40 @@
-<form action="{{ path('admin_child_search') }}" method="GET">
-    <input type="search" name="search">
-    <input type="submit" value="Rechercher">
-</form>
+{% extends 'admin/common/base.html.twig' %}
 
-<div>
-    <a href="{{ path ('admin_child_insert') }}"> - Créer une nouvelle fiche enfant - </a>
-</div>
-<div>
-    <a href="{{ path ('admin_dashboard') }}"> - Accueil - </a>
-</div>
+{% block content %}
 
-{% for child in children %}
-<div>
-    <h1>{{ child.firstName }} {{ child.lastName }}</h1>
-    <div>
-        <a href="{{ path ('admin_child_show', {'id':child.id}) }}"> - Détails - </a>
-    </div>
-    {% endfor %}
-</div>
+    <section class="title-search">
+        <h1>ENFANTS</h1>
+        <div>
+            <form action="{{ path('admin_child_search') }}" method="GET">
+                <label>
+                    <input class="searchBar" type="text" name="search" placeholder="RECHERCHER">
+                </label>
+                <button class="btnSearch" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="path xLarge-3 large-3 medium-6 small-9">
+            <a href="{{ path ('admin_allergen_insert') }}">Créer une nouvelle fiche enfant</a>
+        </div>
+        <div class="singleCat xLarge-5 large-5 medium-10 small-9">
+            {% for child in children %}
+                <div class="singleCatContent">
+                    <p>{{ child.firstName }} <b>{{ child.lastName }}</b></p>
+                    <a href="{{ path ('admin_child_show', {'id':child.id}) }}">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="return">
+            <a href="{{ path ('admin_dashboard') }}">
+                <i class="fa fa-reply"></i>
+            </a>
+        </div>
+    </section>
+
+{% endblock %}

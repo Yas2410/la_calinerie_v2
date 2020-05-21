@@ -1,18 +1,40 @@
-<form action="{{ path('admin_user_search') }}" method="GET">
-    <input type="search" name="search">
-    <input type="submit" value="Rechercher">
-</form>
+{% extends 'admin/common/base.html.twig' %}
 
-<div>
-    <a href="{{ path ('admin_dashboard') }}"> - Accueil - </a>
-</div>
+{% block content %}
 
-{% for user in users %}
-    <div>
-        <h1>{{ user.lastName }} {{ user.firstName }}</h1>
-    </div>
-    <div><a href="{{ path ('admin_user_show', {'id':user.id}) }}"> Voir la fiche famille </a></div>
-{% endfor %}
+    <section class="title-search">
+        <h1>FAMILLES</h1>
+        <div>
+            <form action="{{ path('admin_user_search') }}" method="GET">
+                <label>
+                    <input class="searchBar" type="text" name="search" placeholder="RECHERCHER">
+                </label>
+                <button class="btnSearch" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="singleCat xLarge-5 large-5 medium-10 small-9">
+            {% for user in users %}
+                <div class="singleCatContent">
+                    <p><b>{{ user.lastName }}</b> {{ user.firstName }}</p>
+                    <a href="{{ path ('admin_user_show', {'id':user.id}) }}">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="return">
+            <a href="{{ path ('admin_dashboard') }}">
+                <i class="fa fa-reply"></i>
+            </a>
+        </div>
+    </section>
+
+{% endblock %}
 
 
 

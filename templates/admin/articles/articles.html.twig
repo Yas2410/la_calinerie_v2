@@ -1,19 +1,33 @@
+{% extends 'admin/common/base.html.twig' %}
 
+{% block content %}
 
-    <h1 class="title">ARTICLES</h1>
-<div>
-    <a href="{{ path ('admin_article_insert') }}"> - Rédiger un nouvel article - </a>
-</div>
-<div>
-    <a href="{{ path ('admin_dashboard') }}"> - Accueil - </a>
-</div>
+<section class="title-search">
+    <h1>ARTICLES</h1>
+</section>
 
-{% for article in articles %}
-<div>
-    <h1>{{ article.title }}</h1>
-    <h6>{{ article.date|date('d/m/Y') }}</h6>
-    <div>
-        <a href="{{ path ('admin_article_show', {'id':article.id}) }}"> - Voir l'article - </a>
+<section class="container">
+    <div class="path xLarge-3 large-3 medium-6 small-9">
+        <a href="{{ path ('admin_article_insert') }}">Rédiger un nouvel article</a>
     </div>
-    {% endfor %}
-</div>
+    <div class="singleCat xLarge-5 large-5 medium-10 small-9">
+        {% for article in articles %}
+            <div class="singleCatContent">
+                <h1>
+                    {{ article.title }} <br>
+                   <span>{{ article.date|date('d/m/Y') }}</span>
+                </h1>
+                <a href="{{ path ('admin_article_show', {'id':article.id}) }}">
+                    <i class="fa fa-eye"></i>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="return">
+        <a href="{{ path ('admin_dashboard') }}">
+            <i class="fa fa-reply"></i>
+        </a>
+    </div>
+</section>
+
+{% endblock %}
