@@ -2,15 +2,8 @@
 
 {% block content %}
 
-    <div>
-        <div class=" logoResp">
-            <a href="{{ path('admin_dashboard') }}">
-                <img src="{{ asset('uploads/admin/img/logo.png') }}" alt="Logo La Calinerie" class="img-fluid">
-            </a>
-        </div>
-    </div>
-    <section class="topSection">
-        <h1 class="title">ALLERGÈNES</h1>
+    <section class="title-search">
+        <h1>ALLERGÈNES</h1>
         <div>
             <form action="{{ path('admin_allergen_search') }}" method="GET">
                 <label>
@@ -23,23 +16,25 @@
         </div>
     </section>
 
-    <section class="mainFlex">
-    {% for allergen in allergens %}
-        <div class="flex">
-            <div>
-                <p>{{ allergen.type }}</p>
-            </div>
-            <div>
-                <a href="{{ path ('admin_allergen_show', {'id':allergen.id}) }}">
-                    <i class="fa fa-eye"></i>
-                </a>
-            </div>
+    <section class="container">
+        <div class="path xLarge-3 large-3 medium-6 small-9">
+            <a href="{{ path ('admin_allergen_insert') }}">Insérer un nouveau type d'allergène</a>
         </div>
-    {% endfor %}
+        <div class="singleCat xLarge-5 large-5 medium-10 small-9">
+            {% for allergen in allergens %}
+                <div class="singleCatContent">
+                    <p>{{ allergen.type }}</p>
+                    <a href="{{ path ('admin_allergen_show', {'id':allergen.id}) }}">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="return">
+            <a href="{{ path ('admin_allergens_list') }}">
+                <i class="fa fa-reply"></i>
+            </a>
+        </div>
     </section>
-
-    <div class="path">
-        <a href="{{ path ('admin_allergen_insert') }}"> - Insérer un nouveau type d'allergène - </a>
-    </div>
 
 {% endblock %}

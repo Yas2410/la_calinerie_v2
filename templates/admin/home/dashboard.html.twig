@@ -2,39 +2,19 @@
 
 {% block content %}
 
-    <navResp>
-        <div class="drop-down">
-            <nav role='navigation'>
-                <h1 class="textLogo">
-                    <span id="t1">L</span>a Ca<span id="t2">l</span>ine<span id="t3">r</span>ie
-                </h1>
-                <ul>
-                    <li><a href="{{ path('admin_articles_list') }}">ARTICLES</a></li>
-                    <li><a href="{{ path('admin_events_list') }}">ÉVÈNEMENTS</a></li>
-                    <li><a href="{{ path('admin_pictures_list') }}">GALERIE</a></li>
-                    <li><a href="{{ path('admin_menus_list') }}">MENUS</a></li>
-                    <li><a class="logoutResp" href="{{ path('app_login') }}">Se Déconnecter</a></li>
-                </ul>
-            </nav>
+    <section>
+        <div class="dashboardResp">
+            <div class="medium-2 small-3">
+                <img src="{{ asset('uploads/admin/img/logo.png') }}" alt="Logo La Calinerie" class="img-fluid">
+            </div>
+            <p class="hello">
+                Admin, Bonjour !
+            </p>
+            <p class="welcome">
+                Bienvenue sur votre Tableau de Bord
+            </p>
         </div>
-        <div class="menuResp">
-            <a class="trigger" href="#"><i class="fa fa-navicon"></i></a>
-            <a class="close" href="#"><i class="fa fa-times"></i></a>
-        </div>
-    </navResp>
-
-    <div class="dashboardResp">
-        <div class="medium-2 small-3">
-            <img src="{{ asset('uploads/admin/img/logo.png') }}" alt="Logo La Calinerie" class="img-fluid">
-        </div>
-        <p class="hello">
-            Admin, Bonjour !
-        </p>
-        <p class="welcome">
-            Bienvenue sur votre Tableau de Bord
-        </p>
-    </div>
-
+    </section>
 
     <section class="mainCatBox">
         <div class="mainCat selectCat">

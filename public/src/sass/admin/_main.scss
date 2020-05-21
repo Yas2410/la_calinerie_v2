@@ -31,6 +31,7 @@ h1, h3, p {
   font-family: $logoText;
   font-weight: bold;
   color: $grey;
+
   #t1 {
     color: $blue;
   }
@@ -45,8 +46,11 @@ h1, h3, p {
 }
 
 .logoResp {
-  margin: 10px 15px;
-  width: 10%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 

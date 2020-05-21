@@ -17,7 +17,7 @@
     margin-top: 30px;
   }
 
-  .dashboardResp, .logoResp, navResp {
+  .dashboardResp, .logoResp, navResp, .return {
     display: none !important;
   }
 }
@@ -42,7 +42,7 @@
     margin-top: 30px;
   }
 
-  .dashboardResp, .logoResp, navResp {
+  .dashboardResp, .logoResp, navResp, .return {
     display: none !important;
   }
 }
@@ -71,11 +71,25 @@
     display: none !important;
   }
 
-  .mainCatBox, .mainCat, .topSection {
-  flex-direction: column;
-    margin: 10px!important;
+  .mainCatBox, .mainCat {
+    flex-direction: column;
+    margin: 10px !important;
   }
 
+  .title-search {
+    flex-direction: column;
+    padding: 0 30px;
+    margin-top: 22px !important;
+    margin-left: 0 !important;
+
+    h1 {
+      margin-bottom: 15px;
+    }
+  }
+
+  .singleCat, .path {
+    margin-left: 0!important;
+  }
 }
 
 
@@ -98,12 +112,28 @@
     margin-top: 60px;
   }
 
-  .dashboardDesk, aside, .resumeBox{
+  .dashboardDesk, aside, .resumeBox {
     display: none !important;
   }
 
-  .mainCatBox, .mainCat, .topSection {
+  .mainCatBox, .mainCat {
     flex-direction: column;
-    margin: 15px!important;
+    margin: 15px !important;
   }
+
+  .title-search {
+    flex-direction: column;
+    padding: 0 30px;
+    margin-top: 22px !important;
+    margin-left: 0!important;
+
+    h1 {
+      margin-bottom: 15px;
+    }
+  }
+
+  .singleCat, .path {
+    margin-left: 0!important;
+  }
+
 }

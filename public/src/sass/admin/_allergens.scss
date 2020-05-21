@@ -1,55 +1,64 @@
 .searchBar {
-@include searchBar ($grey)
+  @include searchBar($grey)
 }
 
 .btnSearch {
-@include searchBtn ($darkPink)
+  @include searchBtn($darkPink)
 }
 
-.topSection {
+.title-search {
   display: flex;
   justify-content: space-between;
   margin-left: 18%;
   padding: 0 30px;
   margin-top: 35px;
+
+  h1 {
+    color: $darkGrey;
+    font-size: 30px;
+  }
 }
 
 .path {
+  text-align: center;
   margin-left: 20%;
   font-size: 20px;
   justify-content: space-between;
-  padding-left: 10px;
+  padding: 15px 0;
+  border: 1px solid $darkGrey;
+
+  a {
+    color: $darkGrey;
+  }
+
+  &:hover {
+    font-weight: bold;
+    background: $darkGrey;
+
+    a {
+      color: white;
+    }
+  }
 }
 
-.path a {
-  color: $darkGrey;
-}
-
-.path:hover {
-  font-weight: bold;
-}
-
-.mainFlex {
+.singleCat {
   justify-content: space-between;
   margin-left: 20%;
   margin-top: 30px;
   margin-bottom: 30px;
-  width: 25%;
   height: auto;
   background-color: white;
 }
 
-.insertBox {
-  position: fixed;
-  top: 30%;
-  left: 45%;
-  width: 20%;
-  border: 1px solid black;
+.singleCatContent {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 15px;
 }
 
-.insertBox h3 {
-  font-size: 18px;
-  color: $darkGrey;
-  margin-bottom: 50px;
+.return .fa-reply {
+  @include icon($darkGrey);
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 

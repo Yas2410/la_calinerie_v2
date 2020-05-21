@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fc1eb0a-69df-41be-90ec-b23689bbb73b" name="Default Changelist" comment="" />
+    <list default="true" id="3fc1eb0a-69df-41be-90ec-b23689bbb73b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dist/css/admin/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/admin/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dist/css/admin/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/admin/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_allergens.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_allergens.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_dashboardAdmin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_dashboardAdmin.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_responsive.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/allergens/allergen_insert.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/allergens/allergen_insert.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/allergens/allergens.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/allergens/allergens.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/common/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/common/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/home/dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/home/dashboard.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -216,7 +228,8 @@
       <workItem from="1589703666136" duration="17758000" />
       <workItem from="1589798239096" duration="12406000" />
       <workItem from="1589875713559" duration="14803000" />
-      <workItem from="1589967229308" duration="14658000" />
+      <workItem from="1589967229308" duration="14760000" />
+      <workItem from="1590048323345" duration="7206000" />
     </task>
     <task id="LOCAL-00001" summary="Forms / Insert">
       <created>1587759344490</created>
@@ -358,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590007619525</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Responsive : BurgerMenu/Dashboard/JS">
+      <created>1590007684385</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1590007684385</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,10 +440,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589100581906" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1590007617907">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1590007683551">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590007617907" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590007683551" />
     <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog" timestamp="1587806426419">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -448,18 +468,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589659515130" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1590007637437">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1590007686100">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590007637437" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590007686100" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1589493729998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1589493729998" />
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589967267550">
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1590048324064">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589967267550" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1590048324064" />
     <state x="577" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588771287901">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
