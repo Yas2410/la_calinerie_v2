@@ -30,6 +30,7 @@
                     <span id="t1">L</span>a Ca<span id="t2">l</span>ine<span id="t3">r</span>ie
                 </h1>
                 <ul>
+                    <li><a href="{{ path('admin_dashboard') }}">ACCUEIL</a></li>
                     <li><a href="{{ path('admin_articles_list') }}">ARTICLES</a></li>
                     <li><a href="{{ path('admin_events_list') }}">ÉVÈNEMENTS</a></li>
                     <li><a href="{{ path('admin_pictures_list') }}">GALERIE</a></li>
@@ -69,8 +70,10 @@
 
 {# j'affiche tous les messages flashs enregistrés #}
 {% for message in app.flashes('success') %}
-    <div class="flash center">
-        {{ message }}
+    <div class="container">
+        <div class="flash xLarge-3 large-3 medium-6 small-9">
+            {{ message }}
+        </div>
     </div>
 {% endfor %}
 

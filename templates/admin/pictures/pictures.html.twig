@@ -1,15 +1,33 @@
-<div>
-    <a href="{{ path ('admin_picture_insert') }}"> - Insérer une nouvelle photo - </a>
-</div>
-<div>
-    <a href="{{ path ('admin_dashboard') }}"> - Accueil - </a>
-</div>
+{% extends 'admin/common/base.html.twig' %}
 
-{% for picture in pictures %}
-<div>
-    <p> {{ picture.description }}</p>
-    <div>
-        <a href="{{ path ('admin_picture_show', {'id':picture.id}) }}"> - Voir la photo - </a>
-    </div>
-    {% endfor %}
-</div>
+{% block content %}
+
+    <section class="title-search">
+        <h1>GALERIE</h1>
+    </section>
+
+    <section class="container">
+        <div class="path xLarge-3 large-3 medium-6 small-9">
+            <a href="{{ path ('admin_picture_insert') }}">Ajouter une photo</a>
+        </div>
+        <div class="singleCat xLarge-5 large-5 medium-10 small-9">
+            {% for picture in pictures %}
+                <div class="singleCatContent">
+                    <p>
+                        {{ picture.description}}
+                    </p>
+                    <a href="{{ path ('admin_picture_show', {'id':picture.id}) }}">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="return">
+            <a href="{{ path ('admin_dashboard') }}">
+                <i class="fa fa-reply"></i>
+            </a>
+        </div>
+    </section>
+
+{% endblock %}
+

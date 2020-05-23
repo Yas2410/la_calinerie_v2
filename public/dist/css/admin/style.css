@@ -52,7 +52,7 @@
     margin-top: 30px;
   }
 
-  .dashboardResp, .logoResp, navResp, .return {
+  .dashboardResp, .logoResp, navResp {
     display: none !important;
   }
 }
@@ -110,7 +110,7 @@
     margin-top: 30px;
   }
 
-  .dashboardResp, .logoResp, navResp, .return {
+  .dashboardResp, .logoResp, navResp {
     display: none !important;
   }
 }
@@ -187,8 +187,12 @@
     margin-bottom: 15px;
   }
 
-  .singleCat, .path {
+  .singleCat, .singleCatInsert, .path, .returnSmall, .flash {
     margin-left: 0 !important;
+  }
+
+  .singleCatInsert {
+    margin-top: 35px;
   }
 }
 @media only screen and (min-width: 260px) and (max-width: 519px) {
@@ -264,8 +268,12 @@
     margin-bottom: 15px;
   }
 
-  .singleCat, .path {
+  .singleCat, .singleCatInsert, .path, .return, .returnSmall, .flash {
     margin-left: 0 !important;
+  }
+
+  .singleCatInsert {
+    margin-top: 35px;
   }
 }
 /*GLOBAL CSS*/
@@ -366,6 +374,20 @@ h1, h3, p {
 .btnLogin button:hover {
   background-color: #F08EAD;
   font-weight: bold;
+}
+
+/*FLASH MESSAGES*/
+.flash {
+  background-color: #5A5A5A;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding: 0;
+  margin-left: 20%;
 }
 
 /*DASHBOARD DESKTOP*/
@@ -721,10 +743,107 @@ h1, h3, p {
   font-weight: normal;
 }
 
+.return {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-left: 20%;
+}
 .return .fa-reply {
   color: #5A5A5A;
   font-size: 40px;
   margin-bottom: 20px;
+}
+
+/*INSERT ALL CATEGORIES*/
+.containerInsert {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.singleCatInsert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20%;
+  margin-bottom: 30px;
+  background-color: white;
+  border: 1px solid #5A5A5A;
+  height: 450px;
+  color: #5A5A5A;
+}
+.singleCatInsert p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5A5A5A;
+  padding: 15px;
+}
+
+.formInsert {
+  display: flex;
+  flex-direction: column;
+}
+.formInsert form {
+  text-align: center;
+}
+.formInsert input, .formInsert select {
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.formInsert label {
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+.formInsertChild {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formInsertChild #child_birthDate {
+  width: 50%;
+}
+.formInsertChild #child_sex {
+  display: flex;
+}
+.formInsertChild input, .formInsertChild select {
+  width: 200px;
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.returnSmall {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-left: 20%;
+}
+.returnSmall .fa-reply {
+  color: #5A5A5A;
+  font-size: 30px;
+  margin: 20px 20px;
+}
+
+#allergen_submit, #child_submit, #article_submit,
+#event_submit, #menu_submit, #picture_submit {
+  width: 60px;
+  height: 30px;
+  line-height: 15px;
+  background-color: #5A5A5A;
+  color: white;
+  font-size: 14px;
+  border: none;
+}
+#allergen_submit:hover, #child_submit:hover, #article_submit:hover,
+#event_submit:hover, #menu_submit:hover, #picture_submit:hover {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -17,7 +17,7 @@
     margin-top: 30px;
   }
 
-  .dashboardResp, .logoResp, navResp, .return {
+  .dashboardResp, .logoResp, navResp {
     display: none !important;
   }
 }
@@ -42,7 +42,7 @@
     margin-top: 30px;
   }
 
-  .dashboardResp, .logoResp, navResp, .return {
+  .dashboardResp, .logoResp, navResp {
     display: none !important;
   }
 }
@@ -87,8 +87,12 @@
     }
   }
 
-  .singleCat, .path {
+  .singleCat, .singleCatInsert, .path, .returnSmall, .flash {
     margin-left: 0!important;
+  }
+
+  .singleCatInsert {
+    margin-top: 35px;
   }
 }
 
@@ -132,8 +136,12 @@
     }
   }
 
-  .singleCat, .path {
+  .singleCat, .singleCatInsert, .path, .return, .returnSmall, .flash {
     margin-left: 0!important;
+  }
+
+  .singleCatInsert {
+    margin-top: 35px;
   }
 
 }

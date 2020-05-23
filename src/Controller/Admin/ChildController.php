@@ -152,7 +152,7 @@ class ChildController extends AbstractController
 
         $this->addFlash('success', "La fiche enfant a bien été supprimée !");
 
-        return $this->render('admin/articles/child_delete.html.twig', [
+        return $this->render('admin/children/child_delete.html.twig', [
             'child' => $child
         ]);
     }

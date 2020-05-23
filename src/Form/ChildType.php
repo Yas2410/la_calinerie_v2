@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -19,9 +20,14 @@ class ChildType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('lastName')
-            ->add('firstName')
+            ->add('lastName', TextType::class, [
+                'label' => 'NOM'
+            ])
+            ->add('firstName', TextType::class, [
+                'label' => 'Prénom'
+            ])
             ->add('birthDate', BirthdayType::class, [
+                'label' => 'Date de naissance',
                 'placeholder' => [
                     'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
                 ],
@@ -29,6 +35,7 @@ class ChildType extends AbstractType
                 'format' => 'yyyy-MM-dd'
             ])
             ->add('sex', ChoiceType::class, [
+                'label' => 'Sexe',
                 'choices' => [
                     'Feminin' => 'F',
                     'Masculin' => 'M',
@@ -40,9 +47,9 @@ class ChildType extends AbstractType
                 'required' => false
             ])
             ->add('allergen', EntityType::class, [
+                'label' => 'ALLERGÈNE(S)',
                 'class' => Allergen::class,
                 'multiple' => true,
-                'label' => 'Allergène',
                 'choice_label' => 'type',
                 'required' => false,
 
@@ -53,7 +60,9 @@ class ChildType extends AbstractType
                 'choice_label' => 'lastName',
                 'required' => false
             ])
-            ->add('submit', SubmitType::class);
+            ->add('submit', SubmitType::class, [
+                'label' => 'Valider'
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

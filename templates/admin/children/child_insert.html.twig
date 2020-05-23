@@ -1,14 +1,33 @@
-{% for message in app.flashes('success') %}
-    <div class="message">
-        {{ message }}
-    </div>
-{% endfor %}
+{% extends 'admin/common/base.html.twig' %}
 
-<div class="form">
-    {{ form_start(formChild) }}
+{% block content %}
 
-    {{ form_end(formChild) }}
-</div>
-<div>
-    <a href="{{ path ('admin_children_list') }}"> - Revenir à la liste des enfants - </a>
-</div>
+    <section class="containerInsert">
+        <div class="singleCatInsert xLarge-3 large-3 medium-6 small-9">
+            <div class="formInsertChild">
+                <p>Créer une nouvelle fiche enfant</p>
+                <div>
+                    {{ form_start(formChild) }}
+
+                    {{ form_label(formChild.lastName) }}
+                    {{ form_widget(formChild.lastName) }}
+                    {{ form_errors(formChild.lastName) }}
+
+                    {{ form_label(formChild.firstName) }}
+                    {{ form_widget(formChild.firstName) }}
+                    {{ form_errors(formChild.firstName) }}
+
+
+
+                    {{ form_end(formChild) }}
+                </div>
+            </div>
+        </div>
+        <div class="returnSmall">
+            <a href="{{ path ('admin_children_list') }}">
+                <i class="fa fa-reply"></i>
+            </a>
+        </div>
+    </section>
+
+{% endblock %}
