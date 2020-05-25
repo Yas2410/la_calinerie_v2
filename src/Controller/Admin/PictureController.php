@@ -176,8 +176,6 @@ class PictureController extends AbstractController
         $entityManager->remove($picture);
         $entityManager->flush();
 
-        $this->addFlash('success', "L'élément' a bien été supprimé !");
-
         return $this->render('admin/pictures/picture_delete.html.twig', [
             'picture' => $picture
         ]);

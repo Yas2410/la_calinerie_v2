@@ -213,8 +213,6 @@ class ArticleController extends AbstractController
         $entityManager->remove($article);
         $entityManager->flush();
 
-        $this->addFlash('success', "L'article a bien été supprimé !");
-
         return $this->render('admin/articles/article_delete.html.twig', [
             'article' => $article
         ]);

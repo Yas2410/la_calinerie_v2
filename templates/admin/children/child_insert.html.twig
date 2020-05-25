@@ -4,23 +4,30 @@
 
     <section class="containerInsert">
         <div class="singleCatInsert xLarge-3 large-3 medium-6 small-9">
-            <div class="formInsertChild">
-                <p>Créer une nouvelle fiche enfant</p>
+            <div class="formInsert">
                 <div>
-                    {{ form_start(formChild) }}
-
-                    {{ form_label(formChild.lastName) }}
-                    {{ form_widget(formChild.lastName) }}
-                    {{ form_errors(formChild.lastName) }}
-
-                    {{ form_label(formChild.firstName) }}
-                    {{ form_widget(formChild.firstName) }}
-                    {{ form_errors(formChild.firstName) }}
-
-
-
-                    {{ form_end(formChild) }}
+                    <p>Créer une nouvelle fiche enfant</p>
                 </div>
+                {{ form_start(formChild) }}
+                <div class="labelInsert">
+                    {{ form_row(formChild.lastName) }}
+                    {{ form_row(formChild.firstName) }}
+                    <div class="dateInput">
+                    {{ form_row(formChild.birthDate) }}
+                    </div>
+                    <div class="sexInput">
+                    {{ form_row(formChild.sex) }}
+                    </div>
+                    {{ form_row(formChild.image) }}
+                    <div class="allergenInput">
+                    {{ form_row(formChild.allergen) }}
+                    </div>
+                    {{ form_row(formChild.user) }}
+                </div>
+                <div class="btnInsert">
+                    {{ form_widget(formChild.submit) }}
+                </div>
+                {{ form_end(formChild) }}
             </div>
         </div>
         <div class="returnSmall">

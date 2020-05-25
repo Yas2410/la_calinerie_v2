@@ -20,6 +20,14 @@
   .dashboardResp, .logoResp, navResp {
     display: none !important;
   }
+
+  #article_content, #event_content {
+    width: 725px !important;
+  }
+
+  .dateInput {
+    width: 20% !important;
+  }
 }
 
 
@@ -44,6 +52,14 @@
 
   .dashboardResp, .logoResp, navResp {
     display: none !important;
+  }
+
+  #article_content, #event_content {
+    width: 725px !important;
+  }
+
+  .dateInput {
+    width: 20% !important;
   }
 }
 

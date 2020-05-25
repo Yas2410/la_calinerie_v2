@@ -150,8 +150,6 @@ class UserController extends AbstractController
         $entityManager->remove($user);
         $entityManager->flush();
 
-        $this->addFlash('success', "L'utilisateur a bien été supprimé !");
-
         return $this->render('admin/users/user_delete.html.twig', [
             'user' => $user
         ]);

@@ -1,7 +1,11 @@
+
 <h1>{{ child.firstName }} {{ child.lastName }}</h1>
 <div>
     <p>Né(e) le : {{ child.birthDate|date('d/m/Y') }}</p>
     <p>De sexe : {{ child.sex }}</p>
+</div>
+<div>
+    <img src="{{ asset ('uploads/admin/children/') ~ child.image }}" alt="">
 </div>
 <div>
     <h2>FICHE CONTACT</h2>

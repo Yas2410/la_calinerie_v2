@@ -30,9 +30,12 @@ class ArticleType extends AbstractType
                 'mapped' => false
             ])
             ->add('date', DateType::class, [
+                'label' => 'Date de publication',
                 'widget' => 'single_text'
             ])
-            ->add('submit', SubmitType::class);
+            ->add('submit', SubmitType::class, [
+                'label' => 'Valider'
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

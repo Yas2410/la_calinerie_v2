@@ -2,26 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fc1eb0a-69df-41be-90ec-b23689bbb73b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/dist/css/admin/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/admin/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/dist/css/admin/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/admin/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_categories.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_categories.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_dashboard.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_mixin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_mixin.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_responsive.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/src/sass/admin/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AllergenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AllergenController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArticleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ChildController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ChildController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/MenuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/MenuController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/PictureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/PictureController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Child.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Child.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ArticleType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ArticleType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/ChildType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ChildType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/EventType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/EventType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/MenuType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/MenuType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PictureType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PictureType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/allergens/allergen.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/allergens/allergen.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/allergens/allergen_delete.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/allergens/allergen_delete.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/allergens/allergen_insert.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/allergens/allergen_insert.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/articles/article.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/articles/article.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/articles/article_delete.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/articles/article_delete.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/articles/article_insert.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/articles/article_insert.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/children/child.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/children/child.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/children/child_insert.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/children/child_insert.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/children/children.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/children/children.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/common/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/common/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/events/event.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/events/event.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/events/event_delete.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/events/event_delete.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/events/event_insert.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/events/event_insert.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/menus/menu.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/menus/menu.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/menus/menu_delete.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/menus/menu_delete.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/menus/menu_insert.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/menus/menu_insert.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/pictures/picture.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/pictures/picture.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/pictures/picture_delete.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/pictures/picture_delete.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/pictures/picture_insert.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/pictures/picture_insert.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/pictures/pictures.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/pictures/pictures.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +260,9 @@
       <workItem from="1590048323345" duration="10260000" />
       <workItem from="1590089974628" duration="4792000" />
       <workItem from="1590142406010" duration="15577000" />
-      <workItem from="1590239400812" duration="11406000" />
+      <workItem from="1590239400812" duration="17327000" />
+      <workItem from="1590319470378" duration="6922000" />
+      <workItem from="1590399936621" duration="12749000" />
     </task>
     <task id="LOCAL-00001" summary="Forms / Insert">
       <created>1587759344490</created>
@@ -404,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590066467758</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Forms">
+      <created>1590261932015</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1590261932015</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,7 +472,8 @@
     <MESSAGE value="SASS/CSS update" />
     <MESSAGE value="Responsive : BurgerMenu/Dashboard/JS" />
     <MESSAGE value="DESK/RESP : Admin Main Cat. Lists SASS : OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="DESK/RESP : Admin Main Cat. Lists SASS : OK" />
+    <MESSAGE value="Forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Forms" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Notifications" timestamp="1589493776031">
@@ -463,14 +492,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="457" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1588176190332" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589100581906">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590326289460">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589100581906" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1590261864296">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1590326289460" />
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1590261930547">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590261864296" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590261930547" />
     <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog" timestamp="1587806426419">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -495,18 +524,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589659515130" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1590066470292">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1590261936337">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590066470292" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590261936337" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1589493729998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1589493729998" />
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1590239730655">
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1590441557722">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1590239730655" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1590441557722" />
     <state x="577" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588771287901">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

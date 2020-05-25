@@ -1,15 +1,36 @@
-<div>
-    <h1>{{ article.title }}</h1>
-    <h6>{{ article.date|date('d/m/Y') }}</h6>
-    <img src="{{ asset ('uploads/admin/articles/') ~ article.image }}" alt="">
-</div>
-<p> {{ article.content }}</p>
-<div>
-    <a href="{{ path ('admin_article_update', {'id':article.id}) }}"> - Modifier l'article - </a>
-</div>
-<div>
-    <a href="{{ path ('admin_article_delete', {'id':article.id}) }}"> - Supprimer l'article - </a>
-</div>
-<div>
-    <a href="{{ path ('admin_articles_list') }}"> - Revenir à l'ensemble des articles - </a>
-</div>
+{% extends 'admin/common/base.html.twig' %}
+
+{% block content %}
+
+    <section class="containerInsert">
+        <div class="singleCatInsert medium-10 small-12">
+            <div class="details">
+                <div class="date">
+                    <h1>{{ article.title }}</h1>
+                    <p>{{ article.date|date('d/m/Y') }}</p>
+                </div>
+                <div class=" xLarge-5 large-5 medium-10 small-11">
+                    {% if article.image %}
+                        <img src="{{ asset ('uploads/admin/articles/') ~ article.image }}" alt="image illustrant l'article"
+                             class="img-fluid">
+                    {% endif %}
+                </div>
+                <div class="text">
+                    <p> {{ article.content }}</p>
+                </div>
+                <div class="action">
+                    <a href="{{ path ('admin_article_update', {'id':article.id}) }}">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a href="{{ path ('admin_article_delete', {'id':article.id}) }}">
+                        <i class="fa fa-remove"></i>
+                    </a>
+                    <a href="{{ path ('admin_articles_list') }}">
+                        <i class="fa fa-reply"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

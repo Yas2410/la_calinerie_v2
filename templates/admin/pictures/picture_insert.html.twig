@@ -5,11 +5,18 @@
     <section class="containerInsert">
         <div class="singleCatInsert xLarge-3 large-3 medium-6 small-9">
             <div class="formInsert">
-                <p>Ajouter une photo</p>
                 <div>
-                    {{ form_start(formPicture) }}
-                    {{ form_end(formPicture) }}
+                    <p>Ajouter une photo</p>
                 </div>
+                {{ form_start(formPicture) }}
+                <div class="labelInsert">
+                    {{ form_row(formPicture.description) }}
+                    {{ form_row(formPicture.image) }}
+                </div>
+                <div class="btnInsert">
+                    {{ form_widget(formPicture.submit) }}
+                </div>
+                {{ form_end(formPicture) }}
             </div>
         </div>
         <div class="returnSmall">

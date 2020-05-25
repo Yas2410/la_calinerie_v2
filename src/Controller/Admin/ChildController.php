@@ -74,6 +74,23 @@ class ChildController extends AbstractController
 
         if ($formChild->isSubmitted() && $formChild->isValid()) {
 
+            $image = $formChild->get('image')->getData();
+
+            if ($image) {
+
+                $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
+
+                $safeFilename = $slugger->slug($originalFilename);
+
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $image->guessExtension();
+
+                $image->move(
+                    $this->getParameter('children_directory'),
+                    $newFilename);
+
+                $child->setImage($newFilename);
+            }
+
             $entityManager->persist($child);
             $entityManager->flush();
 
@@ -105,6 +122,7 @@ class ChildController extends AbstractController
      * @route("admin/child/update/{id}", name="admin_child_update")
      * @param Request $request
      * @param ChildRepository $childRepository
+     * @param SluggerInterface $slugger
      * @param EntityManagerInterface $entityManager
      * @param $id
      * @return Response
@@ -112,6 +130,7 @@ class ChildController extends AbstractController
     public function updateChild(
         Request $request,
         ChildRepository $childRepository,
+        SluggerInterface $slugger,
         EntityManagerInterface $entityManager,
         $id
     )
@@ -120,6 +139,24 @@ class ChildController extends AbstractController
         $formChild = $this->createForm(ChildType::class, $child);
         $formChild->handleRequest($request);
         if ($formChild->isSubmitted() && $formChild->isValid()) {
+
+            $image = $formChild->get('image')->getData();
+
+            if ($image) {
+
+                $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
+
+                $safeFilename = $slugger->slug($originalFilename);
+
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $image->guessExtension();
+
+                $image->move(
+                    $this->getParameter('children_directory'),
+                    $newFilename);
+
+                $child->setImage($newFilename);
+            }
+
             $entityManager->persist($child);
             $entityManager->flush();
 
@@ -149,8 +186,6 @@ class ChildController extends AbstractController
         $child = $childRepository->find($id);
         $entityManager->remove($child);
         $entityManager->flush();
-
-        $this->addFlash('success', "La fiche enfant a bien été supprimée !");
 
         return $this->render('admin/children/child_delete.html.twig', [
             'child' => $child

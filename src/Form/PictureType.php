@@ -22,7 +22,9 @@ class PictureType extends AbstractType
                 'mapped' => false,
                 'required' => false
             ])
-            ->add('submit', SubmitType::class);
+            ->add('submit', SubmitType::class, [
+                'label' => 'Valider'
+            ]);
     }
 
 

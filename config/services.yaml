@@ -8,6 +8,7 @@ parameters:
     events_directory: '%kernel.project_dir%/public/uploads/admin/events'
     gallery_directory: '%kernel.project_dir%/public/uploads/admin/gallery'
     menus_directory: '%kernel.project_dir%/public/uploads/admin/menus'
+    children_directory: '%kernel.project_dir%/public/uploads/admin/children'
 
 services:
     # default configuration for services in *this* file

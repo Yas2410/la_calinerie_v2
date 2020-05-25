@@ -190,8 +190,6 @@ class MenuController extends AbstractController
         $entityManager->remove($menu);
         $entityManager->flush();
 
-        $this->addFlash('success', "Le menu a bien été supprimé !");
-
         return $this->render('admin/menus/menu_delete.html.twig', [
             'menu' => $menu
         ]);

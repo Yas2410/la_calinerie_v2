@@ -5,11 +5,20 @@
     <section class="containerInsert">
         <div class="singleCatInsert xLarge-3 large-3 medium-6 small-9">
             <div class="formInsert">
-                <p>Ajouter un menu</p>
                 <div>
-                    {{ form_start(formMenu) }}
-                    {{ form_end(formMenu) }}
+                    <p>Ajouter un menu</p>
                 </div>
+                {{ form_start(formMenu) }}
+                <div class="labelInsert">
+                    {{ form_row(formMenu.title) }}
+                    {{ form_row(formMenu.content) }}
+                    {{ form_row(formMenu.image) }}
+                    {{ form_row(formMenu.file) }}
+                </div>
+                <div class="btnInsert">
+                    {{ form_widget(formMenu.submit) }}
+                </div>
+                {{ form_end(formMenu) }}
             </div>
         </div>
         <div class="returnSmall">

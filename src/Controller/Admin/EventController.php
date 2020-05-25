@@ -176,8 +176,6 @@ class EventController extends AbstractController
         $entityManager->remove($event);
         $entityManager->flush();
 
-        $this->addFlash('success', "L'évènement a bien été supprimé !");
-
         return $this->render('admin/events/event_delete.html.twig', [
             'event' => $event
         ]);

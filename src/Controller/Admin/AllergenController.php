@@ -142,8 +142,6 @@ class AllergenController extends AbstractController
         $entityManager->remove($allergen);
         $entityManager->flush();
 
-        $this->addFlash('success', "Le type d'allergène a bien été supprimé !");
-
         return $this->render('admin/allergens/allergen_delete.html.twig', [
             'allergen' => $allergen
         ]);

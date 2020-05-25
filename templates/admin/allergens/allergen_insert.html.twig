@@ -4,21 +4,18 @@
 
     <section class="containerInsert">
         <div class="singleCatInsert xLarge-3 large-3 medium-6 small-9">
-            <div class="formInsertChild">
-            <p>Insérer un nouveau type d'allergène</p>
-            <div>
-                {{ form_start(formAllergen) }}
-
-                {{ form_label(formAllergen.type) }}
-                {{ form_widget(formAllergen.type, { 'attr' : {'class' : 'inputType'} }) }}
-                {{ form_errors(formAllergen.type) }}
-
+            <div class="formInsert">
                 <div>
-                {{ form_widget(formAllergen.submit) }}
+                    <p>Insérer un nouveau type d'allergène</p>
                 </div>
-
+                {{ form_start(formAllergen) }}
+                <div class="labelInsert">
+                    {{ form_row(formAllergen.type) }}
+                </div>
+                <div class="btnInsert">
+                    {{ form_widget(formAllergen.submit) }}
+                </div>
                 {{ form_end(formAllergen) }}
-            </div>
             </div>
         </div>
         <div class="returnSmall">

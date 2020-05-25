@@ -1,8 +1,20 @@
-{% for message in app.flashes('success') %}
-    <div class="message">
-        {{ message }}
-    </div>
-    <div>
-        <a href="{{ path ('admin_events_list') }}"> - Revenir à l'ensemble des évènements - </a>
-    </div>
-{% endfor %}
+{% extends 'admin/common/base.html.twig' %}
+
+{% block content %}
+
+    <section class="containerInsert">
+        <div class="singleCatInsert medium-10 small-12">
+            <div class="details">
+                <div class="delete">
+                    <h1> L'évènement <em><b>{{ article.title }}</b></em> a bien été supprimé ! </h1>
+                </div>
+                <div class="action">
+                    <a href="{{ path ('admin_events_list') }}">
+                        <i class="fa fa-reply"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

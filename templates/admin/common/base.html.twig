@@ -71,7 +71,7 @@
 {# j'affiche tous les messages flashs enregistrés #}
 {% for message in app.flashes('success') %}
     <div class="container">
-        <div class="flash xLarge-3 large-3 medium-6 small-9">
+        <div class="flash">
             {{ message }}
         </div>
     </div>

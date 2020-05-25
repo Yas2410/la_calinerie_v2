@@ -1,13 +1,31 @@
-<div>
-    <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image }}" alt="">
-</div>
-<p> {{ picture.description }}</p>
-<div>
-    <a href="{{ path ('admin_picture_update', {'id':picture.id}) }}"> - Modifier la photo - </a>
-</div>
-<div>
-    <a href="{{ path ('admin_picture_delete', {'id':picture.id}) }}"> - Supprimer la photo - </a>
-</div>
-<div>
-    <a href="{{ path ('admin_pictures_list') }}"> - Revenir à la galerie photo - </a>
-</div>
+{% extends 'admin/common/base.html.twig' %}
+
+{% block content %}
+
+    <section class="containerInsert">
+        <div class="singleCatInsert medium-10 small-12">
+            <div class="details">
+                <div class=" xLarge-5 large-5 medium-10 small-11">
+                        <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image }}" alt="" class="img-fluid">
+                </div>
+                <div class="text">
+                    {% if picture.description %}
+                        <p>{{ picture.description }}</p>
+                    {% endif %}
+                </div>
+                <div class="action">
+                    <a href="{{ path ('admin_picture_update', {'id':picture.id}) }}">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a href="{{ path ('admin_picture_delete', {'id':picture.id}) }}">
+                        <i class="fa fa-remove"></i>
+                    </a>
+                    <a href="{{ path ('admin_pictures_list') }}">
+                        <i class="fa fa-reply"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
