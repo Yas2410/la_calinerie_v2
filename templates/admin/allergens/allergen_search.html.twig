@@ -1,10 +1,28 @@
-<h5>Vous avez recherché : {{ search }}</h5>
-{% for allergen in allergens %}
-    <div>
-        <h1>{{ allergen.type }}</h1>
-    </div>
-    <div><a href="{{ path ('admin_allergen_show', {'id':allergen.id}) }}"> - Liste des enfants concernés - </a></div>
-{% endfor %}
-<div>
-    <a href="{{ path ('admin_allergens_list') }}"> - Revenir à l'ensemble des allergènes  - </a>
-</div>
+{% extends 'admin/common/base.html.twig' %}
+
+{% block content %}
+
+    <section class="containerInsert">
+        <div class="singleCatInsert xLarge-3 large-3 medium-6 small-9">
+            <div class="formInsert">
+                <div class="searchWord">
+                    <h2>Vous avez recherché : <span>{{ search }}</span></h2>
+                </div>
+                <div class="searchWord">
+                {% for allergen in allergens %}
+                    <p> {{ allergen.type }} </p>
+                    <a href="{{ path ('admin_allergen_show', {'id':allergen.id}) }}">
+                        - Voir la liste des enfants concernés -
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="returnSmall">
+            <a href="{{ path ('admin_allergens_list') }}">
+                <i class="fa fa-reply"></i>
+            </a>
+        </div>
+    </section>
+
+{% endblock %}

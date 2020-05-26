@@ -25,7 +25,7 @@
     width: 725px !important;
   }
 
-  .dateInput {
+  .dateInputArt {
     width: 20% !important;
   }
 }
@@ -58,7 +58,7 @@
     width: 725px !important;
   }
 
-  .dateInput {
+  .dateInputArt {
     width: 20% !important;
   }
 }
@@ -103,7 +103,8 @@
     }
   }
 
-  .singleCat, .singleCatInsert, .path, .returnSmall, .flash {
+  .singleCat, .singleCatInsert, .path, .return, .returnSmall, .flash,
+  .detailsCard, .actionCard, .contactInfo, .contactInfoParents, .allergenInfo {
     margin-left: 0!important;
   }
 
@@ -152,12 +153,18 @@
     }
   }
 
-  .singleCat, .singleCatInsert, .path, .return, .returnSmall, .flash {
+  .singleCat, .singleCatInsert, .path, .return, .returnSmall, .flash,
+  .detailsCard, .actionCard, .contactInfo, .contactInfoParents, .allergenInfo {
     margin-left: 0!important;
   }
 
   .singleCatInsert {
     margin-top: 35px;
   }
-
+}
+  .contactInfo, .contactInfoParents, .allergenInfo {
+    h2 {
+      padding-left: 100px !important;
+      padding-right: 100px !important;
+    }
 }

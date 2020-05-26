@@ -60,7 +60,7 @@
     width: 725px !important;
   }
 
-  .dateInput {
+  .dateInputArt {
     width: 20% !important;
   }
 }
@@ -126,7 +126,7 @@
     width: 725px !important;
   }
 
-  .dateInput {
+  .dateInputArt {
     width: 20% !important;
   }
 }
@@ -203,7 +203,8 @@
     margin-bottom: 15px;
   }
 
-  .singleCat, .singleCatInsert, .path, .returnSmall, .flash {
+  .singleCat, .singleCatInsert, .path, .return, .returnSmall, .flash,
+.detailsCard, .actionCard, .contactInfo, .contactInfoParents, .allergenInfo {
     margin-left: 0 !important;
   }
 
@@ -284,7 +285,8 @@
     margin-bottom: 15px;
   }
 
-  .singleCat, .singleCatInsert, .path, .return, .returnSmall, .flash {
+  .singleCat, .singleCatInsert, .path, .return, .returnSmall, .flash,
+.detailsCard, .actionCard, .contactInfo, .contactInfoParents, .allergenInfo {
     margin-left: 0 !important;
   }
 
@@ -292,6 +294,11 @@
     margin-top: 35px;
   }
 }
+.contactInfo h2, .contactInfoParents h2, .allergenInfo h2 {
+  padding-left: 100px !important;
+  padding-right: 100px !important;
+}
+
 /*GLOBAL CSS*/
 body {
   box-sizing: border-box;
@@ -630,7 +637,7 @@ textarea {
   align-items: center;
   margin-left: 18%;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .mainCat {
@@ -829,7 +836,7 @@ textarea {
   display: flex;
   justify-content: space-between;
 }
-.labelInsert .dateInput {
+.labelInsert .dateInput, .labelInsert .dateInputArt {
   width: 50%;
 }
 .labelInsert .sexInput {
@@ -911,13 +918,13 @@ textarea {
 
 .fa-edit, .fa-remove, .fa-reply {
   color: #5A5A5A;
-  font-size: 35px;
+  font-size: 30px;
   padding: 25px;
 }
 
 .fa-remove {
   color: #F08EAD;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .text p {
@@ -948,6 +955,70 @@ textarea {
 }
 .delete i {
   text-align: center;
+}
+
+.detailsCard {
+  margin-left: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.contactInfo, .contactInfoParents, .allergenInfo {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  text-align: center;
+  color: #5A5A5A;
+  align-items: center;
+}
+.contactInfo h1, .contactInfoParents h1, .allergenInfo h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.contactInfo h2, .contactInfoParents h2, .allergenInfo h2 {
+  border: 1px solid #5A5A5A;
+  padding: 5px 150px;
+}
+
+.childInfo {
+  padding: 25px;
+  color: #5A5A5A;
+  text-align: center;
+}
+
+.actionCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  margin-left: 20%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.searchWord {
+  text-align: center;
+}
+.searchWord span {
+  font-size: 25px;
+  color: #F08EAD;
+}
+.searchWord h2 {
+  margin-bottom: 50px;
+}
+.searchWord p {
+  margin: 15px 0;
+}
+.searchWord a {
+  font-size: 18px;
+  color: #5A5A5A;
+  transition: transform 0.3s;
+}
+.searchWord a:hover {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

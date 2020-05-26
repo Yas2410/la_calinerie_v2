@@ -1,41 +1,69 @@
+{% extends 'admin/common/base.html.twig' %}
 
-<h1>{{ child.firstName }} {{ child.lastName }}</h1>
-<div>
-    <p>Né(e) le : {{ child.birthDate|date('d/m/Y') }}</p>
-    <p>De sexe : {{ child.sex }}</p>
-</div>
-<div>
-    <img src="{{ asset ('uploads/admin/children/') ~ child.image }}" alt="">
-</div>
-<div>
-    <h2>FICHE CONTACT</h2>
-    <div>
-        {% if child.user is not null %}
-        M. / Mme {{ child.user.lastName }} {{ child.user.firstName }}
-        Adresse : {{ child.user.address }}
-        {{ child.user.zipcode }}
-        {{ child.user.city }}
-        Téléphone : {{ child.user.phoneNumber }}
-        Adresse mail : {{ child.user.email }}
-        {% else %}
-        Aucun compte parent rattaché à la fiche enfant
-        {% endif %}
-    </div>
-</div>
-<div>
-    Allergènes :
-    {% for allergen in child.allergen %}
-    <p>
-        {{ allergen.type }}
-        {% endfor %}
-    </p>
-</div>
-<div>
-    <a href="{{ path ('admin_child_update', {'id':child.id}) }}"> - Modifier la fiche enfant - </a>
-</div>
-<div>
-    <a href="{{ path ('admin_child_delete', {'id':child.id}) }}"> - Supprimer la fiche enfant - </a>
-</div>
-<div>
-    <a href="{{ path ('admin_children_list') }}"> - Revenir à la liste des enfants - </a>
-</div>
+{% block content %}
+
+    <section class="containerInsert">
+        <div class="detailsCard">
+            <div class=" xLarge-2 large-2 medium-4 small-5">
+                {% if child.image %}
+                    <img src="{{ asset ('uploads/admin/children/') ~ child.image }}" alt="Photo de l'enfant"
+                         class="img-fluid">
+                {% endif %}
+            </div>
+            <div class="childInfo">
+                <h1>{{ child.firstName }} {{ child.lastName }}</h1>
+                <p>Né(e) le : {{ child.birthDate|date('d/m/Y') }}</p>
+                <p>De sexe : {{ child.sex }}</p>
+            </div>
+        </div>
+        <div class="allergenInfo">
+            <h2>ALLERGÈNES</h2>
+            {% for allergen in child.allergen %}
+                <div>
+                <p>
+                {{ allergen.type }}
+            {% else %}
+                <b>Aucun allergène n'est à ce jour recensé pour {{ child.firstName }}</b>
+                </p>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="contactInfo">
+            <h2>FICHE CONTACT</h2>
+            <div>
+                {% if child.user is not null %}
+                    <p><b>M. / Mme</b> {{ child.user.lastName }} {{ child.user.firstName }} </p>
+                    <p>
+                        <b>Adresse(s) :</b> {{ child.user.address }}
+                        {% if child.user.address2 %}
+                            {{ child.user.address2 }}
+                        {% endif %}
+                    </p>
+                    <p><b>Code Postal :</b> {{ child.user.zipcode }} </p>
+                    <p><b>Ville :</b> {{ child.user.city }} </p>
+                    <p>
+                        <b>Téléphone(s):</b> {{ child.user.phoneNumber }}
+                        {% if child.user.phoneNumber2 %}
+                            {{ child.user.phoneNumber2 }}
+                        {% endif %}
+                    </p>
+                    <p><b>Mail :</b> {{ child.user.email }} </p>
+                {% else %}
+                    <p> Aucun compte parent n'est rattaché à la fiche enfant </p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="actionCard">
+            <a href="{{ path ('admin_child_update', {'id':child.id}) }}">
+                <i class="fa fa-edit"></i>
+            </a>
+            <a href="{{ path ('admin_child_delete', {'id':child.id}) }}">
+                <i class="fa fa-remove"></i>
+            </a>
+            <a href="{{ path ('admin_children_list') }}">
+                <i class="fa fa-reply"></i>
+            </a>
+        </div>
+    </section>
+
+{% endblock %}

@@ -49,7 +49,7 @@
             {% for user in users %}
                 <div class="flex">
                     <p>
-                        <b>{{ user.lastName }}</b> {{ user.firstName }}
+                        <b> M. / Mme. {{ user.lastName }}</b>
                     </p>
                     <div>
                         <a href="{{ path ('admin_user_show', {'id':user.id}) }}">
