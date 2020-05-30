@@ -20,7 +20,7 @@
         <div class="singleCat xLarge-5 large-5 medium-10 small-9">
             {% for user in users %}
                 <div class="singleCatContent">
-                    <p><b>{{ user.lastName }}</b> {{ user.firstName }}</p>
+                    <p> <b>{{ user.lastName }}</b> </p>
                     <a href="{{ path ('admin_user_show', {'id':user.id}) }}">
                         <i class="fa fa-eye"></i>
                     </a>

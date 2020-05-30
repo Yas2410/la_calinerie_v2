@@ -464,7 +464,7 @@ textarea {
 }
 
 .welcome {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
 }
 
@@ -816,7 +816,7 @@ textarea {
 .returnSmall .fa-reply {
   color: #5A5A5A;
   font-size: 30px;
-  margin: 20px 20px;
+  margin-bottom: 30px;
 }
 
 .formInsert {
@@ -825,9 +825,6 @@ textarea {
   align-items: center;
 }
 
-.labelInsert div {
-  margin-bottom: 20px;
-}
 .labelInsert input {
   margin-top: 5px;
   width: 100%;
@@ -861,10 +858,11 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 35px;
 }
 
 #allergen_submit, #child_submit, #article_submit,
-#event_submit, #menu_submit, #picture_submit {
+#event_submit, #menu_submit, #picture_submit, #user_submit {
   width: 60px;
   height: 30px;
   line-height: 15px;
@@ -874,7 +872,7 @@ textarea {
   border: none;
 }
 #allergen_submit:hover, #child_submit:hover, #article_submit:hover,
-#event_submit:hover, #menu_submit:hover, #picture_submit:hover {
+#event_submit:hover, #menu_submit:hover, #picture_submit:hover, #user_submit:hover {
   font-weight: bold;
 }
 

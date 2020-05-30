@@ -18,21 +18,21 @@
         </div>
         <div class="allergenInfo">
             <h2>ALLERGÈNES</h2>
-            {% for allergen in child.allergen %}
-                <div>
-                <p>
-                {{ allergen.type }}
-            {% else %}
-                <b>Aucun allergène n'est à ce jour recensé pour {{ child.firstName }}</b>
-                </p>
-                </div>
-            {% endfor %}
+            <div>
+                {% for allergen in child.allergen %}
+                    <p>
+                    {{ allergen.type }}
+                {% else %}
+                    <b>Aucun allergène n'est à ce jour recensé pour {{ child.firstName }}</b>
+                    </p>
+                {% endfor %}
+            </div>
         </div>
         <div class="contactInfo">
             <h2>FICHE CONTACT</h2>
             <div>
                 {% if child.user is not null %}
-                    <p><b>M. / Mme</b> {{ child.user.lastName }} {{ child.user.firstName }} </p>
+                    <p><b>M. / Mme</b> {{ child.user.lastName }} </p>
                     <p>
                         <b>Adresse(s) :</b> {{ child.user.address }}
                         {% if child.user.address2 %}

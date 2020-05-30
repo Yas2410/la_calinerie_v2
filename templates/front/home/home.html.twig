@@ -3,73 +3,96 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Yasemin Koçak">
     <meta name="description"
           content="Bienvenue à La Calinerie! Retrouvez toutes les informations utiles à l'accueil de votre enfant!
     Le site vous propose également un espace parent dédié : Actualités, agenda, photos">
     <meta name="keywords" content="Crèche, Enfants, Parents, Accueil, Jeux, Garde">
-    <link rel="icon" type="image/png" href="{{ asset('uploads/img/icon.png') }}">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Quicksand|Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ asset('uploads/admin/img/icon.png') }}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Quicksand|Raleway:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/front/style.css') }}">
-    <title>{% block title %}Crèche Multi-Accueil LA CALINERIE{% endblock %}</title>
-    {% block stylesheets %}{% endblock %}
+    <title>Crèche Multi-Accueil LA CALINERIE</title>
 </head>
 
 <body>
 
 <header class="cover">
-    <div class="element1">
-        <div class="logo">
-            <img src="{{ asset('uploads/img/logo.png') }}" alt="Logo La Calinerie" class="img-fluid">
+    <div class="coverLogo medium-5">
+        <div class="xLarge-4 large-4 medium-5 small-3">
+            <img src="{{ asset('uploads/admin/img/logo.png') }}" alt="Logo La Calinerie" class="img-fluid">
         </div>
         <h1 class="textLogo">
             <span id="t1">L</span>a Ca<span id="t2">l</span>ine<span id="t3">r</span>ie
         </h1>
+        <h2>Crèche Multi-Accueil</h2>
     </div>
-    <div class="menu">
-        <div class="bouton zoom">
+    <nav class="navPublic">
+        <div class="zoom">
             <a href="#CRECHE">LA CRÈCHE</a>
         </div>
-        <div class="bouton zoom">
+        <div class="zoom">
             <a href="#PARENTS">ESPACE PARENTS</a>
         </div>
-        <div class="bouton zoom margin">
+        <div class="zoom">
             <a href="#CONTACT">CONTACT</a>
         </div>
+    </nav>
+    <div class="titlePublic">
+        <p> Crèche Multi-Accueil </p>
+        <h1 class="textLogo">
+            <span id="t1">L</span>a Ca<span id="t2">l</span>ine<span id="t3">r</span>ie
+        </h1>
     </div>
+    <navResp>
+        <div class="drop-down">
+            <nav role='navigation' class="logoBurger">
+                <div class="small-4">
+                    <img src="{{ asset('uploads/admin/img/logo.png') }}" alt="Logo La Calinerie" class="img-fluid">
+                </div>
+                <h1 class="textLogo">
+                    <span id="t1">L</span>a Ca<span id="t2">l</span>ine<span id="t3">r</span>ie
+                </h1>
+                <ul>
+                    <li><a href="#ACCUEIL">ACCUEIL</a></li>
+                    <li><a href="#CRECHE">LA CRÈCHE</a></li>
+                    <li class="parentsAccount"><a href="#PARENTS">ESPACE PARENTS</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menuResp">
+            <a class="trigger" href="#"><i class="fa fa-navicon"></i></a>
+            <a class="close" href="#"><i class="fa fa-times"></i></a>
+        </div>
+    </navResp>
 </header>
 
-<section class="creche" id="CRECHE">
-    <div class="img1">
-        <img src="{{ asset('uploads/img/creche.jpg') }}" alt="Photo d'enfants" class="img-fluid">
+
+<section>
+    <div>
+        <img src="{{ asset('') }}" alt="Photo d'enfants" class="img-fluid">
     </div>
     <div>
-        <p class="resume">
-            Située au milieu du parc des Prés Lacoste, la crèche La Câlinerie propose un aménagement intérieur
-            avec 3 espaces définis qui possèdent chacun un coin jeu, un dortoir et un espace de change. Ils sont
-            adaptés à chaque groupe d’âge : petit, moyen et grand.
+        <p>
+            lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto atque, aut blanditiis,
+            exercitationem fuga necessitatibus nobis, nulla obcaecati quo quos repellat saepe suscipit tempora unde?
+            At consequatur esse laudantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolor
+            doloremque eius esse et fugit inventore, labore ut veritatis vitae. Aliquam asperiores autem dolorem in
+            magnam perferendis provident, ratione repellendus?
         </p>
-    </div>
-    <div class="icons iconsize">
-        <img src="{{ asset('uploads/img/icon1.png') }}" alt="Icon" class="img-fluid">
-        <span> 26 PLACES</span>
-        <img src="{{ asset('uploads/img/icon2.png') }}" alt="Icon" class="img-fluid">
-        <span> DES REPAS BIO</span>
-        <img src="{{ asset('uploads/img/icon3.png') }}" alt="Icon" class="img-fluid">
-        <span>3 ESPACES</span>
     </div>
 </section>
 
-</body>
-</html>
-
-
-<form method="post" class="container justify-content-center">
+<form method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
-    <div class="form1">
+    <div>
         <h3>BIENVENUE SUR L'ESPACE PARENTS !</h3>
         <div><label for="inputEmail">Email</label>
             <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required
@@ -94,8 +117,8 @@
             </div>
         #}
 
-        <div class="btn1">
-            <button class="btn btn-secondary" type="submit">
+        <div>
+            <button type="submit">
                 Se Connecter
             </button>
         </div>
@@ -104,6 +127,17 @@
 <div><a href="{{ path ('app_register') }}"> - Première Connexion ? - </a></div>
 <div><a href="{{ path ('app_forgotten_password') }}"> - Mot de Passe Oublié? - </a></div>
 <div><a href="{{ path ('contact') }}"> - Contactez-nous - </a></div>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous"></script>
+<script src="{{ asset('src/js/app.js') }}"></script>
+</body>
+</html>
+
+
 
 
 
