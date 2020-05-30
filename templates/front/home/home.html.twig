@@ -12,7 +12,8 @@
     Le site vous propose également un espace parent dédié : Actualités, agenda, photos">
     <meta name="keywords" content="Crèche, Enfants, Parents, Accueil, Jeux, Garde">
     <link rel="icon" type="image/png" href="{{ asset('uploads/admin/img/icon.png') }}">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Quicksand|Raleway:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Quicksand|Raleway:wght@200;300;400&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/front/style.css') }}">
     <title>Crèche Multi-Accueil LA CALINERIE</title>
@@ -72,39 +73,52 @@
 </header>
 
 
-<section>
-    <div>
-        <img src="{{ asset('') }}" alt="Photo d'enfants" class="img-fluid">
+<section class="container">
+    <div class="xLarge-5 large-5 medium-7 small-12">
+        <img src="{{ asset('uploads/admin/img/laCreche4.jpg') }}" alt="Photo d'enfant qui joue" class="img-fluid">
     </div>
-    <div>
+    <div class="presentation xLarge-6 large-6 medium-7 small-12" id="CRECHE">
         <p>
-            lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto atque, aut blanditiis,
-            exercitationem fuga necessitatibus nobis, nulla obcaecati quo quos repellat saepe suscipit tempora unde?
-            At consequatur esse laudantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolor
-            doloremque eius esse et fugit inventore, labore ut veritatis vitae. Aliquam asperiores autem dolorem in
-            magnam perferendis provident, ratione repellendus?
+            Située au milieu du parc des Prés Lacoste, au sein d'une bâtisse en pierre, la crèche <b>La Calinerie</b>
+            s’adapte aux besoins des familles et vous permet de profiter d’un accueil petite enfance
+            en toute sérénité, pour <b>favoriser l’épanouissement des enfants et le confort des parents.</b>
         </p>
+        <p>
+            Pour répondre aux besoins de chacun, nous proposons <b>trois types d’accueil :</b>
+            un accueil régulier, occasionnel et d’urgence pour faire face aux contraintes et aux imprévus.
+        </p>
+        <p>
+            L'aménagement de la crèche est pensé spécialement pour répondre aux besoins des tout-petits et <b>favoriser
+                le développement de leurs compétences naturelles.</b> Tous nos espaces sont sécurisés et encadrés par
+            des
+            professionnels de la petite enfance.
+        </p>
+        <div class="iconSet xLarge-7 large-7 medium-10 small-12">
+            <img src="{{ asset('uploads/admin/img/iconCreche5.png') }}" alt="les services proposés par la crèche"
+                 class="img-fluid">
+        </div>
     </div>
 </section>
 
-<form method="post">
+<form method="post" class="containerLog Parents">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
-    <div>
+    <div class="logParents">
         <h3>BIENVENUE SUR L'ESPACE PARENTS !</h3>
-        <div><label for="inputEmail">Email</label>
-            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required
-                   autofocus>
+        <div class="connect">
+            <label for="inputEmail">Mail</label>
+            <input type="email" value="" name="email" id="inputEmail" class="form-control" required
+                   autofocus placeholder="Saisir votre Adresse Mail">
         </div>
-        <div>
+        <div class="connect">
             <label for="inputPassword">Mot de Passe</label>
-            <input type="password" name="password" id="inputPassword" class="form-control" required>
+            <input type="password" name="password" id="inputPassword" class="form-control" required
+                   placeholder="Saisir votre Mot de Passe">
         </div>
         <input type="hidden" name="_csrf_token"
-               value="{{ csrf_token('authenticate') }}"
-        >
+               value="{{ csrf_token('authenticate') }}">
 
         {#
             Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
@@ -117,15 +131,19 @@
             </div>
         #}
 
-        <div>
+        <div class="connect">
             <button type="submit">
                 Se Connecter
             </button>
         </div>
+        <div class="connectLinks">
+            <a href="{{ path ('app_register') }}"> Première Connexion ? </a>
+            <a href="{{ path ('app_forgotten_password') }}"> Mot de Passe Oublié? </a>
+        </div>
     </div>
+
 </form>
-<div><a href="{{ path ('app_register') }}"> - Première Connexion ? - </a></div>
-<div><a href="{{ path ('app_forgotten_password') }}"> - Mot de Passe Oublié? - </a></div>
+
 <div><a href="{{ path ('contact') }}"> - Contactez-nous - </a></div>
 
 
