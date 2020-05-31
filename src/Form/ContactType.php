@@ -17,10 +17,10 @@ class ContactType extends AbstractType
     {
         $builder
             ->add('civility', ChoiceType::class, [
-                'label' => 'Civilité',
+                'label' => false,
                 'choices' => [
                     'M.' => 'M.',
-                    'Mme.' => 'Mme.',
+                    'Mme' => 'Mme',
                 ],
                 'expanded' => true
             ])
@@ -33,16 +33,22 @@ class ContactType extends AbstractType
             ->add('email', EmailType::class, [
                 'label' => 'Mail : '
             ])
-            ->add('object', TextType::class, [
-                'label' => 'Objet : '
+            ->add('object', ChoiceType::class, [
+                'label' => 'Votre message concerne',
+                'choices' => [
+                    'La crèche' => 'La crèche',
+                    'Une inscription' => 'Une inscription',
+                    'Un problème technique' => 'Un problème technique',
+                    'Autre' => 'Autre'
+
+                ]
             ])
             ->add('message', TextareaType::class, [
-                'label' => "Votre Message : "
+                'label' => "Votre Message"
             ])
-            ->add('envoyer', SubmitType::class, [
+            ->add('submit', SubmitType::class, [
                 'label' => 'Envoyer'
-            ])
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

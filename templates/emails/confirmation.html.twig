@@ -1,8 +1,19 @@
-<h1>Activation de votre compte</h1>
-<p>
-    Vous venez de demander la création de votre espace PARENTS.
-    Un mail d'activation de compte vient de vous être envoyé !
-</p>
-<div>
-    <a href="{{ path('home') }}">Accueil</a>
-</div>
+{% extends 'front/common/basePublic.html.twig' %}
+
+{% block content %}
+
+    <section class="mentionPage">
+        <div class="activation">
+        <h1>Activation de votre compte</h1>
+        <div class="mentionText">
+            <p>
+                Vous venez de demander la création de votre espace PARENTS. <br>
+                Un mail d'activation de compte vient de vous être envoyé !
+            </p>
+            <div class="homePage">
+                <a href="{{ path ('home') }}"> Revenir à l'accueil du site </a>
+            </div>
+        </div>
+        </div>
+    </section>
+{% endblock %}

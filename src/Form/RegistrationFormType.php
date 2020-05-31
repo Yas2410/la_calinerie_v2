@@ -34,7 +34,7 @@ class RegistrationFormType extends AbstractType
                 'label' => 'Adresse'
             ])
             ->add('address2', TextType::class, [
-                'label' => 'Adresse 2',
+                'label' => 'Adresse 2 (facultatif)',
                 'required' => false
             ])
             ->add('zipcode', IntegerType::class, [
@@ -54,7 +54,7 @@ class RegistrationFormType extends AbstractType
                 ]
             ])
             ->add('phoneNumber2', TextType::class, [
-                'label' => 'Téléphone 2',
+                'label' => 'Téléphone 2 (facultatif) ',
                 'required' => false
             ])
             ->add('email', TextType::class, [
@@ -92,8 +92,8 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('Submit', SubmitType::class, [
-                'label' => 'Valider'
+            ->add('submit', SubmitType::class, [
+                'label' => 'Je m\'inscris !'
             ]);
 
     }

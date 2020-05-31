@@ -1,8 +1,6 @@
 <?php
 
 namespace App\Controller;
-
-use App\Form\ContactParentsType;
 use App\Form\ContactType;
 use App\Repository\UserRepository;
 use Swift_Mailer;
@@ -11,6 +9,7 @@ use Swift_SmtpTransport;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ContactController extends AbstractController
@@ -23,11 +22,11 @@ class ContactController extends AbstractController
      */
     public function index(Request $request, Swift_Mailer $mailer)
     {
-        $form = $this->createForm(ContactType::class);
-        $form->handleRequest($request);
+        $formContact = $this->createForm(ContactType::class);
+        $formContact->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $contact = $form->getData();
+        if ($formContact->isSubmitted() && $formContact->isValid()) {
+            $contact = $formContact->getData();
 
             // On crée le message
             $message = (new Swift_Message('Demande d\'information concernant la crèche'))
@@ -45,9 +44,11 @@ class ContactController extends AbstractController
             ;
             $mailer->send($message);
 
-            $this->addFlash('message', 'Votre message a été transmis,
+            $this->addFlash('success', 'Votre message a été transmis,
              nous vous répondrons dans les meilleurs délais.');
         }
-        return $this->render('contact/index.html.twig',['contactForm' => $form->createView()]);
+        return $this->render('contact/index.html.twig',[
+            'contactForm' => $formContact->createView()]);
     }
+
 }

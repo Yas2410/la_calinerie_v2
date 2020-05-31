@@ -14,9 +14,9 @@ class ResetPassType extends AbstractType
     {
         $builder
             ->add ('email', EmailType::class, [
-                'label' => 'Veuillez saisir votre Mail : '
+                'label' => 'Veuillez saisir votre Mail '
             ])
-            ->add('envoyer', SubmitType::class, [
+            ->add('validate', SubmitType::class, [
                 'label' => 'Envoyer'
             ])
         ;

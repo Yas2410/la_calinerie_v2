@@ -1,12 +1,31 @@
-<h1>FORMULAIRE DE CONTACT</h1>
-{{ form(contactForm) }}
-<h2>
-    {% for message in app.flashes('message') %}
-        <div class="message">
-            {{ message }}
+{% extends 'front/common/basePublic.html.twig' %}
+
+{% block content %}
+
+    <section class="contactPage">
+            <h1>FORMULAIRE DE CONTACT</h1>
+            {{ form_start(contactForm) }}
+        <div class="contactForm">
+            <div class="identity">
+                {{ form_row(contactForm.civility) }}
+                {{ form_row(contactForm.lastName) }}
+                {{ form_row(contactForm.firstName) }}
+                {{ form_row(contactForm.email) }}
+            </div>
+            <div class="message">
+                <div class="choice">
+                {{ form_row(contactForm.object) }}
+                </div>
+                {{ form_row(contactForm.message) }}
+            </div>
         </div>
-    {% endfor %}
-</h2>
-<div>
-    <a href="{{ path ('home') }}"> - Revenir à l'accueil du site - </a>
-</div>
+        <div class="connect">
+            {{ form_widget(contactForm.submit) }}
+        </div>
+        {{ form_end(contactForm) }}
+        <div class="homePage">
+            <a href="{{ path ('home') }}"> Revenir à l'accueil du site </a>
+        </div>
+    </section>
+
+{% endblock %}

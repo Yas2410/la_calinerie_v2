@@ -17,12 +17,10 @@ class HomeController extends AbstractController
     public function home(AuthenticationUtils $authenticationUtils)
     {
 
-
         $error = $authenticationUtils->getLastAuthenticationError();
         $lastUsername = $authenticationUtils->getLastUsername();
         return $this->render('front/home/home.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
-
-
     }
+
 
 }

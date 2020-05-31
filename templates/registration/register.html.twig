@@ -1,31 +1,50 @@
+{% extends 'front/common/basePublic.html.twig' %}
 
+{% block content %}
 
-{% block title %}Formulaire d'Inscription{% endblock %}
+    <section class="registerPage">
 
-{% block body %}
+        <h1>FORMULAIRE D'INSCRIPTION</h1>
+        <p>
+            Votre enfant est inscrit au sein de notre crèche? <br>
+            Complétez ce formulaire afin de créer votre compte PARENTS! <br>
+            Ce dernier vous donnera accès à de multiples informations : <br>
+            Actualités, évènements, galerie photos, etc. <br>
+        </p>
+        {{ form_start(registrationForm) }}
+        <div class="registrationPage">
+            <div class="registrationPart">
+                {{ form_row(registrationForm.lastName) }}
+                {{ form_row(registrationForm.firstName) }}
+                {{ form_row(registrationForm.address) }}
+                {{ form_row(registrationForm.address2) }}
+                <div class="midWidth">
+                    {{ form_row(registrationForm.zipcode) }}
+                </div>
+                {{ form_row(registrationForm.city) }}
+                <div class="midWidth">
+                    {{ form_row(registrationForm.phoneNumber) }}
+                </div>
+                <div class="midWidth">
+                    {{ form_row(registrationForm.phoneNumber2) }}
+                </div>
+            </div>
+            <div class="registrationPart">
+                {{ form_row(registrationForm.email) }}
+                <div class="midWidth">
+                {{ form_row(registrationForm.plainPassword) }}
+                </div>
+                <div class="agreeTerms">
+                {{ form_row(registrationForm.agreeTerms) }}
+                </div>
+            </div>
+        </div>
+        <div class="connect">
+            {{ form_widget(registrationForm.submit) }}
+        </div>
 
-    <h1>FORMULAIRE D'INSCRIPTION</h1>
-    <p>
-        Votre enfant est inscrit au sein de notre crèche?
-        Complétez ce formulaire afin de créer votre compte PARENTS!
-        Ce dernier vous donnera accès à de multiples informations :
-        Actualités, évènements, galerie photo, etc.
-    </p>
-    {{ form_start(registrationForm) }}
+        {{ form_end(registrationForm) }}
 
-    {{ form_row(registrationForm.lastName) }}
-    {{ form_row(registrationForm.firstName) }}
-    {{ form_row(registrationForm.address) }}
-    {{ form_row(registrationForm.address2) }}
-    {{ form_row(registrationForm.zipcode) }}
-    {{ form_row(registrationForm.city) }}
-    {{ form_row(registrationForm.phoneNumber) }}
-    {{ form_row(registrationForm.phoneNumber2) }}
-    {{ form_row(registrationForm.email) }}
-    {{ form_row(registrationForm.plainPassword) }}
-    {{ form_row(registrationForm.agreeTerms) }}
-
-    {{ form_end(registrationForm) }}
-
+    </section>
 
 {% endblock %}

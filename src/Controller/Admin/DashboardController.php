@@ -37,6 +37,8 @@ class DashboardController extends AbstractController
             'users' => $lastUsers,
             'children' => $lastChildren,
         ]);
+
     }
+
 
 }
