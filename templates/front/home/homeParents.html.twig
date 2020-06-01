@@ -71,19 +71,18 @@
             <h2>LES DERNIERS ÉVÈNEMENTS</h2>
             <div class="weekEvent">
                 {% for event in events %}
-                    <div class="inside">
-                        <h4>{{ event.title }}</h4>
-                        <h6>{{ event.date|date('d-m-Y') }}</h6>
-                        <div  class="xLarge-5 large-5">
+                    <div class="inside article">
+                        <h3>{{ event.title }}</h3>
+                        <div class="xLarge-8 large-8 medium-10 small-10">
                             <img src="{{ asset ('uploads/admin/events/') ~ event.image }}"
                                  alt="Photo illustrant l'évènement" class="img-fluid">
                         </div>
                         <p>{{ event.resume }} </p>
-                    </div>
-                    <div>
-                        <a href="{{ path('event', {'id':event.id}) }}">
-                            Voir l'évènement
-                        </a>
+                        <div>
+                            <a href="{{ path('event', {'id':event.id}) }}">
+                                Voir l'évènement
+                            </a>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
@@ -92,11 +91,15 @@
             <div class="weekPix">
                 {% for picture in pictures %}
                     <div class="inside">
-                        <div class="xLarge-10 large-10">
+                        <div class="xLarge-8 large-8 medium-10 small-8">
                             <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image }}"
                                  alt="Galerie photo" class="img-fluid">
                         </div>
-                        <p>{{ picture.description }}</p>
+                        <div class="zoom">
+                            <a href="{{ asset('uploads/admin/gallery/' ~ picture.image) }}" target="_blank">
+                                <i class="fa fa-download"></i>
+                            </a>
+                        </div>
                     </div>
                 {% endfor %}
             </div>

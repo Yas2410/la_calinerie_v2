@@ -25,7 +25,8 @@ class UserType extends AbstractType
                 'label' => 'Adresse'
             ])
             ->add('address2', textType::class, [
-                'label' => 'Adresse Secondaire'
+                'label' => 'Autre adresse',
+                'required' => false
             ])
             ->add('city', textType::class, [
                 'label' => 'Ville'
@@ -37,7 +38,8 @@ class UserType extends AbstractType
                 'label' => 'Téléphone 1'
             ])
             ->add('phoneNumber2', textType::class, [
-                'label' => 'Téléphone 2'
+                'label' => 'Téléphone 2',
+                'required' => false
             ])
             ->add('email', textType::class, [
                 'label' => 'Mail'

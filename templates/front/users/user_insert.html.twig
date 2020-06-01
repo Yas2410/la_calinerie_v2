@@ -1,14 +1,41 @@
-{% for message in app.flashes('success') %}
-    <div class="message">
-        {{ message }}
-    </div>
-{% endfor %}
+{% extends 'front/common/baseParents.html.twig' %}
 
-<div class="form" >
-    {{ form_start(formUser) }}
+{% block content %}
 
-    {{ form_end(formUser) }}
-</div>
-<div>
-    <a href="{{ path ('home_parents') }}"> - Accueil - </a>
-</div>
+    <section class="registerPage">
+        <h1>METTRE A JOUR MON COMPTE</h1>
+        <p>
+            Un changement d'adresse? de mail? de téléphone? <br>
+            N'hésitez pas à mettre à jour vos coordonnées ! <br>
+        </p>
+        {{ form_start(formUser) }}
+        <div class="registrationPage">
+            <div class="registrationPart">
+                {{ form_row(formUser.lastName) }}
+                {{ form_row(formUser.firstName) }}
+                {{ form_row(formUser.address) }}
+                {{ form_row(formUser.address2) }}
+                <div class="midWidth">
+                    {{ form_row(formUser.zipcode) }}
+                </div>
+                {{ form_row(formUser.city) }}
+                <div class="midWidth">
+                    {{ form_row(formUser.phoneNumber) }}
+                </div>
+                <div class="midWidth">
+                    {{ form_row(formUser.phoneNumber2) }}
+                </div>
+                <div>
+                    {{ form_row(formUser.email) }}
+                </div>
+            </div>
+        </div>
+        <div class="connect">
+            {{ form_widget(formUser.submit) }}
+        </div>
+
+        {{ form_end(formUser) }}
+
+    </section>
+
+{% endblock %}

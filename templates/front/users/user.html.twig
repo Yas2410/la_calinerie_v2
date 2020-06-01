@@ -1,23 +1,35 @@
-<article>
-    <h3>Mes Coordonnées</h3>
-    {{ user.lastName }}
-    {{ user.address }}
-    {{ user.zipcode }} {{ user.city }}
-    {{ user.phoneNumber }}
-    {{ user.email }}
+{% extends 'front/common/baseParents.html.twig' %}
 
-    <h3>Enfant(s)</h3>
+{% block content %}
 
-    {% for child in user.children %}
-        {{ child.firstName }}
-        Date de Naissance : {{ child.birthDate|date('d/m/Y') }}
-    {% endfor %}
+    <section class="containerSection">
+        <h1>Mes Coordonnées</h1>
+        <div class="userInfo">
+            <h4>M. / Mme {{ user.lastName }}</h4>
+            <p><b>Adresse :</b> <br> {{ user.address }}</p>
+            <p>{{ user.zipcode }} {{ user.city }}</p>
+            <p><b>Téléphone :</b> <br> {{ user.phoneNumber }}</p>
+            <p><b>Mail :</b> <br> {{ user.email }}</p>
+        </div>
 
-    <div class="margin"><a class="update" href="{{ path ('user_update', {'id':app.user.id}) }}"> - Modifier mes
-            informations - </a></div>
-    <div><a class="delete" href="{{ path ('user_delete', {'id':app.user.id}) }}"> - Supprimer mon compte - </a>
-    </div>
-    <div>
-        <a href="{{ path ('home_parents') }}"> - Retour à l'espace Parents - </a>
-    </div>
-</article>
+        <h1>Enfant(s)</h1>
+        <div class="userInfo">
+            {% for child in user.children %}
+                <h4>{{ child.firstName }}</h4>
+                <p><b>Date de Naissance :</b> {{ child.birthDate|date('d/m/Y') }}</p>
+            {% endfor %}
+            <div class="action space">
+                <a href="{{ path ('user_update', {'id':app.user.id}) }}">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a href=""{{ path ('user_delete', {'id':app.user.id}) }}">
+                <i class="fa fa-remove"></i>
+                </a>
+                <a href="{{ path ('home_parents') }}">
+                    <i class="fa fa-reply"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

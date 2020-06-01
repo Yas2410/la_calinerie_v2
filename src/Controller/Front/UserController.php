@@ -109,7 +109,7 @@ class UserController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
 
-            $this->addFlash('success', "L'utilisateur a bien été modifié !");
+            $this->addFlash('success', "Votre fiche famille a bien été mise à jour!");
 
         }
 
