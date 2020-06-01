@@ -4,60 +4,82 @@
 
     {% if app.user.children is empty %}
         <section class="restrictionPage">
-        <div class="activation">
-        <h1>ACCES RESTREINT</h1>
-        <div class="mentionText">
-        <p>
-            Votre compte PARENTS n'est pas encore rattaché à la fiche de votre/vos enfant(s) <br>
-            Ce dernier sera fonctionnel sous 48H
-        </p>
-            <div class="homePage">
-                <a href="{{ path ('home') }}"> Revenir à l'accueil du site </a>
+            <div class="activation">
+                <h1>ACCES RESTREINT</h1>
+                <div class="mentionText">
+                    <p>
+                        Votre compte PARENTS n'est pas encore rattaché à la fiche de votre/vos enfant(s) <br>
+                        Ce dernier sera fonctionnel sous 48H !
+                    </p>
+                    <div class="homePage">
+                        <a href="{{ path ('home') }}"> Revenir à l'accueil du site </a>
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
         </section>
+
     {% else %}
 
-        <article>
+        <section class="containerParentsDashboard">
             <h2>LE MENU DE LA SEMAINE</h2>
-            {% for menu in menus %}
-                <h1>{{ menu.title }}</h1>
-                <div>
-                    <a href="{{ asset('uploads/admin/menus/' ~ menu.file) }}" target="_blank">
-                        <img src="{{ asset ('uploads/admin/menus/' ~ menu.image) }}" alt="">
-                    </a>
-                </div>
-                <p> {{ menu.content }}</p>
-            {% endfor %}
-        </article>
-        <article>
-            <h2>Les derniers articles ajoutés :</h2>
-            {% for article in articles %}
-                <h4>{{ article.title }}</h4>
-                <h6>{{ article.date|date('d-m-Y') }}</h6>
-                <img src="{{ asset ('uploads/admin/articles/') ~ article.image }}" alt="">
-                <span> <em>{{ article.content }} </em></span>
-            {% endfor %}
-        </article>
-        <br/>
-        <article>
-            <h2>Les derniers évènements ajoutés :</h2>
-            {% for event in events %}
-                <h4>{{ event.title }}</h4>
-                <h6>{{ event.date|date('d-m-Y') }}</h6>
-                <img src="{{ asset ('uploads/admin/events/') ~ event.image }}" alt="">
-                <span> <em>{{ event.content }} </em></span>
-            {% endfor %}
-        </article>
+            <div class="weekMenu center">
+                {% for menu in menus %}
+                    <div class="inside">
+                        <h3>{{ menu.title }}</h3>
+                        <div class="xLarge-6 large-6 small-12">
+                            <a href="{{ asset('uploads/admin/menus/' ~ menu.file) }}" target="_blank">
+                                <img src="{{ asset ('uploads/admin/menus/' ~ menu.image) }}"
+                                     alt="Le Menu de la Semaine" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
 
-        <article>
-            <h2>Les dernieres photos :</h2>
-            {% for picture in pictures %}
-                <h4>{{ picture.description }}</h4>
-                <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image }}" alt="">
-            {% endfor %}
-        </article>
+            <h2>LES DERNIERS ARTICLES</h2>
+            <div class="weekArticle">
+                {% for article in articles %}
+                    <div class="inside">
+                        <h4>{{ article.title }}</h4>
+                        <h6>{{ article.date|date('d-m-Y') }}</h6>
+                        <div class="xLarge-5 large-5">
+                            <img src="{{ asset ('uploads/admin/articles/') ~ article.image }}"
+                                 alt="Photo illustrant l'article" class="img-fluid">
+                        </div>
+                        <span> <em>{{ article.content }} </em></span>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <h2>LES DERNIERS ÉVÈNEMENTS</h2>
+            <div class="weekEvent">
+                {% for event in events %}
+                    <div class="inside">
+                        <h4>{{ event.title }}</h4>
+                        <h6>{{ event.date|date('d-m-Y') }}</h6>
+                        <div  class="xLarge-5 large-5">
+                            <img src="{{ asset ('uploads/admin/events/') ~ event.image }}"
+                                 alt="Photo illustrant l'évènement" class="img-fluid">
+                        </div>
+                        <span> <em>{{ event.content }} </em></span>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <h2>LES DERNIÈRES PHOTOS</h2>
+            <div class="weekPix">
+                {% for picture in pictures %}
+                    <div class="inside">
+                        <div class="xLarge-10 large-10">
+                            <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image }}"
+                                 alt="Galerie photo" class="img-fluid">
+                        </div>
+                        <h4>{{ picture.description }}</h4>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
     {% endif %}
 
 {% endblock %}
