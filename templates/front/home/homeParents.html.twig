@@ -3,7 +3,7 @@
 {% block content %}
 
     {% if app.user.children is empty %}
-        <section class="mentionPage">
+        <section class="restrictionPage">
         <div class="activation">
         <h1>ACCES RESTREINT</h1>
         <div class="mentionText">
@@ -19,26 +19,6 @@
         </section>
     {% else %}
 
-        <header class="container">
-            <h1>Bienvenue sur l'espace Parents de La Calinerie !</h1>
-            {% if is_granted("ROLE_PARENT") %}
-                Bonjour famille {{ app.user.lastName }} !
-            {% endif %}
-            <div>
-                <a href="{{ path ('user', {'id':app.user.id}) }}"> - Voir ma fiche Famille - </a>
-            </div>
-            <div>
-                <a href="{{ path('app_logout') }}">Se Déconnecter</a>
-            </div>
-        </header>
-        <aside>
-            <div>
-                <a href="{{ path('articles') }}">ARTICLES</a>
-                <a href="{{ path('events') }}">EVENEMENTS</a>
-                <a href="{{ path('pictures') }}">GALERIE</a>
-                <a href="{{ path('menus') }}">MENUS</a>
-            </div>
-        </aside>
         <article>
             <h2>LE MENU DE LA SEMAINE</h2>
             {% for menu in menus %}
