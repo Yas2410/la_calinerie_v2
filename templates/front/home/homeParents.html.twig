@@ -26,10 +26,23 @@
                 {% for menu in menus %}
                     <div class="inside">
                         <h3>{{ menu.title }}</h3>
-                        <div class="xLarge-6 large-6 small-12">
+                        <div class="xLarge-5 large-5 small-10">
                             <a href="{{ asset('uploads/admin/menus/' ~ menu.file) }}" target="_blank">
                                 <img src="{{ asset ('uploads/admin/menus/' ~ menu.image) }}"
                                      alt="Le Menu de la Semaine" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="download zoom">
+                            <a href="{{ asset('uploads/admin/menus/' ~ menu.file) }}" target="_blank">
+                                Télécharger le Menu
+                            </a>
+                        <a href="{{ asset('uploads/admin/menus/' ~ menu.file) }}" target="_blank">
+                            <i class="fa fa-download"></i>
+                        </a>
+                        </div>
+                        <div class="downloadResp">
+                            <a href="{{ asset('uploads/admin/menus/' ~ menu.file) }}" target="_blank">
+                                <i class="fa fa-download"></i>
                             </a>
                         </div>
                     </div>
@@ -39,14 +52,18 @@
             <h2>LES DERNIERS ARTICLES</h2>
             <div class="weekArticle">
                 {% for article in articles %}
-                    <div class="inside">
-                        <h4>{{ article.title }}</h4>
-                        <h6>{{ article.date|date('d-m-Y') }}</h6>
-                        <div class="xLarge-5 large-5">
+                    <div class="inside article">
+                        <h3>{{ article.title }}</h3>
+                        <div class="xLarge-8 large-8 medium-10 small-10">
                             <img src="{{ asset ('uploads/admin/articles/') ~ article.image }}"
                                  alt="Photo illustrant l'article" class="img-fluid">
                         </div>
-                        <span> <em>{{ article.content }} </em></span>
+                        <p>{{ article.resume }} </p>
+                        <div>
+                            <a href="{{ path('article', {'id':article.id}) }}">
+                                Lire l'article
+                            </a>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
@@ -61,7 +78,12 @@
                             <img src="{{ asset ('uploads/admin/events/') ~ event.image }}"
                                  alt="Photo illustrant l'évènement" class="img-fluid">
                         </div>
-                        <span> <em>{{ event.content }} </em></span>
+                        <p>{{ event.resume }} </p>
+                    </div>
+                    <div>
+                        <a href="{{ path('event', {'id':event.id}) }}">
+                            Voir l'évènement
+                        </a>
                     </div>
                 {% endfor %}
             </div>
@@ -74,7 +96,7 @@
                             <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image }}"
                                  alt="Galerie photo" class="img-fluid">
                         </div>
-                        <h4>{{ picture.description }}</h4>
+                        <p>{{ picture.description }}</p>
                     </div>
                 {% endfor %}
             </div>

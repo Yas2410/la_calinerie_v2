@@ -840,7 +840,7 @@ textarea {
   width: 65%;
 }
 .labelInsert #child_allergen, .labelInsert #child_user, .labelInsert #article_content,
-.labelInsert #event_content, .labelInsert #menu_content {
+.labelInsert #event_content, .labelInsert #menu_content, .labelInsert #article_resume, .labelInsert #event_resume {
   width: 100%;
   margin-top: 5px;
 }

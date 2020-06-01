@@ -3,6 +3,7 @@
     <h6>{{ article.date|date('d/m/Y') }}</h6>
     <img src="{{ asset ('uploads/admin/articles/') ~ article.image }}" alt="">
 </div>
+<p> {{ article.resume }}</p>
 <p> {{ article.content }}</p>
 <div>
     <a href="{{ path ('articles') }}"> - Revenir à l'ensemble des articles - </a>

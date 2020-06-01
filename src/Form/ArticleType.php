@@ -22,6 +22,9 @@ class ArticleType extends AbstractType
             ->add('title', TextType::class, [
                 'label' => 'Titre',
             ])
+            ->add('resume', TextareaType::class, [
+                'label' => 'Résumé',
+            ])
             ->add('content', TextareaType::class, [
                 'label' => 'Contenu',
             ])
