@@ -1,13 +1,32 @@
-<h5>Vous avez recherché : {{ search }}</h5>
+{% extends 'front/common/baseParents.html.twig' %}
 
-{% for picture in pictures %}
-<div>
-    <h1>{{ picture.description }}</h1>
-    <div>
-        <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image }}" alt="">
+{% block content %}
+
+    <div class="resultSearch">
+        <h2>Vous avez recherché : <span>{{ search }}</span></h2>
     </div>
-    {% endfor %}
-</div>
-<div>
-    <a href="{{ path ('pictures') }}"> - Revenir à la galerie - </a>
-</div>
+    <section class="containerSectionDetails">
+        <div class="sectionDetails">
+            {% for picture in pictures %}
+            <div class="unit">
+                <div class="xLarge-5 large-5 medium-10 small-10">
+                    <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image }}"
+                         alt="Galerie Photos" class="img-fluid">
+                </div>
+                <p class="xLarge-6 large-6">{{ picture.description }} </p>
+                <div class="zoom">
+                    <a href="{{ asset('uploads/admin/gallery/' ~ picture.image) }}" target="_blank">
+                        <i class="fa fa-download"></i>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="back">
+            <a href="{{ path ('pictures') }}">
+                <i class="fa fa-reply"></i>
+            </a>
+        </div>
+    </section>
+
+{% endblock %}

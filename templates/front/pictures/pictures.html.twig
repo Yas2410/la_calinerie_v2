@@ -1,15 +1,38 @@
-<div>
-    <a href="{{ path ('home_parents') }}"> - Accueil - </a>
-</div>
-<form action="{{ path('picture_search') }}" method="GET">
-    <input type="search" name="search">
-    <input type="submit" value="Rechercher">
-</form>
+{% extends 'front/common/baseParents.html.twig' %}
 
+{% block content %}
 
-{% for picture in pictures %}
-<div>
-    <h4>{{ picture.description }}</h4>
-    <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image }}" alt="">
-    {% endfor %}
-</div>
+    <section class="userSearchTool">
+        <div>
+            <h1>GALERIE</h1>
+            <form action="{{ path('picture_search') }}" method="GET">
+                <label>
+                    <input class="searchBar" type="text" name="search" placeholder="RECHERCHER">
+                </label>
+                <button class="btnSearch" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="containerSectionDetails">
+        <div class="alignPix">
+            {% for picture in pictures %}
+                <div class="inside wrap">
+                    <div class="xLarge-6 large-6 medium-8 small-8">
+                        <img src="{{ asset ('uploads/admin/gallery/') ~ picture.image }}"
+                             alt="Galerie photo" class="img-fluid">
+                    </div>
+                    <p> {{ picture.description }}</p>
+                    <div class="zoom">
+                        <a href="{{ asset('uploads/admin/gallery/' ~ picture.image) }}" target="_blank">
+                            <i class="fa fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}
