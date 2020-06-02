@@ -1,19 +1,42 @@
-<div>
-    <a href="{{ path ('home_parents') }}"> - Accueil - </a>
-</div>
-<form action="{{ path('article_search') }}" method="GET">
-    <input type="search" name="search">
-    <input type="submit" value="Rechercher">
-</form>
-{% for article in articles %}
-<div>
-    <h1>{{ article.title }}</h1>
-    <h6>{{ article.date|date('d/m/Y') }}</h6>
+{% extends 'front/common/baseParents.html.twig' %}
 
-    <div>
-        <a href="{{ path ('article', {'id':article.id}) }}"> - Voir l'article - </a>
-    </div>
-    {% endfor %}
-</div>
+{% block content %}
+
+    <section class="userSearchTool">
+        <div>
+            <h1>ARTICLES</h1>
+            <form action="{{ path('article_search') }}" method="GET">
+                <label>
+                    <input class="searchBar" type="text" name="search" placeholder="RECHERCHER">
+                </label>
+                <button class="btnSearch" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="containerSectionDetails">
+        <div class="sectionDetails">
+            {% for article in articles %}
+            <div class="unit">
+                <h3>{{ article.title }}</h3>
+                <h6>{{ article.date|date('d/m/Y') }}</h6>
+                <div class="xLarge-5 large-5 medium-10 small-10">
+                    <img src="{{ asset ('uploads/admin/articles/') ~ article.image }}"
+                         alt="Photo illustrant l'article" class="img-fluid">
+                </div>
+                <p class="xLarge-6 large-6">{{ article.resume }} </p>
+                <div>
+                    <a href="{{ path('article', {'id':article.id}) }}">
+                        Lire l'article
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
 
 

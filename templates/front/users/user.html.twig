@@ -8,7 +8,13 @@
             <h4>M. / Mme {{ user.lastName }}</h4>
             <p><b>Adresse :</b> <br> {{ user.address }}</p>
             <p>{{ user.zipcode }} {{ user.city }}</p>
+            {% if user.address2 %}
+               <p> {{ user.address2 }} </p>
+            {% endif %}
             <p><b>Téléphone :</b> <br> {{ user.phoneNumber }}</p>
+            {% if user.phoneNumber2 %}
+                <p> {{ user.phoneNumber2 }} </p>
+            {% endif %}
             <p><b>Mail :</b> <br> {{ user.email }}</p>
         </div>
 
@@ -24,7 +30,6 @@
                 </a>
                 <a href=""{{ path ('user_delete', {'id':app.user.id}) }}">
                 <i class="fa fa-remove"></i>
-                </a>
                 <a href="{{ path ('home_parents') }}">
                     <i class="fa fa-reply"></i>
                 </a>

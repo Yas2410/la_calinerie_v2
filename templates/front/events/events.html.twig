@@ -1,22 +1,43 @@
-<div>
-    <a href="{{ path ('home_parents') }}"> - Accueil - </a>
-</div>
+{% extends 'front/common/baseParents.html.twig' %}
 
-<form action="{{ path('event_search') }}" method="GET">
-    <input type="search" name="search">
-    <input type="submit" value="Rechercher">
-</form>
+{% block content %}
 
+    <section class="userSearchTool">
+        <div>
+            <h1>ÉVÈNEMENTS</h1>
+            <form action="{{ path('event_search') }}" method="GET">
+                <label>
+                    <input class="searchBar" type="text" name="search" placeholder="RECHERCHER">
+                </label>
+                <button class="btnSearch" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </section>
 
-{% for event in events %}
-<div>
-    <h1>{{ event.title }}</h1>
-    <h6>{{ event.date|date('d/m/Y') }}</h6>
-    <div>
-        <a href="{{ path ('event', {'id':event.id}) }}"> - Voir l'évènement - </a>
-    </div>
-    {% endfor %}
-</div>
+    <section class="containerSectionDetails">
+        <div class="sectionDetails">
+            {% for event in events %}
+            <div class="unit">
+                <h3>{{ event.title }}</h3>
+                <h6>{{ event.date|date('d/m/Y') }}</h6>
+                <div class="xLarge-5 large-5 medium-10 small-10">
+                    <img src="{{ asset ('uploads/admin/events/') ~ event.image }}"
+                         alt="Photo illustrant l'évènement" class="img-fluid">
+                </div>
+                <p class="xLarge-6 large-6">{{ event.resume }} </p>
+                <div>
+                    <a href="{{ path('event', {'id':event.id}) }}">
+                        Voir l'évènement
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
 
 
 

@@ -25,7 +25,8 @@ class ArticleRepository extends ServiceEntityRepository
 
         $queryBuilder = $this->createQueryBuilder('article');
         $query = $queryBuilder->select('article')
-            ->where('article.content LIKE :word OR article.title LIKE :word')
+            ->where('article.content LIKE :word OR article.title LIKE :word OR article.resume LIKE :
+            word')
             //SECURITE
             ->setParameter('word', '%' . $word . '%')
             ->getQuery();

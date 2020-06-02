@@ -1,19 +1,32 @@
-<div>
-    <a href="{{ path ('home_parents') }}"> - Accueil - </a>
-</div>
-<h5>Vous avez recherché : {{ search }}</h5>
+{% extends 'front/common/baseParents.html.twig' %}
 
-<div>
-    {% for menu in menus %}
-    <div>
-        <h1>{{ menu.title }}</h1>
-<p>{{ menu.content }}</p>
-        <div>
-            <a href="{{ path ('menu', {'id':menu.id}) }}"> - Details - </a>
-        </div>
-        {% endfor %}
+{% block content %}
+
+    <div class="resultSearch">
+        <h2>Vous avez recherché : <span>{{ search }}</span></h2>
     </div>
-</div>
-<div>
-    <a href="{{ path ('menus') }}"> - Revenir à la liste des menus - </a>
-</div>
+    <section class="containerSectionDetails">
+        <div class="sectionDetails">
+            {% for menu in menus %}
+            <div class="unit">
+                <h3>{{ menu.title }}</h3>
+                <div class=" menu xLarge-5 large-5 medium-10 small-10">
+                    <img src="{{ asset ('uploads/admin/menus/') ~ menu.image }}"
+                         alt="Le Menu de la Semaine" class="img-fluid">
+                </div>
+                <div>
+                    <a href="{{ path('menu', {'id':menu.id}) }}">
+                        Voir le Menu
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="back">
+            <a href="{{ path ('menus') }}">
+                <i class="fa fa-reply"></i>
+            </a>
+        </div>
+    </section>
+
+{% endblock %}

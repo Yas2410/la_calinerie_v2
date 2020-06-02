@@ -47,8 +47,18 @@ class MenuRepository extends ServiceEntityRepository
         ;
     }
     */
-    public function getByWordInMenu($search)
+    public function getByWordInMenu($word)
     {
+        $queryBuilder = $this->createQueryBuilder('menu');
+        $query = $queryBuilder->select('menu')
+            ->where('menu.title LIKE :word')
+            //SECURITE
+            ->setParameter('word', '%' . $word . '%')
+            ->getQuery();
+
+        $results = $query->getResult();
+        //Méthode qui me retourne les résultats que l'on va ensuite appeler (afficher) dans mon Menucontroller
+        return $results;
     }
 
 }

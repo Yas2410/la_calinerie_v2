@@ -51,7 +51,7 @@ class EventRepository extends ServiceEntityRepository
     {
         $queryBuilder = $this->createQueryBuilder('event');
         $query = $queryBuilder->select('event')
-            ->where('event.title LIKE :word OR event.content LIKE :word')
+            ->where('event.title LIKE :word OR event.content LIKE :word or event.resume LIKE :word')
             ->setParameter('word', '%' . $word . '%')
             ->getQuery();
 

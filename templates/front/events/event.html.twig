@@ -1,10 +1,27 @@
-<div>
-    <h1>{{ event.title }}</h1>
-    <h6>{{ event.date|date('d/m/Y') }}</h6>
-    <img src="{{ asset ('uploads/admin/events/') ~ event.image }}" alt="">
-</div>
-<p> {{ event.resume }}</p>
-<p> {{ event.content }}</p>
-<div>
-    <a href="{{ path ('events') }}"> - Revenir à l'ensemble des évènements - </a>
-</div>
+{% extends 'front/common/baseParents.html.twig' %}
+
+{% block content %}
+
+    <section class="containerSectionDetails">
+        <div class="sectionDetails">
+            <div class="unit">
+                <h3>{{ event.title }}</h3>
+                <h6>{{ event.date|date('d/m/Y') }}</h6>
+                <div class="xLarge-5 large-5 medium-10 small-10">
+                    <img src="{{ asset ('uploads/admin/events/') ~ event.image }}"
+                         alt="Photo illustrant l'évènement" class="img-fluid">
+                </div>
+                <p class="xLarge-6 large-6">{{ event.resume }} </p>
+                <div class="content xLarge-7 large-7">
+                    <p>{{ event.content }} </p>
+                </div>
+            </div>
+        </div>
+        <div class="back">
+            <a href="{{ path ('events') }}">
+                <i class="fa fa-reply"></i>
+            </a>
+        </div>
+    </section>
+
+{% endblock %}
