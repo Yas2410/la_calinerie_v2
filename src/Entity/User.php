@@ -7,10 +7,13 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
+ * //Ici, je m'assure que pour la création de compte, une adresse mail soit unique. Ainsi, si une adresse mail est
+ //déjà été utilisée, le message ci-dessous apparait pour en informer l'utilisateur
+ * @UniqueEntity(fields={"email"}, message="Cette adresse mail est déjà utilisée")
  */
 class User implements UserInterface
 {
@@ -23,6 +26,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\NotBlank
      */
     private $email;
 
@@ -39,16 +43,27 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
+     * @Assert\Type(
+     *     type="alpha",
+     *     message="Saisie invalide : Le nom ne peut contenir de caractères numériques"
+     * )
      */
     private $lastName;
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
+     * @Assert\Type(
+     *     type="alpha",
+     *     message="Saisie invalide : Le prénom ne peut contenir de caractères numériques"
+     * )
      */
     private $firstName;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $address;
 
@@ -59,11 +74,14 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank
      */
+
     private $zipcode;
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank
      */
     private $city;
 

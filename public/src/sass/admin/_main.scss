@@ -57,6 +57,25 @@ textarea {
   resize: none;
 }
 
+.formError ul {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  color: $darkPink;
+  text-align: center;
+  border: 1px solid $darkPink;
+}
+
+.alert-danger{
+  font-size: 22px;
+  font-weight: bold;
+  color: grey;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 
 
 

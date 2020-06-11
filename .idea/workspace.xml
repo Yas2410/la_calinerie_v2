@@ -1,11 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fc1eb0a-69df-41be-90ec-b23689bbb73b" name="Default Changelist" comment="">
+    <list default="true" id="3fc1eb0a-69df-41be-90ec-b23689bbb73b" name="Default Changelist" comment="Front DONE Admin/Public">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/pictures/picture_search.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pictures/picture_search.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dist/css/admin/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/admin/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dist/css/admin/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/admin/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/src/sass/admin/_var.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/sass/admin/_var.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ChildController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ChildController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Allergen.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Allergen.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Child.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Child.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AllergenType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AllergenType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ArticleType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ArticleType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ChildType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ChildType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ContactType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/allergens/allergen_insert.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/allergens/allergen_insert.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/articles/article_insert.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/articles/article_insert.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/children/child.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/children/child.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/children/children.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/children/children.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/home/dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/home/dashboard.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/users/users.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/users/users.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/emails/activation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/emails/activation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/articles/article.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/articles/article.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/articles/articles.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/articles/articles.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/events/events.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/events/events.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/menus/menu.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/menus/menus.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/menus/menus.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/pictures/pictures.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pictures/pictures.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/security/loginParents.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/security/loginParents.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/users/user.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/users/user.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +186,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -163,23 +193,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/src/sass/front" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\la_calinerie\public\src\sass\front" />
-      <recent name="C:\wamp64\www\la_calinerie\templates\front\common" />
-      <recent name="C:\wamp64\www\la_calinerie\src\Controller\Front" />
-      <recent name="C:\wamp64\www\la_calinerie\public\src\sass\admin" />
-      <recent name="C:\wamp64\www\la_calinerie\public\src\sass" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\la_calinerie\public\src\sass\front" />
       <recent name="C:\wamp64\www\la_calinerie\templates\front\common" />
       <recent name="C:\wamp64\www\la_calinerie\public\src\sass" />
       <recent name="C:\wamp64\www\la_calinerie\templates\admin" />
       <recent name="C:\wamp64\www\la_calinerie\public\src\sass\admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\la_calinerie\templates\front\security" />
+      <recent name="C:\wamp64\www\la_calinerie\templates\admin\home" />
+      <recent name="C:\wamp64\www\la_calinerie\public\src\sass\front" />
+      <recent name="C:\wamp64\www\la_calinerie\templates\front\common" />
+      <recent name="C:\wamp64\www\la_calinerie\src\Controller\Front" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -240,7 +270,23 @@
       <workItem from="1590818825276" duration="33230000" />
       <workItem from="1590904384600" duration="47913000" />
       <workItem from="1590994877361" duration="36609000" />
-      <workItem from="1591082409960" duration="20854000" />
+      <workItem from="1591082409960" duration="21251000" />
+      <workItem from="1591178852919" duration="3755000" />
+      <workItem from="1591259538888" duration="14645000" />
+      <workItem from="1591342981118" duration="17269000" />
+      <workItem from="1591511341454" duration="8785000" />
+      <workItem from="1591613836827" duration="608000" />
+      <workItem from="1591697140751" duration="4531000" />
+      <workItem from="1591784299171" duration="5789000" />
+      <workItem from="1591820499197" duration="157000" />
+      <workItem from="1591821108668" duration="46000" />
+      <workItem from="1591874997158" duration="377000" />
+      <workItem from="1591876227457" duration="165000" />
+      <workItem from="1591876422302" duration="287000" />
+      <workItem from="1591880169208" duration="455000" />
+      <workItem from="1591880632806" duration="40000" />
+      <workItem from="1591880688111" duration="576000" />
+      <workItem from="1591881280150" duration="3863000" />
     </task>
     <task id="LOCAL-00001" summary="Forms / Insert">
       <created>1587759344490</created>
@@ -487,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591108451177</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Front DONE Admin/Public">
+      <created>1591130644156</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1591130644156</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,17 +586,22 @@
     <MESSAGE value="FRONT SASS &quot;HomePage&quot; Desk/Tab/Resp" />
     <MESSAGE value="FRONT SASS : Register/Mail/ConfirmAccount/ResetPass" />
     <MESSAGE value="Front USER ACCOUNT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Front USER ACCOUNT" />
+    <MESSAGE value="Front DONE Admin/Public" />
+    <option name="LAST_COMMIT_MESSAGE" value="Front DONE Admin/Public" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="71" key="#Notifications" timestamp="1589493776031">
+    <state x="361" y="71" key="#Inspections" timestamp="1591875115216">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1589493776031" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590652814783">
+    <state x="361" y="71" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1591875115216" />
+    <state x="361" y="71" key="#Notifications" timestamp="1591876310773">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1590652814783" />
+    <state x="361" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1591876310773" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591880491513">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1591880491513" />
     <state x="536" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590786838082">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -552,14 +610,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="457" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1588176190332" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590918295109">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1591366080092">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1590918295109" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1591108449816">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1591366080092" />
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1591880234067">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591108449816" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591880234067" />
     <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog" timestamp="1587806426419">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -573,6 +631,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="189" height="539" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1590652777413" />
+    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1591875489990">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1591875489990" />
     <state x="147" y="65" key="MergeDialog" timestamp="1587805620571">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -585,22 +647,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="577" y="211" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1589101795435" />
-    <state x="277" y="55" key="SettingsEditor" timestamp="1589659515130">
+    <state x="277" y="55" key="SettingsEditor" timestamp="1591884548809">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589659515130" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1591108453463">
+    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591884548809" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1591130645337">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591108453463" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591130645337" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1589493729998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1589493729998" />
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1591082547462">
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1591881289468">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591082547462" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591881289468" />
     <state x="577" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588771287901">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -609,9 +671,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="494" y="51" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1588192181370" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589745861025">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1591884315728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589745861025" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1591884315728" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1591876536397">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1591876536397" />
   </component>
 </project>

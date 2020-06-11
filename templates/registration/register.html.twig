@@ -11,38 +11,50 @@
             Ce dernier vous donnera accès à de multiples informations : <br>
             Actualités, évènements, galerie photos, etc. <br>
         </p>
+        {# J'affiche la balise d'ouverture de mon formulaire #}
         {{ form_start(registrationForm) }}
         <div class="registrationPage">
-            <div class="registrationPart">
+            <div class="registrationPart formError">
                 {{ form_row(registrationForm.lastName) }}
                 {{ form_row(registrationForm.firstName) }}
                 {{ form_row(registrationForm.address) }}
                 {{ form_row(registrationForm.address2) }}
-                <div class="midWidth">
+                <div class="midWidth formError">
                     {{ form_row(registrationForm.zipcode) }}
                 </div>
                 {{ form_row(registrationForm.city) }}
-                <div class="midWidth">
-                    {{ form_row(registrationForm.phoneNumber) }}
+                <div class="midWidth formError">
+                    {# form_label permet de rendre le label d'un champs de formulaire #}
+                    {{ form_label(registrationForm.phoneNumber) }}
+                    {# form_widget permet de rendre l'input d'un formulaire #}
+                    {{ form_widget(registrationForm.phoneNumber) }}
+                    {# form_errors permet d'afficher un message d'erreur en cas de saisie incorrecte
+                    cf. Entity & FormTypes' #}
+                    {{ form_errors(registrationForm.phoneNumber) }}
                 </div>
                 <div class="midWidth">
                     {{ form_row(registrationForm.phoneNumber2) }}
                 </div>
             </div>
-            <div class="registrationPart">
-                {{ form_row(registrationForm.email) }}
-                <div class="midWidth">
-                {{ form_row(registrationForm.plainPassword) }}
+            <div class="registrationPart formError">
+                {{ form_label(registrationForm.email) }}
+                {{ form_widget(registrationForm.email) }}
+                {{ form_errors(registrationForm.email) }}
+                <div class="midWidth formError">
+                    {{ form_widget(registrationForm.plainPassword) }}
+                    {{ form_errors(registrationForm.plainPassword) }}
                 </div>
-                <div class="agreeTerms">
-                {{ form_row(registrationForm.agreeTerms) }}
+                <div class="agreeTerms formError">
+                    {{ form_label(registrationForm.agreeTerms) }}
+                    {{ form_widget(registrationForm.agreeTerms) }}
+                    {{ form_errors(registrationForm.agreeTerms) }}
                 </div>
             </div>
         </div>
         <div class="connect">
             {{ form_widget(registrationForm.submit) }}
         </div>
-
+        {# J'affiche la balise de fermeture de mon formulaire #}
         {{ form_end(registrationForm) }}
 
     </section>

@@ -17,7 +17,8 @@ class AllergenType extends AbstractType
     {
         $builder
             ->add('type', TextType::class, [
-                'label' => 'Type  '
+                'label' => 'Type',
+                'required' => true
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Valider'

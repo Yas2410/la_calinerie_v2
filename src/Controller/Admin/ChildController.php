@@ -68,10 +68,17 @@ class ChildController extends AbstractController
                                 SluggerInterface $slugger
     )
     {
+        /* Je créé une nouvelle instance de Child que je mets dans une variable pour ensuite la lier à mon
+        formulaire */
         $child = new Child();
+        /* Je créé mon formulaire, ici "ChildType", que je lie à mon "new Child" créé précédemment */
         $formChild = $this->createForm(ChildType::class, $child);
+
+        /* je demande à mon formulaire de gérer les données de la requête POST par le biais de la
+        méthode "handleRequest" */
         $formChild->handleRequest($request);
 
+        /* Si le formulaire a été envoyé et que les données sont valides : */
         if ($formChild->isSubmitted() && $formChild->isValid()) {
 
             $image = $formChild->get('image')->getData();

@@ -4,7 +4,7 @@
 
     <section class="containerInsert">
         <div class="detailsCard">
-            <div class=" xLarge-2 large-2 medium-4 small-5">
+            <div class=" xLarge-4 large-4 medium-5 small-6">
                 {% if child.image %}
                     <img src="{{ asset ('uploads/admin/children/') ~ child.image }}" alt="Photo de l'enfant"
                          class="img-fluid">
@@ -49,7 +49,7 @@
                     </p>
                     <p><b>Mail :</b> {{ child.user.email }} </p>
                 {% else %}
-                    <p> Aucun compte parent n'est rattaché à la fiche enfant </p>
+                    <p> <b>Aucun compte parent n'est rattaché à la fiche enfant</b> </p>
                 {% endif %}
             </div>
         </div>

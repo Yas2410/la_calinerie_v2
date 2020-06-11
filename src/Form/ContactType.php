@@ -37,8 +37,9 @@ class ContactType extends AbstractType
                 'label' => 'Votre message concerne',
                 'choices' => [
                     'La crèche' => 'La crèche',
-                    'Une inscription' => 'Une inscription',
-                    'Un problème technique' => 'Un problème technique',
+                    'Une Inscription' => 'Une Inscription',
+                    'Un Problème technique' => 'Un Problème technique',
+                    'Mon Compte' => 'Mon Compte',
                     'Autre' => 'Autre'
 
                 ]

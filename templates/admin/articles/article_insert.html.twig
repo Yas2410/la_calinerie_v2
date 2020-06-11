@@ -10,7 +10,9 @@
                 </div>
                 {{ form_start(formArticle) }}
                 <div class="labelInsert">
-                    {{ form_row(formArticle.title) }}
+                    {{ form_label(formArticle.title) }}
+                    {{ form_widget(formArticle.title) }}
+                    {{ form_errors(formArticle.title) }}
                     {{ form_row(formArticle.resume) }}
                     {{ form_row(formArticle.content) }}
                     {{ form_row(formArticle.image) }}

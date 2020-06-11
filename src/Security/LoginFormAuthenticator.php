@@ -80,10 +80,11 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
 
         if (!$user) {
             // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('Email could not be found.');
+            throw new CustomUserMessageAuthenticationException('Le compte associé à cette adresse mail n\'existe pas');
         }
 
         return $user;
+
     }
 
     public function checkCredentials($credentials, UserInterface $user)
@@ -110,13 +111,13 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
         $isAdmin = $this->security->isGranted('ROLE_ADMIN');
         $isParent = $this->security->isGranted('ROLE_PARENT');
 
+
         if ($isAdmin) {
             return new RedirectResponse($this->urlGenerator->generate('admin_dashboard'));
         }
         if ($isParent) {
             return new RedirectResponse($this->urlGenerator->generate('home_parents'));
         }
-
         return new RedirectResponse($this->urlGenerator->generate('home'));
     }
 

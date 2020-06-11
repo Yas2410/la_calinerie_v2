@@ -10,7 +10,9 @@
                 </div>
                 {{ form_start(formAllergen) }}
                 <div class="labelInsert">
-                    {{ form_row(formAllergen.type) }}
+                    {{ form_label(formAllergen.type) }}
+                    {{ form_widget(formAllergen.type) }}
+                    {{ form_errors(formAllergen.type) }}
                 </div>
                 <div class="btnInsert">
                     {{ form_widget(formAllergen.submit) }}

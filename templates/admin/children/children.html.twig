@@ -23,7 +23,7 @@
         <div class="singleCat xLarge-5 large-5 medium-10 small-9">
             {% for child in children %}
                 <div class="singleCatContent">
-                    <p>{{ child.firstName }} <b>{{ child.lastName }}</b></p>
+                    <p> <b>{{ child.firstName }}</b> {{ child.lastName }}</p>
                     <a href="{{ path ('admin_child_show', {'id':child.id}) }}">
                         <i class="fa fa-eye"></i>
                     </a>

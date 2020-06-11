@@ -2,6 +2,24 @@
 
 {% block content %}
 
+    {% if app.user.children is empty %}
+    <section class="restrictionPage">
+        <div class="activation">
+            <h1>ACCES RESTREINT</h1>
+            <div class="mentionText">
+                <p>
+                    Votre compte PARENTS n'est pas encore rattaché à la fiche de votre/vos enfant(s) <br>
+                    Ce dernier sera fonctionnel sous 48H !
+                </p>
+                <div class="homePage">
+                    <a href="{{ path ('home') }}"> Revenir à l'accueil du site </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% else %}
+
     <section class="containerSection">
         <h1>Mes Coordonnées</h1>
         <div class="userInfo">
@@ -34,5 +52,7 @@
             </div>
         </div>
     </section>
+
+    {% endif %}
 
 {% endblock %}

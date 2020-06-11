@@ -38,7 +38,6 @@ class SecurityController extends AbstractController
         return $this->render('front/security/loginAdmin.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
     }
 
-
     /**
      * @Route("/logout", name="app_logout")
      */

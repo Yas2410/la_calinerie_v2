@@ -34,7 +34,7 @@
             {% for child in children %}
                 <div class="flex">
                     <p>
-                        <b>{{ child.lastName }}</b> {{ child.firstName }}
+                        <b>{{ child.firstName }}</b> {{ child.LastName }}
                     </p>
                     <div>
                         <a href="{{ path ('admin_child_show', {'id':child.id}) }}">
@@ -49,7 +49,7 @@
             {% for user in users %}
                 <div class="flex">
                     <p>
-                        <b> M. / Mme. {{ user.lastName }}</b>
+                        M. / Mme. <b> {{ user.lastName }}</b>
                     </p>
                     <div>
                         <a href="{{ path ('admin_user_show', {'id':user.id}) }}">
