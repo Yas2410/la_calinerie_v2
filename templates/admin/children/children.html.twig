@@ -5,6 +5,8 @@
     <section class="title-search">
         <h1>ENFANTS</h1>
         <div>
+            {# Je fais appel à la route qui correspond à la recherche d'un enfant
+             et je créé le formulaire de recherche #}
             <form action="{{ path('admin_child_search') }}" method="GET">
                 <label>
                     <input class="searchBar" type="text" name="search" placeholder="RECHERCHER">

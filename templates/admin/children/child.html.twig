@@ -5,12 +5,15 @@
     <section class="containerInsert">
         <div class="detailsCard">
             <div class=" xLarge-4 large-4 medium-5 small-6">
+                {#J'applique ici une condition :
+                Si la fiche enfant contient une photo, je l'affiche #}
                 {% if child.image %}
-                    <img src="{{ asset ('uploads/admin/children/') ~ child.image }}" alt="Photo de l'enfant"
-                         class="img-fluid">
+                    <img src="{{ asset ('uploads/admin/children/') ~ child.image }}"
+                    alt="Photo de l'enfant" class="img-fluid">
                 {% endif %}
             </div>
             <div class="childInfo">
+                {# J'affiche ici les informations concernant l'enfant #}
                 <h1>{{ child.firstName }} {{ child.lastName }}</h1>
                 <p>Né(e) le : {{ child.birthDate|date('d/m/Y') }}</p>
                 <p>De sexe : {{ child.sex }}</p>
@@ -19,11 +22,16 @@
         <div class="allergenInfo">
             <h2>ALLERGÈNES</h2>
             <div>
+                {# J'utilise une boucle afin d'afficher les allergènes :
+                Si l'enfant possède des allergies : #}
                 {% for allergen in child.allergen %}
                     <p>
                     {{ allergen.type }}
+                {# S'il n'en possède pas, j'affiche le message suivant : #}
                 {% else %}
-                    <b>Aucun allergène n'est à ce jour recensé pour {{ child.firstName }}</b>
+                    <b>Aucun allergène n'est à ce jour recensé pour
+                        {{ child.firstName }}
+                    </b>
                     </p>
                 {% endfor %}
             </div>
@@ -31,6 +39,10 @@
         <div class="contactInfo">
             <h2>FICHE CONTACT</h2>
             <div>
+                {# J'applique également une condition concernant les
+                 informations liées aux parents. Si les parents ont activé
+                 leur compte en ligne, alors je souhaite afficher les
+                informations sur la fiche de l'enfant concerné : #}
                 {% if child.user is not null %}
                     <p><b>M. / Mme</b> {{ child.user.lastName }} </p>
                     <p>
@@ -48,6 +60,8 @@
                         {% endif %}
                     </p>
                     <p><b>Mail :</b> {{ child.user.email }} </p>
+                {# Si les parents n'ont pas encore créé de compte en ligne, j'affiche le message
+                suivant : #}
                 {% else %}
                     <p> <b>Aucun compte parent n'est rattaché à la fiche enfant</b> </p>
                 {% endif %}

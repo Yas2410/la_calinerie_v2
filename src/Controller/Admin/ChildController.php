@@ -11,7 +11,6 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 class ChildController extends AbstractController
@@ -37,21 +36,23 @@ class ChildController extends AbstractController
         ]);
     }
 
+    /* Création d'une nouvelle route avec une WildCArd */
     /**
      * @route("admin/child/show/{id}", name="admin_child_show")
      * @param ChildRepository $childRepository
-     * @param UserRepository $userRepository
      * @param $id
      * @return Response
      */
-    public function Child(ChildRepository $childRepository, UserRepository $userRepository, $id)
+    /* La classe Repository me permet de selectionner la liste des enfants enregistrés
+    en base de données */
+    public function Child(ChildRepository $childRepository, $id)
     {
+        /* Pour selectionner un enfant en particulier, je passe en paramètre de la méthode 'find()'
+        l'$id, passé en paramètre de l'URL */
         $child = $childRepository->find($id);
-        $user = $userRepository->find($id);
-
+        /* Je retourne une réponse par le biais de mon fichier twig via la méthode 'render()' */
         return $this->render('admin/children/child.html.twig', [
             'child' => $child,
-            'user' => $user,
         ]);
     }
 
@@ -81,29 +82,35 @@ class ChildController extends AbstractController
         /* Si le formulaire a été envoyé et que les données sont valides : */
         if ($formChild->isSubmitted() && $formChild->isValid()) {
 
+            /* Je récupère ici la valeur du fichier uploadé */
             $image = $formChild->get('image')->getData();
 
+            /* Je vérifie qu'un fichier a bien été envoyé */
             if ($image) {
 
+                /* Et, je récupère ici le nom de ce fichier */
                 $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
-
+                /* Duquel j'exclus les caracètres spéciaux (slugger) */
                 $safeFilename = $slugger->slug($originalFilename);
-
+                /* J'ajoute au nom du fichier un identifiant unique */
                 $newFilename = $safeFilename . '-' . uniqid() . '.' . $image->guessExtension();
-
+                /* Je déplace le fichier dans le dossier correspondant, paramétré au préalable dans
+                mon fichier 'services.yaml', ici 'children_directory' */
                 $image->move(
                     $this->getParameter('children_directory'),
                     $newFilename);
-
+                /* Enfin, j'enregistre en base de données le nom du fichier uploadé */
                 $child->setImage($newFilename);
             }
 
             $entityManager->persist($child);
             $entityManager->flush();
 
+            /* J'ajoute un message flash, qui sera rappelé dans mon 'base.html.twig' afin de confirmer la création d'une
+            nouvelle fiche enfant */
             $this->addFlash('success', "La fiche enfant a bien été créée !");
-
         }
+        /* Création de ma vue et renvoi du formulaire créé dans ce même fichier twig */
         return $this->render('admin/children/child_insert.html.twig', [
             'formChild' => $formChild->createView()
         ]);
@@ -115,8 +122,12 @@ class ChildController extends AbstractController
      * @param Request $request
      * @return Response
      */
+
     public function searchByChild(ChildRepository $childRepository, Request $request)
     {
+        /* J'utilise le childRepository pour appeler ma méthode 'getByWordInChild()'
+        Ce dernier permet, en plus des méthodes find(), etc. de créer des méthodes
+        plus spécifiques de SELECT de données en bdd */
         $search = $request->query->get('search');
         $children = $childRepository->getByWordInChild($search);
 
@@ -142,7 +153,10 @@ class ChildController extends AbstractController
         $id
     )
     {
+        /* Pour selectionner une fiche, je passe en paramètre de la méthode 'find()'
+        l'$id et fait appel à la classe Repository de mon entité Child */
         $child = $childRepository->find($id);
+        /* Je reprend le formulaire ayant servi à la création d'une fiche */
         $formChild = $this->createForm(ChildType::class, $child);
         $formChild->handleRequest($request);
         if ($formChild->isSubmitted() && $formChild->isValid()) {
@@ -150,23 +164,18 @@ class ChildController extends AbstractController
             $image = $formChild->get('image')->getData();
 
             if ($image) {
-
                 $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
-
                 $safeFilename = $slugger->slug($originalFilename);
-
                 $newFilename = $safeFilename . '-' . uniqid() . '.' . $image->guessExtension();
-
                 $image->move(
                     $this->getParameter('children_directory'),
                     $newFilename);
-
                 $child->setImage($newFilename);
             }
-
+        /* J'enregistre de nouveau les données en base de données */
             $entityManager->persist($child);
             $entityManager->flush();
-
+        /* Comme pour la création, j'ajoute un message indiquant que la fiche à bien été modifiée */
             $this->addFlash('success', "La fiche enfant a bien été modifiée !");
         }
 
@@ -191,12 +200,13 @@ class ChildController extends AbstractController
     )
     {
         $child = $childRepository->find($id);
+        /* J'applique la méthode 'remove()' afin de supprimer la fiche */
         $entityManager->remove($child);
+        /* Je valide la suppression */
         $entityManager->flush();
-
+        /* Je redirige vers la page correspondante */
         return $this->render('admin/children/child_delete.html.twig', [
             'child' => $child
         ]);
     }
-
 }

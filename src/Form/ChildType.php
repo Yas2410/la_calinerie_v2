@@ -83,7 +83,7 @@ class ChildType extends AbstractType
                 'required' => false,
 
             ])
-            // Afin de pouvoir lier l'enfant inscrit et le compte parents, je fais appelle à mon entité 'User'
+            // Afin de pouvoir lier l'enfant inscrit et le compte parents, je fais appel à mon entité 'User'
             ->add('user', EntityType::class, [
                 'class' => User::class,
                 'label' => 'FAMILLE',
@@ -92,7 +92,7 @@ class ChildType extends AbstractType
                 // Tous les parents n'étant pas forcés de créer leur compte en ligne, je passe le 'required' en 'false'
                 'required' => false
             ])
-            // Enfin, j'ajoute un boutton de validation de mon formulaire
+            // Enfin, j'ajoute un bouton de validation de mon formulaire
             ->add('submit', SubmitType::class, [
                 'label' => 'Valider'
             ]);

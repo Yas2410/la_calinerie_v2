@@ -9,7 +9,6 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 //Ici, je créé ma classe "ArticleController" qui sera nommée à l'identique que mon fichier.
@@ -43,9 +42,8 @@ class ArticleController extends AbstractController
         ]);
     }
 
-// Création d'une nouvelle route avec une WildCArd (= une variable).
-// Ici, "$id".
-
+    /* Création d'une nouvelle route avec une WildCArd (= une variable).
+     Ici, '$id' */
     /**
      * @route("admin/article/show/{id}", name="admin_article_show")
      * @param ArticleRepository $articleRepository
@@ -76,9 +74,9 @@ class ArticleController extends AbstractController
                                   SluggerInterface $slugger
     )
     {
-// Création d'un nouvel articles afin de le lier au formulaire.
+// Création d'un nouvel article afin de le lier au formulaire.
         $article = new Article();
-// Création du formulaire que je lie au nouvel articles.
+// Création du formulaire que je lie au nouvel article.
         $formArticle = $this->createForm(ArticleType::class, $article);
 // Je demande à mon formulaire (ici $formArticle) de gérer les données POST.
         $formArticle->handleRequest($request);

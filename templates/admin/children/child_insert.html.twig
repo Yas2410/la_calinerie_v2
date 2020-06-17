@@ -8,25 +8,27 @@
                 <div>
                     <p>Créer une nouvelle fiche enfant</p>
                 </div>
+                {# J'affiche la balise d'ouverture de mon formulaire #}
                 {{ form_start(formChild) }}
                 <div class="labelInsert">
                     {{ form_row(formChild.lastName) }}
                     {{ form_row(formChild.firstName) }}
                     <div class="dateInput">
-                    {{ form_row(formChild.birthDate) }}
+                        {{ form_row(formChild.birthDate) }}
                     </div>
                     <div class="sexInput">
-                    {{ form_row(formChild.sex) }}
+                        {{ form_row(formChild.sex) }}
                     </div>
                     {{ form_row(formChild.image) }}
                     <div class="allergenInput">
-                    {{ form_row(formChild.allergen) }}
+                        {{ form_row(formChild.allergen) }}
                     </div>
                     {{ form_row(formChild.user) }}
                 </div>
                 <div class="btnInsert">
                     {{ form_widget(formChild.submit) }}
                 </div>
+                {# J'affiche la balise de fermeture de mon formulaire #}
                 {{ form_end(formChild) }}
             </div>
         </div>
@@ -38,3 +40,5 @@
     </section>
 
 {% endblock %}
+
+
