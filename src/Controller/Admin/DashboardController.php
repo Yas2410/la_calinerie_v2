@@ -27,18 +27,24 @@ class DashboardController extends AbstractController
      * @return Response
      */
     public function adminDashboard(
+        // Je fais appel à mes Repository User et Child puisque
+        // je veux afficher la liste des derniers enfants inscrits
+        // et la liste des derniers comptes Parents créés
         UserRepository $userRepository,
         ChildRepository $childRepository
     )
     {
+        // Je paramètre mon affichage en indiquant que je souhaite les ID décroissants
+        // et donc les plus récents, avec une limite de 5 données
         $lastUsers = $userRepository->findBy([], ['id' => 'DESC'], 5, 0);
         $lastChildren = $childRepository->findBy([], ['id' => 'DESC'], 5, 0);
+
+        // Je souhaite afficher cela sur le tableau de bord Admin et
+        // je retourne donc la vue correspondante
         return $this->render('admin/home/dashboard.html.twig', [
             'users' => $lastUsers,
             'children' => $lastChildren,
         ]);
-
     }
-
-
 }
+

@@ -8,7 +8,8 @@
                 <h1>ACCES RESTREINT</h1>
                 <div class="mentionText">
                     <p>
-                        Votre compte PARENTS n'est pas encore rattaché à la fiche de votre/vos enfant(s) <br>
+                        Votre compte PARENTS n'est pas encore rattaché à
+                        la fiche de votre/vos enfant(s) <br>
                         Ce dernier sera fonctionnel sous 48H !
                     </p>
                     <div class="homePage">
@@ -19,7 +20,6 @@
         </section>
 
     {% else %}
-
         <section class="containerParentsDashboard">
             <h2>LE MENU DE LA SEMAINE</h2>
             <div class="weekMenu center">
@@ -36,9 +36,9 @@
                             <a href="{{ asset('uploads/admin/menus/' ~ menu.file) }}" target="_blank">
                                 Télécharger le Menu
                             </a>
-                        <a href="{{ asset('uploads/admin/menus/' ~ menu.file) }}" target="_blank">
-                            <i class="fa fa-download"></i>
-                        </a>
+                            <a href="{{ asset('uploads/admin/menus/' ~ menu.file) }}" target="_blank">
+                                <i class="fa fa-download"></i>
+                            </a>
                         </div>
                         <div class="downloadResp">
                             <a href="{{ asset('uploads/admin/menus/' ~ menu.file) }}" target="_blank">
@@ -108,3 +108,4 @@
     {% endif %}
 
 {% endblock %}
+

@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="3fc1eb0a-69df-41be-90ec-b23689bbb73b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ChildController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ChildController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/home/dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/home/dashboard.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/emails/activation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/emails/activation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/emails/confirmation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/emails/confirmation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/home/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/home/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/home/homeParents.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/home/homeParents.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +274,11 @@
       <workItem from="1592035536322" duration="2514000" />
       <workItem from="1592236234656" duration="5996000" />
       <workItem from="1592337814521" duration="629000" />
-      <workItem from="1592392477158" duration="9275000" />
+      <workItem from="1592392477158" duration="10036000" />
+      <workItem from="1592566460280" duration="12083000" />
+      <workItem from="1592638853726" duration="2172000" />
+      <workItem from="1592737342523" duration="2540000" />
+      <workItem from="1592808812721" duration="5195000" />
     </task>
     <task id="LOCAL-00001" summary="Forms / Insert">
       <created>1587759344490</created>
@@ -537,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592420881969</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Comments">
+      <created>1592421147969</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1592421147969</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -612,10 +628,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1591366080092" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1592420880762">
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1592860480090">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592420880762" />
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592860480090" />
     <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog" timestamp="1587806426419">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -649,18 +665,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="310" y="31" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591896168307" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1592420885991">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1592421149464">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592420885991" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592421149464" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1589493729998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1589493729998" />
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1592392577198">
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1592808815071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592392577198" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592808815071" />
     <state x="577" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588771287901">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

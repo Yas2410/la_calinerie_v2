@@ -31,11 +31,14 @@
     <section class="resumeBox">
         <div class="resumeBoxDetails">
             <p class="lastRegister"> LES DERNIERS ENFANTS INSCRITS </p>
+            {# Boucle FOR : pour chaque enfant, je souhaite afficher
+            son NOM et son prénom #}
             {% for child in children %}
                 <div class="flex">
                     <p>
                         <b>{{ child.firstName }}</b> {{ child.LastName }}
                     </p>
+                    {#Pour afficher les détails de la fiche enfant #}
                     <div>
                         <a href="{{ path ('admin_child_show', {'id':child.id}) }}">
                             <i class="fa fa-eye"></i>
@@ -46,11 +49,15 @@
         </div>
         <div class="resumeBoxDetails">
             <p class="lastRegister"> LES DERNIERS COMPTES PARENTS CRÉÉS </p>
+            {# Boucle FOR : pour chaque compte créé, je souhaite afficher
+            le nom des parents correspondants #}
             {% for user in users %}
                 <div class="flex">
                     <p>
                         M. / Mme. <b> {{ user.lastName }}</b>
                     </p>
+                    {#Pour afficher les détails sur les parents nouvellement
+                     inscrits #}
                     <div>
                         <a href="{{ path ('admin_user_show', {'id':user.id}) }}">
                             <i class="fa fa-eye"></i>
