@@ -1,0 +1,33 @@
+@mixin searchBar ($grey) {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $grey;
+  width: 235px;
+  height: 25px;
+  font-size: 16px;
+  outline: none;
+}
+
+@mixin searchBtn ($darkPink) {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  color: $darkPink;
+}
+
+@mixin icon ($grey) {
+  color: $grey;
+}
+
+@mixin flash ($darkGrey) {
+  background-color: #5A5A5A;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding: 0;
+}

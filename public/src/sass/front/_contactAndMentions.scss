@@ -1,0 +1,102 @@
+.contactPage, .mentionPage, .registerPage, .restrictionPage {
+  box-sizing: border-box;
+  padding: 0 0 16px;
+
+  .connect button {
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
+
+  h1, h2 {
+    font-size: 30px;
+    text-align: center;
+    color: $darkGrey;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+}
+
+.contactForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .identity {
+    margin-right: 80px;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  label {
+    font-size: 18px;
+    color: $darkGrey;
+  }
+
+  #contact_civility {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+#contact_message {
+  width: 100%;
+  height: 100px;
+  margin-top: 5px;
+}
+
+.message {
+margin-top: 50px;
+}
+
+.choice {
+  margin-bottom: 15px;
+
+  label {
+    padding-right: 10px;
+  }
+}
+
+.homePage {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 18px;
+
+  a {
+    color: $darkGrey;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
+
+.mentionText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 15px;
+
+  p {
+    text-align: center;
+    font-size: 16px;
+    color: $darkGrey;
+  }
+}
+
+.restrictionPage {
+  padding: 130px;
+}
+
+

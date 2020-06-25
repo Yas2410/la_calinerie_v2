@@ -1,0 +1,107 @@
+/*INSERT ALL CATEGORIES + FORMS */
+.containerInsert {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.singleCatInsert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20%;
+  margin-bottom: 30px;
+  color: $darkGrey;
+
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    color: $darkGrey;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.returnSmall {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-left: 20%;
+
+  .fa-reply {
+    @include icon($darkGrey);
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.formInsert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.labelInsert {
+
+  input {
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  #child_sex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dateInput, .dateInputArt {
+    width: 50%;
+  }
+
+
+  .sexInput {
+    width: 65%;
+  }
+
+  #child_allergen, #child_user, #article_content,
+  #event_content, #menu_content, #article_resume, #event_resume {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  #article_content, #event_content {
+    height: 350px;
+  }
+
+  #menu_content {
+    height: 150px;
+  }
+
+  label {
+    margin-bottom: 15px;
+  }
+}
+
+.btnInsert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+#allergen_submit, #child_submit, #article_submit,
+#event_submit, #menu_submit, #picture_submit, #user_submit {
+  width: 60px;
+  height: 30px;
+  line-height: 15px;
+  background-color: #5A5A5A;
+  color: white;
+  font-size: 14px;
+  border: none;
+
+  &:hover {
+    font-weight: bold;
+  }
+}
+

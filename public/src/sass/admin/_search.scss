@@ -1,0 +1,22 @@
+.searchWord {
+  text-align: center;
+
+  span{
+    font-size: 25px;
+    color: $darkPink;
+  }
+  h2 {
+    margin-bottom: 50px;
+  }
+  p {
+    margin: 15px 0;
+  }
+  a {
+    font-size: 18px;
+    color: $darkGrey;
+    transition: transform 0.3s;
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}

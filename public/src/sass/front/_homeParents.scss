@@ -1,0 +1,96 @@
+.containerParentsDashboard, .containerSection, .containerSectionDetails {
+
+  p, h1, h2, h3, h4, h5, h6, a {
+    color: $darkGrey;
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    text-align: center;
+    background-color: $darkGrey;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  h3 {
+    padding: 10px;
+  }
+
+  padding: 150px 150px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.weekMenu, .weekArticle, .weekEvent, .weekPix {
+  display: flex;
+  justify-content: space-around;
+}
+
+.center {
+text-align: center;
+}
+
+.inside, .unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  h3, p {
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 15px;
+  }
+
+  a {
+    font-size: 18px;
+
+    &:hover {
+      font-weight: bold;
+      color: $darkPink;
+    }
+  }
+}
+
+.fa-download {
+  font-size: 35px;
+  padding: 15px;
+}
+
+.download {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 16%;
+  position: absolute;
+  top: 55%;
+  left: 40%;
+  padding: 30px;
+  font-weight: bold;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.article {
+  border: 4px solid white;
+  margin: 15px;
+  padding: 5px;
+}
+
+

@@ -1,0 +1,87 @@
+.logoNavParents {
+  width: 3%;
+}
+
+.familyWelcome {
+  color: white;
+
+  p {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+
+  span {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 10px;
+  }
+}
+
+.parentIcon {
+  li {
+    margin-bottom: 15px;
+  }
+}
+
+.navParents {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: $darkGrey;
+  margin: 0;
+
+  a {
+    color: white;
+    font-size: 22px;
+    padding-right: 35px;
+    padding-left: 35px;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
+
+.square {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.square:hover {
+    height: 80px;
+    background-color: $lightGrey;
+  a {
+    color: $darkGrey;
+    font-weight: bold;
+  }
+}
+
+.menuParents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoutParents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .fa-user, .fa-lock {
+    color: white;
+    font-size: 25px;
+    margin-left: 10px;
+  }
+}
+

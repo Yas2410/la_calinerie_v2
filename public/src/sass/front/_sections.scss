@@ -1,0 +1,200 @@
+.searchBar {
+  @include searchBar($grey)
+}
+
+.btnSearch {
+  @include searchBtn($darkPink)
+}
+
+.resultSearch {
+  margin-top: 100px;
+  text-align: center;
+
+  span {
+    font-size: 25px;
+    color: $darkPink;
+  }
+
+  h2 {
+    color: $darkGrey;
+    margin-top: 135px;
+  }
+}
+
+.userSearchTool {
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+  text-align: center;
+
+  h1 {
+    color: $darkGrey;
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+}
+
+.containerSection {
+  padding-bottom: 50px;
+
+  h1 {
+    color: $darkPink;
+  }
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.fa-edit, .fa-remove, .fa-reply {
+  @include icon($darkGrey);
+  font-size: 30px;
+  padding: 25px;
+}
+
+.fa-remove {
+  color: $darkPink;
+  font-size: 35px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  p {
+    margin-bottom: 5px;
+  }
+
+  h4 {
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+.space {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.sectionTitle h4 {
+  text-align: center;
+  padding: 10px;
+}
+
+.updateUserInfo {
+  margin-top: 150px;
+
+  h1 {
+    color: $darkGrey;
+    text-align: center;
+  }
+}
+
+.userSearchTool {
+
+  h1 {
+    font-size: 45px;
+    font-weight: 200;
+  }
+}
+
+.containerSectionDetails {
+  display: flex;
+  flex-direction: column;
+  padding: 55px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sectionDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.unit {
+  padding: 50px;
+
+  h3 {
+    font-size: 30px;
+    font-weight: 200;
+  }
+
+  h6 {
+    font-size: 16px;
+    text-align: end;
+    margin-bottom: 10px;
+  }
+
+  p {
+    padding: 10px;
+  }
+
+  a {
+    padding: 5px;
+    font-size: 25px;
+    border: 1px solid $darkGrey;
+
+    &:hover {
+      border: 2px solid $darkPink;
+    }
+  }
+}
+
+.back {
+  .fa-reply {
+  font-size: 40px;
+    padding: 0;
+  }
+
+  a {
+    border: none;
+  }
+
+  &:hover a{
+    border: none;
+  }
+}
+
+.content p {
+  font-size: 18px;
+  font-style: normal;
+}
+
+.containerSectionDetails {
+  .menu, .pix {
+    a, .fa-download {
+      border: none;
+    }
+
+    img {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.alignPix {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrap {
+  width: 33%;
+}
+
+.unit {
+  a {
+    border: none;
+  }
+}
+
+
+

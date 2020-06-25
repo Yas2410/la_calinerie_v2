@@ -1,0 +1,234 @@
+@media only screen and (min-width: 1280px) {
+  /* For wide screens: */
+  .xLarge-1 {width: 8.33%;}
+  .xLarge-2 {width: 16.66%;}
+  .xLarge-3 {width: 25%;}
+  .xLarge-4 {width: 33.33%;}
+  .xLarge-5 {width: 41.66%;}
+  .xLarge-6 {width: 50%;}
+  .xLarge-7 {width: 58.33%;}
+  .xLarge-8 {width: 66.66%;}
+  .xLarge-9 {width: 75%;}
+  .xLarge-10 {width: 83.33%;}
+  .xLarge-11 {width: 91.66%;}
+  .xLarge-12 {width: 100%;}
+
+  navResp, navRespConnected, .titlePublic, .downloadResp {
+    display: none !important;
+  }
+
+}
+
+
+@media only screen and (min-width: 980px)
+and (max-width: 1279px) {
+  /* For desktop: */
+  .large-1 {width: 8.33%;}
+  .large-2 {width: 16.66%;}
+  .large-3 {width: 25%;}
+  .large-4 {width: 33.33%;}
+  .large-5 {width: 41.66%;}
+  .large-6 {width: 50%;}
+  .large-7 {width: 58.33%;}
+  .large-8 {width: 66.66%;}
+  .large-9 {width: 75%;}
+  .large-10 {width: 83.33%;}
+  .large-11 {width: 91.66%;}
+  .large-12 {width: 100%;}
+
+  navResp, navRespConnected .titlePublic, .downloadResp {
+    display: none !important;
+  }
+
+}
+
+
+@media only screen and (min-width: 520px)
+and (max-width: 979px) {
+  /* For tablets: */
+  .medium-1 {width: 8.33%;}
+  .medium-2 {width: 16.66%;}
+  .medium-3 {width: 25%;}
+  .medium-4 {width: 33.33%;}
+  .medium-5 {width: 41.66%;}
+  .medium-6 {width: 50%;}
+  .medium-7 {width: 58.33%;}
+  .medium-8 {width: 66.66%;}
+  .medium-9 {width: 75%;}
+  .medium-10 {width: 83.33%;}
+  .medium-11 {width: 91.66%;}
+  .medium-12 {width: 100%;}
+
+  .cover {
+    flex-direction: column-reverse !important;
+    justify-content: space-between !important;
+    background-image: url("../../../uploads/admin/img/coverResp.jpg") !important;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+  }
+
+  .navPublic {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: rgba(70, 65, 65,0.6);
+    margin: 0 !important;
+    padding: 0 !important;
+
+    a {
+      color: white !important;
+    }
+  }
+
+  .coverLogo {
+    margin-bottom: 170px;
+  }
+
+  .containerLog {
+    align-items: center !important;
+  }
+
+  .logParents {
+    margin: 0 !important;
+  }
+
+  navResp, .titlePublic, .navParents, .download {
+    display: none !important;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+
+    div {
+      padding: 10px;
+    }
+  }
+
+  .weekMenu, .weekArticle, .weekEvent, .weekPix {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+
+@media only screen and (min-width: 260px)
+and (max-width: 519px) {
+  /* For mobile: */
+  .small-1 {width: 8.33%;}
+  .small-2 {width: 16.66%;}
+  .small-3 {width: 25%;}
+  .small-4 {width: 33.33%;}
+  .small-5 {width: 41.66%;}
+  .small-6 {width: 50%;}
+  .small-7 {width: 58.33%;}
+  .small-8 {width: 66.66%;}
+  .small-9 {width: 75%;}
+  .small-10 {width: 83.33%;}
+  .small-11 {width: 91.66%;}
+  .small-12 {width: 100%;}
+
+  .cover {
+    display: inherit !important;
+    background-image: url("../../../uploads/admin/img/coverResp.jpg") !important;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+  }
+  .navPublic, .coverLogo, .navParents, .download {
+    display: none !important;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .containerLog {
+    align-items: center !important;
+    h3 {
+      font-size: 24px !important;
+      text-align: center;
+    }
+  }
+
+  .logParents {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+
+    div {
+      padding: 10px;
+    }
+  }
+
+  .subFooter, .contactForm, .registrationPage {
+    flex-direction: column;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .activation {
+    padding: 0!important;
+  }
+
+  .restrictionPage {
+    padding: 15px !important;
+  }
+
+  .contactForm, .identity {
+    margin: 0;
+    text-align: start;
+  }
+
+  .containerParentsDashboard, .containerSection,
+  .containerSectionDetails, .unit {
+    padding: 0 !important;
+
+    h2 {
+      margin-top: 60px !important;
+    }
+  }
+
+  .containerSection, .updateUserInfo {
+    h1 {
+      margin-top: 60px !important;
+    }
+  }
+
+  .weekMenu, .weekArticle, .weekEvent, .weekPix, .alignPix {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .updateUserInfo {
+    margin-top: 100px !important;
+  }
+
+  .unit {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .containerSectionDetails {
+    .fa-reply {
+      margin-bottom: 25px !important;
+    }
+  }
+
+  .wrap {
+    width: 100% !important;
+      margin-top: 35px;
+  }
+}
+
+

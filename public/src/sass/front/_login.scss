@@ -1,0 +1,213 @@
+.containerLog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  input {
+    width: 50%;
+    margin-bottom: 15px;
+    height: 20px;
+  }
+
+  h3 {
+    color: white;
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 50px;
+  }
+}
+
+.Parents {
+  background-image: url("../../../uploads/admin/img/logParents.jpg");
+  background-size: cover;
+  height: 65vh;
+  margin-bottom: 150px;
+}
+
+.logParents {
+  padding: 20px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(70, 65, 65,0.4);
+
+  label {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 5px;
+  }
+}
+
+.connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    margin-bottom: 50px;
+    background-color: $darkGrey;
+    border: 1px solid white;
+    font-family: $mainFont;
+    margin-top: 10px;
+    outline: none;
+    width: 130px;
+    height: 40px;
+    line-height: 20px;
+    font-size: 16px;
+    border-radius: 65px;
+    color: white;
+
+    &:hover {
+      background-color: $lightGrey;
+      font-weight: bold;
+      color: $darkGrey;
+      border: 1px solid $darkGrey;
+    }
+  }
+}
+
+.connectLinks{
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    font-size: 18px;
+    color: white;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+      font-weight: bold;
+    }
+  }
+}
+
+.registrationPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .registrationPart {
+    padding: 15px;
+  }
+}
+
+.registerPage, .updateUserInfo {
+  p {
+    text-align: center;
+    font-style: italic;
+    color: $darkGrey;
+    margin-bottom: 15px;
+  }
+
+  label {
+    color: $darkGrey;
+  }
+}
+
+.midWidth {
+  width: 50%;
+}
+
+.agreeTerms {
+  display: inline;
+
+  #registration_form_agreeTerms {
+    margin: 0;
+    padding: 0;
+    width: 10%;
+  }
+}
+
+#registration_form_submit {
+  margin-bottom: 50px;
+}
+
+.contactForm {
+  display: flex;
+  text-align: center;
+}
+
+.contactFormBis {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 85px;
+  padding-top: 115px;
+}
+
+#reset_pass_email {
+  margin-bottom: 17px;
+}
+
+#reset_pass_validate, #valider {
+    margin-bottom: 50px;
+    background-color: $darkGrey;
+    border: 1px solid white;
+    font-family: $mainFont;
+    margin-top: 5px;
+    outline: none;
+    width: 130px;
+    height: 40px;
+    line-height: 20px;
+    font-size: 16px;
+    border-radius: 65px;
+    color: white;
+
+    &:hover {
+      background-color: $lightGrey;
+      font-weight: bold;
+      color: $darkGrey;
+      border: 1px solid $darkGrey;
+    }
+}
+
+#valider {
+  margin-top: 18px;
+}
+
+.activation {
+  padding: 150px;
+}
+
+.reset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h4 {
+    color: $darkGrey;
+  }
+
+  input {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.resetForm {
+  padding: 61px;
+}
+
+#contact_submit {
+  margin-top: 15px;
+}
+
