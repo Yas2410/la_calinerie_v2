@@ -80,8 +80,7 @@ class ChildType extends AbstractType
                 'multiple' => true,
                 'choice_label' => 'type',
                 // Le 'required' est en 'false' car un enfant n'est pas obligé d'avoir des allergies
-                'required' => false,
-
+                'required' => false
             ])
             // Afin de pouvoir lier l'enfant inscrit et le compte parents, je fais appel à mon entité 'User'
             ->add('user', EntityType::class, [

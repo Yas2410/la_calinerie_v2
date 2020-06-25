@@ -104,23 +104,21 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
     {
-        //if ($targetPath = $this->getTargetPath($request->getSession(), $providerKey)) {
-        //return new RedirectResponse($targetPath);
-        //}
-
+        //Attribution des rôles
         $isAdmin = $this->security->isGranted('ROLE_ADMIN');
         $isParent = $this->security->isGranted('ROLE_PARENT');
-
-
+        //Après authentification :
+        //Si 'ROLE_ADMIN', la redirection s'effectuera sur le tableau de bord de l'esace Admin
         if ($isAdmin) {
             return new RedirectResponse($this->urlGenerator->generate('admin_dashboard'));
         }
+        // Si 'ROLE_PARENT', redirection vers l'espace Parents
         if ($isParent) {
             return new RedirectResponse($this->urlGenerator->generate('home_parents'));
         }
+        //Sinon, la redirection se fait sur la page publique
         return new RedirectResponse($this->urlGenerator->generate('home'));
     }
-
 
     protected function getLoginUrl()
     {

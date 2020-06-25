@@ -12,8 +12,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- * //Ici, je m'assure que pour la création de compte, une adresse mail soit unique. Ainsi, si une adresse mail est
- //déjà été utilisée, le message ci-dessous apparait pour en informer l'utilisateur
+ // Ici, je m'assure que pour la création de compte, une adresse mail soit unique. Ainsi, si une adresse mail
+ // est déjà été utilisée, le message ci-dessous apparait pour en informer l'utilisateur
  * @UniqueEntity(fields={"email"}, message="Cette adresse mail est déjà utilisée")
  */
 class User implements UserInterface

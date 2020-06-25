@@ -42,7 +42,6 @@ class RegistrationController extends AbstractController
 
         /* Si le formulaire envoyé est valide : */
         if ($form->isSubmitted() && $form->isValid()) {
-
             /* 1. Je procède à l'encodage du mot de passe */
             $user->setPassword(
                 $passwordEncoder->encodePassword(
